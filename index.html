@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choru: Family Chore Chart and Chore Tracker for iPhone</title>
+<meta name="description" content="Chores come back when they are due, missed ones carry over, and kids earn coins for rewards you pick. One shared chore chart, on every iPhone in the house.">
+<link rel="canonical" href="https://getchoru.com/">
+<meta name="apple-itunes-app" content="app-id=6812494775">
+<meta name="theme-color" content="#120d1f">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Choru">
+<meta property="og:title" content="Choru: Family Chore Chart and Chore Tracker for iPhone">
+<meta property="og:description" content="Every chore comes back when it is due. Share the list with the house, keep a streak, and spend the coins on rewards you pick.">
+<meta property="og:url" content="https://getchoru.com/">
+<meta property="og:image" content="https://getchoru.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ozolsdev">
+<meta name="twitter:title" content="Choru: Family Chore Chart and Chore Tracker for iPhone">
+<meta name="twitter:description" content="Every chore comes back when it is due. Share the list with the house, keep a streak, and spend the coins on rewards you pick.">
+<meta name="twitter:image" content="https://getchoru.com/assets/og-image.png">
+<link rel="preconnect" href="https://eu.i.posthog.com">
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing startSessionRecording stopSessionRecording isSessionRecordingStarted".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) && location.hostname !== '') {
+        posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            persistence: 'memory'
+        });
+        posthog.register({ app_name: 'choru_web' });
+    }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Choru",
+  "operatingSystem": "iOS 26.5 or later",
+  "applicationCategory": "HomeApplication",
+  "description": "Family chore tracker for iPhone. Chores repeat on their own schedule, missed ones carry over, the list is shared with the household, and every chore earns coins for rewards you pick.",
+  "url": "https://getchoru.com/",
+  "downloadUrl": "https://apps.apple.com/app/id6812494775",
+  "author": {
+    "@type": "Person",
+    "name": "Emils Ozols",
+    "url": "https://ozols.dev"
+  },
+  "image": "https://getchoru.com/assets/icon-512.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I share a chore list with my family?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start a family in Choru's Settings, under Family. Choru shows a code, the other person scans it with their own iPhone, and everyone then sees the family's chores on their own phone. A family can have up to five people."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a chore belong to one person?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each chore has a For row: pick one person, or several. When a chore is on more than one person's list, ticking it asks \"Did you have help?\", so the coins go to everyone who pitched in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do kids use Choru?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each kid joins the family on their own iPhone, and their phone locks itself to their own chores and rewards. The Kids tab shows every kid's chores, streak and coins, and a kid's ticks can wait for a grown-up's OK before the coins count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the coins for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every chore you tick pays coins. You add the rewards, like picking the film or a day out, set their prices, and spend the coins on them. Coins are a tally inside the app, not money."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when a chore is missed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It carries over to today as one row, showing how late it is, instead of piling up a copy for every day you missed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often can a chore repeat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Daily, on set weekdays, weekly, monthly, quarterly, or a custom rhythm like every 3 days, every 2 weeks or every 6 months. Anytime tasks with no fixed date come back a month, three months, six months or a year after you tick them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a day off break my streak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not if you plan it. Pick rest days, like Sundays, and nothing is due on them. Going away? Mark the days away and the streak carries across the trip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are my chores stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On your iPhone and in your own iCloud. Choru has no account of its own, and no server holds your chores. It also keeps an automatic backup copy in your iCloud Drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Choru have ads, or need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No ads, and no account to make. Choru uses the Apple Account your iPhone is already signed in with."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an Android version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at the moment: Choru is made for iPhone. If someone in your house is on Android, tap Register your interest at the top of this page, so I know."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="/">
+      <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+      Choru
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#faq">FAQ</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Home&amp;mt=8" data-ph="appstore_click">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="download">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Family chore tracker for iPhone</span>
+      <h1>Every chore comes back <span class="accent">when it's due</span></h1>
+      <p class="hero-sub">The dishes are obvious. It's the oven, the fridge shelves and the bathroom fan that sneak up on you. Choru keeps track of the chores you do every day and the ones you do every few months, and puts the list on every phone in the house.</p>
+      <div class="cta-row">
+        <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Home&amp;mt=8" data-ph="appstore_click" aria-label="Download Choru on the App Store">
+          <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60">
+        </a>
+        <a class="btn-secondary" href="#how-it-works">See how it works</a>
+      </div>
+      <div class="android-cta">Someone in the family on Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
+      <div class="trust-row">
+        <span>Daily to yearly repeats</span>
+        <span>Shared with the whole house</span>
+        <span>Coins and rewards for kids</span>
+        <span>No account, no ads</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img class="screen" src="/assets/shot-mess.webp" alt="Choru on iPhone: the week calendar with three overdue chores, and Choru the dragon under a pile of mess" width="640" height="1284" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <h2>A chore chart that does the remembering</h2>
+      <p>Everything a chart on the fridge can't do, on everyone's phone.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 3v4M16 3v4"/><circle cx="12" cy="15" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+        <h3>See what is due</h3>
+        <p>A week calendar with today's chores under it. Pull it down to see the whole month.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 014-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 01-4 4H3"/></svg></div>
+        <h3>Repeats that fit real chores</h3>
+        <p>Daily, on set weekdays, weekly, monthly, quarterly, or every few days, weeks, months or years.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Missed ones carry over</h3>
+        <p>A chore you missed moves to today as one row, showing how late it is. Not one copy for every day you missed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M17 15l2 2 3-4"/></svg></div>
+        <h3>Anytime tasks</h3>
+        <p>For jobs with no fixed date. Tick one off and it comes back a month, three months, six months or a year later.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.6a3.2 3.2 0 010 6.8"/><path d="M18 14.3c1.8.8 3 2.7 3 5.7"/></svg></div>
+        <h3>Share the household</h3>
+        <p>Invite the family with a QR code. Everyone sees the shared chores on their own iPhone.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.5 9.5c0-1 1.1-1.8 2.5-1.8s2.5.8 2.5 1.8-1.1 1.6-2.5 1.9-2.5.9-2.5 1.9 1.1 1.8 2.5 1.8 2.5-.8 2.5-1.8"/></svg></div>
+        <h3>Coins and rewards you pick</h3>
+        <p>Every chore pays coins. Set your own rewards and their prices, then spend the coins on them.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="2.6"/><path d="M12 9.5v6M8 12l4-2 4 2M9.5 21l2.5-5.5L14.5 21"/></svg></div>
+        <h3>A Kids tab</h3>
+        <p>Each kid's chores, streak and coins in one place. Their ticks can wait for a grown-up's OK.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c4 0 7-2.7 7-6.8 0-3.6-2.6-6-4.2-8.2-.5 2.1-1.5 3.3-2.8 3.9C12.4 7.5 11 4.6 8.8 2.5 8.6 6.2 5 9 5 15.2 5 19.3 8 22 12 22z"/></svg></div>
+        <h3>A streak with days off</h3>
+        <p>Clear today's list to grow the streak. Rest days and days away keep it safe, and milestones pay bonus coins.</p>
+      </div>
+    </div>
+    <p class="extras"><strong>Also in the box:</strong> a tidy timer, a daily notification with what is due, Home Screen widgets, automatic iCloud backup, and Choru, a small purple dragon who shows how the day is going.</p>
+  </div>
+</section>
+
+<!-- ============ SCREENSHOTS ============ -->
+<section id="screenshots">
+  <div class="container">
+    <div class="section-head">
+      <h2>See it in action</h2>
+      <p>Real screens, straight from the app.</p>
+    </div>
+  </div>
+  <div class="shots-marquee">
+      <div class="shots-track">
+        <div class="shots-set">
+          <figure>
+            <img class="screen" src="/assets/shot-mess.webp" alt="The week calendar with three overdue chores, and Choru the dragon under a pile of mess" loading="lazy" width="640" height="1284">
+            <figcaption>Help Choru out of the mess</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-done.webp" alt="Today&#x27;s chores all ticked off, and Choru the dragon resting" loading="lazy" width="640" height="1284">
+            <figcaption>One tick at a time</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-chores.webp" alt="The Chores tab: what is due today and in the next 7 days, each with its repeat" loading="lazy" width="640" height="1284">
+            <figcaption>Every chore on its own rhythm</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-editor.webp" alt="Editing a chore: its repeat, who it is for, and how many coins it pays" loading="lazy" width="640" height="1284">
+            <figcaption>Set it once, it repeats</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-family.webp" alt="The family&#x27;s join code, ready for another iPhone to scan" loading="lazy" width="640" height="1284">
+            <figcaption>One family, every phone</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-kids.webp" alt="The Kids tab: a kid&#x27;s streak, chores and rewards" loading="lazy" width="640" height="1284">
+            <figcaption>A Kids tab for the children</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-rewards.webp" alt="Rewards with their prices in coins, like an hour of screen time or a day out" loading="lazy" width="640" height="1284">
+            <figcaption>Earn coins for every chore</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-stats.webp" alt="Stats: your streak, coins, and the family&#x27;s chores this week" loading="lazy" width="640" height="1284">
+            <figcaption>See what got done</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-widgets.webp" alt="Home Screen widgets with today&#x27;s chores and Choru the dragon" loading="lazy" width="640" height="1284">
+            <figcaption>Home Screen widgets</figcaption>
+          </figure>
+        </div>
+        <div class="shots-set" aria-hidden="true">
+          <figure>
+            <img class="screen" src="/assets/shot-mess.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Help Choru out of the mess</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-done.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>One tick at a time</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-chores.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Every chore on its own rhythm</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-editor.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Set it once, it repeats</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-family.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>One family, every phone</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-kids.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>A Kids tab for the children</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-rewards.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Earn coins for every chore</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-stats.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>See what got done</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-widgets.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Home Screen widgets</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>From "when did we last clean the oven?" to a list that remembers, in three steps.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Add your chores</h3>
+        <p>Name each chore, pick how often it comes back, and tag the room. Start with the every-few-months jobs: they are the ones that slip.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Bring in the house</h3>
+        <p>Start a family in Settings and show the code. Everyone scans it with their own iPhone and sees the same list.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Tick, earn, repeat</h3>
+        <p>Every tick pays coins and keeps the streak going. Each chore comes back by itself when it is due again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUIDES ============ -->
+<section id="guides">
+  <div class="container">
+    <div class="section-head">
+      <h2>Guides</h2>
+      <p>Straight answers to the questions every shared household runs into.</p>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-card" href="/guides/split-chores-with-partner/">
+        <h3>How to Split Chores Fairly With Your Partner</h3>
+        <p>List the chores nobody sees, split by time and taste, and stop keeping score.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/chore-chart-for-kids-with-rewards/">
+        <h3>How to Make a Chore Chart for Kids That Lasts</h3>
+        <p>Real jobs, coins they can spend, and a quick check before it counts.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/deep-cleaning-schedule/">
+        <h3>How to Keep a Deep Cleaning Schedule</h3>
+        <p>The every-few-months jobs, a schedule to start from, and what to do when you miss one.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/chores-in-reminders-app/">
+        <h3>Can You Use the iPhone Reminders App for Chores?</h3>
+        <p>What the built-in app handles well, where it falls short, and when that matters.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/share-chore-list-with-family-iphone/">
+        <h3>How to Share a Chore List With Your Family on iPhone</h3>
+        <p>A shared note, a shared Reminders list, or a family chore app, and what each is good for.</p>
+        <span class="more">Read the guide</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>How do I share a chore list with my family?</summary>
+        <p>Start a family in Choru's Settings, under Family. Choru shows a code, the other person scans it with their own iPhone, and everyone then sees the family's chores on their own phone. A family can have up to five people. <a href="/guides/share-chore-list-with-family-iphone/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>Can a chore belong to one person?</summary>
+        <p>Yes. Each chore has a For row: pick one person, or several. When a chore is on more than one person's list, ticking it asks "Did you have help?", so the coins go to everyone who pitched in. <a href="/guides/split-chores-with-partner/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>How do kids use Choru?</summary>
+        <p>Each kid joins the family on their own iPhone, and their phone locks itself to their own chores and rewards. The Kids tab shows every kid's chores, streak and coins, and a kid's ticks can wait for a grown-up's OK before the coins count. <a href="/guides/chore-chart-for-kids-with-rewards/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>What are the coins for?</summary>
+        <p>Every chore you tick pays coins. You add the rewards, like picking the film or a day out, set their prices, and spend the coins on them. Coins are a tally inside the app, not money. <a href="/guides/chore-chart-for-kids-with-rewards/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>What happens when a chore is missed?</summary>
+        <p>It carries over to today as one row, showing how late it is, instead of piling up a copy for every day you missed. <a href="/guides/deep-cleaning-schedule/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>How often can a chore repeat?</summary>
+        <p>Daily, on set weekdays, weekly, monthly, quarterly, or a custom rhythm like every 3 days, every 2 weeks or every 6 months. Anytime tasks with no fixed date come back a month, three months, six months or a year after you tick them. <a href="/guides/deep-cleaning-schedule/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>Does a day off break my streak?</summary>
+        <p>Not if you plan it. Pick rest days, like Sundays, and nothing is due on them. Going away? Mark the days away and the streak carries across the trip.</p>
+      </details>
+      <details>
+        <summary>Where are my chores stored?</summary>
+        <p>On your iPhone and in your own iCloud. Choru has no account of its own, and no server holds your chores. It also keeps an automatic backup copy in your iCloud Drive. <a href="/privacy/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>Does Choru have ads, or need an account?</summary>
+        <p>No ads, and no account to make. Choru uses the Apple Account your iPhone is already signed in with. <a href="#download">Get the app</a></p>
+      </details>
+      <details>
+        <summary>Is there an Android version?</summary>
+        <p>Not at the moment: Choru is made for iPhone. If someone in your house is on Android, tap Register your interest at the top of this page, so I know.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section>
+  <div class="container">
+    <a class="cta-band" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Home&amp;mt=8" data-ph="appstore_click" aria-label="Download Choru on the App Store">
+      <h2>Let the list do the remembering</h2>
+      <p>Add the chores once. Choru brings each one back when it is due.</p>
+      <div class="cta-row">
+        <span class="badge-link">
+          <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60">
+        </span>
+      </div>
+    </a>
+    <div class="android-cta android-cta--center">Someone in the family on Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/apple-touch-icon.png" alt="" width="30" height="30">
+          Choru
+        </div>
+        <p class="footer-note">The family chore chart that does the remembering.<br>Requires iOS 26.5 or later.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/guides/">Guides</a>
+        <a href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Home&amp;mt=8" data-ph="appstore_click">App Store</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="https://alarmclockplanner.com/" data-ph="crosssell_alarmplanner">Alarm Clock Planner: alarms for any date</a>
+        <a href="https://ozols.dev" rel="author">Made by Emils Ozols</a>
+      </div>
+    </div>
+    <p class="footer-note">© Emils Ozols. Apple, iPhone, and the App Store badge are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+<script>
+    // posthog.capture exists only after posthog.init, which is skipped on localhost: guard it,
+    // so a preview click still works and no tracking call can stop the page responding.
+    function track(name) {
+        try {
+            if (window.posthog && typeof posthog.capture === 'function') {
+                posthog.capture(name, { page: location.pathname });
+            }
+        } catch (e) {}
+    }
+    document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-ph]');
+        if (el) track(el.getAttribute('data-ph'));
+    });
+    document.querySelectorAll('[data-android]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            btn.parentElement.innerHTML = '<span class="android-cta-done">Thanks. Your interest in an Android version has been noted.</span>';
+            track('android_waitlist_signup');
+        });
+    });
+</script>
+</body>
+</html>

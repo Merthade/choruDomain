@@ -1,0 +1,6 @@
+# macOS junk
+.DS_Store
+
+# Python leftovers
+__pycache__/
+*.pyc

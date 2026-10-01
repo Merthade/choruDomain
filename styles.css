@@ -1,0 +1,312 @@
+/* Choru site styles: AlarmPlanner's layout (alarmclockplanner.com), Choru's violet */
+:root {
+  --bg: #120d1f;
+  --bg-2: #1a1230;
+  --panel: rgba(255, 255, 255, 0.05);
+  --panel-2: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: #f2edfb;
+  --muted: #aea5c4;
+  --accent: #b48bff;
+  --accent-strong: #8757d1;
+  --accent-soft: #d6c2ff;
+  --accent-dim: rgba(180, 139, 255, 0.14);
+  --radius: 18px;
+  --maxw: 1080px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(180, 139, 255, 0.12), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(135, 87, 209, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-soft); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(18, 13, 31, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav {
+  display: flex; align-items: center; gap: 20px;
+  max-width: var(--maxw); margin: 0 auto; padding: 12px 24px;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); }
+.nav-logo img { width: 34px; height: 34px; border-radius: 8px; }
+.nav-logo:hover { text-decoration: none; }
+.nav-links { display: flex; gap: 22px; margin-left: auto; align-items: center; }
+.nav-links a { color: var(--muted); font-size: 15px; }
+.nav-links a:hover { color: var(--text); text-decoration: none; }
+.nav-cta {
+  background: var(--accent); color: #1d1033 !important; font-weight: 600;
+  padding: 8px 16px; border-radius: 999px; font-size: 15px;
+}
+.nav-cta:hover { background: var(--accent-soft); text-decoration: none; }
+@media (max-width: 720px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: 72px 0 40px; }
+.hero-grid {
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
+}
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 44px; }
+}
+.eyebrow {
+  display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent-soft);
+  background: var(--accent-dim); border: 1px solid rgba(180, 139, 255, 0.28);
+  padding: 5px 12px; border-radius: 999px; margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 54px); line-height: 1.08; font-weight: 800;
+  letter-spacing: -0.02em; margin-bottom: 18px;
+}
+h1 .accent { color: var(--accent); }
+.hero-sub { font-size: 19px; color: var(--muted); max-width: 34em; margin-bottom: 28px; }
+.hero-art { display: flex; justify-content: center; }
+.hero-art img { width: min(320px, 80vw); }
+
+/* App screenshots framed in the iPhone shell (buttons included) at build time;
+   shadow follows the transparent frame outline */
+img.screen {
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.45));
+}
+
+.cta-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.badge-link {
+  display: inline-flex; border-radius: 13px;
+  /* box-shadow, not filter: drop-shadow — filter transitions re-rasterize the
+     SVG (janky) and Safari clips filtered replaced elements at the sides */
+  box-shadow: 0 0 0 rgba(180, 139, 255, 0);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.badge-link img { height: 60px; width: auto; display: block; border-radius: 13px; }
+.badge-link:hover, a:hover .badge-link {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(180, 139, 255, 0.38);
+}
+.btn-secondary {
+  border: 1px solid var(--border); color: var(--text); padding: 13px 22px;
+  border-radius: 12px; font-weight: 600; font-size: 16px; background: var(--panel);
+}
+.btn-secondary:hover { background: var(--panel-2); text-decoration: none; }
+.trust-row {
+  display: flex; gap: 10px 26px; flex-wrap: wrap; margin-top: 22px;
+  color: var(--muted); font-size: 14.5px;
+}
+.trust-row span::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+
+/* Android interest (inline green text link next to the iOS download) */
+.android-cta { margin-top: 30px; font-size: 14.5px; color: var(--muted); }
+.android-cta--center { text-align: center; margin-top: 20px; }
+.android-link {
+  font: inherit; color: var(--accent-soft);
+  background: none; border: 0; padding: 0; margin: 0;
+  appearance: none; -webkit-appearance: none;
+  display: inline; cursor: pointer;
+  text-decoration: underline; text-underline-offset: 3px;
+  transition: color 0.18s ease;
+}
+.android-link:hover { color: var(--accent); text-decoration: underline; }
+.android-cta-done { color: var(--accent-soft); font-weight: 600; margin: 0; }
+
+/* ---------- Sections ---------- */
+section { padding: 64px 0; }
+.section-head { max-width: 640px; margin-bottom: 40px; }
+h2 { font-size: clamp(26px, 3.6vw, 36px); font-weight: 800; letter-spacing: -0.015em; margin-bottom: 12px; }
+.section-head p { color: var(--muted); font-size: 17px; }
+
+/* Features */
+.feature-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px;
+}
+.feature-card {
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px;
+}
+.feature-card .ico {
+  width: 42px; height: 42px; border-radius: 12px; background: var(--accent-dim);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+  color: var(--accent-soft);
+}
+.feature-card .ico svg {
+  width: 22px; height: 22px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.feature-card h3 { font-size: 17px; margin-bottom: 6px; }
+.feature-card p { color: var(--muted); font-size: 15px; }
+
+/* Screenshots: slow infinite marquee (track holds two identical sets; shifting
+   the track by -50% equals exactly one set, so the loop is seamless) */
+.shots-marquee { overflow: hidden; padding: 18px 0 20px; width: 100%; }
+.shots-track { display: flex; width: max-content; animation: shots-scroll 80s linear infinite; }
+.shots-set { display: flex; }
+.shots-marquee figure { flex: 0 0 auto; width: min(64vw, 264px); margin-right: 18px; }
+.shots-marquee img.screen {
+  filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.40));
+  transition: transform 0.3s ease;
+}
+.shots-marquee figure:hover img.screen { transform: scale(1.045); }
+.shots-marquee figcaption { font-size: 13.5px; color: var(--muted); margin-top: 10px; text-align: center; }
+@keyframes shots-scroll {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shots-marquee { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .shots-track { animation: none; }
+  .shots-set[aria-hidden="true"] { display: none; }
+}
+
+/* How it works */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; counter-reset: step; }
+.step {
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px;
+}
+.step .num {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #1d1033;
+  font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+}
+.step h3 { font-size: 17px; margin-bottom: 6px; }
+.step p { color: var(--muted); font-size: 15px; }
+
+/* Guides */
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.guide-card {
+  display: block; background: var(--panel); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px 24px; color: var(--text);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.guide-card:hover { border-color: rgba(180, 139, 255, 0.48); background: var(--panel-2); text-decoration: none; }
+.guide-card h3 { font-size: 16.5px; margin-bottom: 6px; color: var(--text); }
+.guide-card p { color: var(--muted); font-size: 14.5px; }
+.guide-card .more { display: inline-block; margin-top: 10px; color: var(--accent-soft); font-size: 14px; font-weight: 600; }
+/* Guides hub: each cluster is a heading + a paragraph of context above its card grid. Clusters are
+   sibling .container blocks, so the gap goes on every one after the first. */
+.guide-cluster + .guide-cluster { margin-top: 52px; }
+.cluster-intro { color: var(--muted); max-width: 780px; margin: 10px 0 22px; font-size: 15.5px; }
+
+/* FAQ */
+.faq-list { max-width: 780px; }
+.faq-list details {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+  padding: 4px 22px; margin-bottom: 12px;
+}
+.faq-list summary {
+  cursor: pointer; font-weight: 600; font-size: 16.5px; padding: 14px 0;
+  list-style: none; position: relative; padding-right: 34px;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+  content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  color: var(--accent); font-size: 22px; font-weight: 400;
+}
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list details p { color: var(--muted); padding-bottom: 18px; font-size: 15.5px; }
+
+/* CTA band: the ENTIRE band is one anchor to the App Store */
+a.cta-band { display: block; color: inherit; }
+a.cta-band:hover { text-decoration: none; }
+.cta-band {
+  background: linear-gradient(135deg, rgba(180, 139, 255, 0.18), rgba(135, 87, 209, 0.12));
+  border: 1px solid rgba(180, 139, 255, 0.32); border-radius: 24px;
+  padding: 52px 40px; text-align: center;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+.cta-band:hover { border-color: rgba(180, 139, 255, 0.66); transform: translateY(-2px); }
+.cta-band h2 { margin-bottom: 10px; }
+.cta-band p { color: var(--muted); margin-bottom: 26px; }
+.cta-band .cta-row { justify-content: center; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 44px 0 60px; margin-top: 40px; }
+.footer-grid { display: flex; gap: 30px; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; }
+.footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.footer-brand img { width: 30px; height: 30px; border-radius: 7px; }
+.footer-links { display: flex; gap: 26px; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); font-size: 14.5px; }
+.footer-note { color: #6f6688; font-size: 13.5px; margin-top: 26px; }
+
+/* ---------- Guide article pages ---------- */
+.article { max-width: 760px; margin: 0 auto; padding: 48px 24px 20px; }
+.breadcrumb { font-size: 14px; color: var(--muted); margin-bottom: 22px; }
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--accent-soft); }
+.article h1 { font-size: clamp(28px, 4.5vw, 40px); margin-bottom: 14px; }
+.article .lede { font-size: 18px; color: var(--muted); margin-bottom: 28px; }
+.article h2 { font-size: 24px; margin: 40px 0 14px; }
+.article h3 { font-size: 18px; margin: 26px 0 10px; }
+.article p { margin-bottom: 16px; }
+.article ul, .article ol { margin: 0 0 18px 24px; }
+.article li { margin-bottom: 8px; }
+.article li::marker { color: var(--accent); font-weight: 700; }
+
+.quick-answer {
+  background: var(--accent-dim); border: 1px solid rgba(180, 139, 255, 0.32);
+  border-radius: 14px; padding: 18px 22px; margin-bottom: 30px;
+}
+.quick-answer strong { color: var(--accent-soft); }
+.quick-answer p { margin: 0; font-size: 16px; }
+
+.article figure { margin: 28px auto; max-width: 320px; }
+.article figcaption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 10px; }
+
+.note-box {
+  background: var(--panel); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0;
+  padding: 14px 18px; margin: 20px 0; font-size: 15px; color: var(--muted);
+}
+
+/* Article CTA: the ENTIRE box is one anchor to the App Store */
+a.article-cta { display: block; color: inherit; }
+a.article-cta:hover { text-decoration: none; }
+.article-cta {
+  background: linear-gradient(135deg, rgba(180, 139, 255, 0.18), rgba(135, 87, 209, 0.12));
+  border: 1px solid rgba(180, 139, 255, 0.32); border-radius: 18px;
+  padding: 28px; margin: 40px 0; text-align: center;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+.article-cta:hover { border-color: rgba(180, 139, 255, 0.66); transform: translateY(-2px); }
+.article-cta h2 { margin: 0 0 8px; font-size: 22px; }
+.article-cta p { color: var(--muted); margin-bottom: 18px; }
+.article-cta .cta-row { justify-content: center; }
+
+.related { border-top: 1px solid var(--border); margin-top: 44px; padding-top: 28px; }
+.related h2 { font-size: 20px; margin-bottom: 16px; }
+.related ul { list-style: none; margin: 0; }
+.related li { margin-bottom: 10px; }
+
+/* ---------- Choru additions ---------- */
+/* One line under the feature grid for the small things that do not need a card */
+.extras { color: var(--muted); font-size: 15.5px; max-width: 760px; margin-top: 26px; }
+.extras strong { color: var(--text); font-weight: 600; }
+
+/* The dragon on the 404 and the guides hub */
+.mascot { width: 180px; height: auto; margin: 0 auto 18px; }
+.hub-head { display: flex; gap: 28px; align-items: center; }
+.hub-head .mascot { width: 150px; margin: 0; flex: 0 0 auto; }
+@media (max-width: 640px) {
+  .hub-head { flex-direction: column-reverse; align-items: flex-start; }
+  .hub-head .mascot { width: 120px; }
+}
