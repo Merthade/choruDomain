@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -115,7 +117,7 @@
   <div class="quick-answer"><p><strong>Quick answer:</strong> Write down every chore, including the ones that only come round every few months. Split them by how long they take and who minds them least, not one for one. Then keep the list where you both see it, so nobody has to be the one who remembers. A shared chore app like <a href="/">Choru</a> does the remembering: each chore comes back on both phones when it is due.</p></div>
 
 <h2>Start with the whole list, not the obvious one</h2>
-<p>Ask two people to list the household chores and you get two different lists. Dishes, laundry and the trash make both. The oven, the fridge shelves, the bathroom fan, the kettle that needs descaling and the dentist appointments usually make only one. Whoever wrote the longer list is the one feeling the load.</p>
+<p>Ask two people to list the household chores and you often get two different lists. Dishes, laundry and the trash make both. The oven, the fridge shelves, the bathroom fan, the kettle that needs descaling and the dentist appointments usually make only one. Whoever wrote the longer list is usually the one feeling the load.</p>
 <p>So write it all down together, in one sitting. If a job has ever made one of you sigh, it goes on the list.</p>
 
 <h2>Split by time and taste, not one for one</h2>
@@ -128,7 +130,7 @@
 </ul>
 
 <h2>Make it visible, so nobody keeps score in their head</h2>
-<p>A split rarely breaks because someone refuses to help. It breaks because the list lives in one person's head. They notice the oven is due, they ask, they remind. That noticing is work too, and it is the part that builds resentment.</p>
+<p>A split often breaks not because someone refuses to help, but because the list lives in one person's head. They notice the oven is due, they ask, they remind. That noticing is work too, and it is the part that builds resentment.</p>
 <p>Put the list somewhere you both see it, with dates. A whiteboard works until the every-three-months jobs fall off it. A shared chore app keeps those coming back on schedule, so neither of you has to be the one who remembers.</p>
 
 <h2>How to set it up in Choru</h2>
@@ -144,7 +146,7 @@
 </figure>
 
 <h2>Check in on the numbers, not the feelings</h2>
-<p>Once a week, look at what actually got done. Choru's Stats count each person's chores for the week, which tends to settle the "I do everything" debate, one way or the other. If one side keeps coming out heavy, move a chore across. No speeches needed.</p>
+<p>Once a week, look at what actually got done. Choru's Stats count each person's chores for the week, which can settle the "I do everything" debate, one way or the other. If one side keeps coming out heavy, move a chore across. No speeches needed.</p>
 <figure>
   <img class="screen" src="/assets/shot-stats.webp" alt="Choru Stats with the family&#x27;s chores this week, counted per person" loading="lazy" width="640" height="1284">
   <figcaption>The week's chores, per person.</figcaption>

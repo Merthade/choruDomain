@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -121,7 +123,7 @@
 <p>Every home is different, so treat this as a first draft and adjust as you go:</p>
 <ul>
   <li><strong>Every 2 weeks:</strong> change the bed sheets, clean the shower screen, wipe out the microwave.</li>
-  <li><strong>Monthly:</strong> clean the fridge shelves, wash the trash cans, dust the baseboards, run the washing machine's cleaning cycle.</li>
+  <li><strong>Monthly:</strong> clean the fridge shelves, wash the trash cans, dust the baseboards, run the washing machine's cleaning cycle, if it has one.</li>
   <li><strong>Every 3 months:</strong> clean the oven, descale the kettle, vacuum under the sofa, wash the shower curtain.</li>
   <li><strong>Every 6 months:</strong> rotate the mattress, wash the pillows and the duvet, clean the bathroom fan cover, clear out the freezer.</li>
   <li><strong>Once a year:</strong> wash the windows inside and out, wash the curtains, clear the gutters.</li>

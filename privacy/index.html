@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -100,7 +102,7 @@
 <p>Analytics can be turned off at any time in Settings, Help out, "Share anonymous usage". The app respects it immediately.</p>
 
 <h2>This website</h2>
-<p>getchoru.com counts page views and taps on its App Store links with PostHog, hosted in the EU, so I can see which pages are useful. It sets no cookies, stores nothing on your device, and does not build a profile of you.</p>
+<p>getchoru.com counts page views, and taps on its App Store links and a few buttons, with PostHog, hosted in the EU, so I can see which pages are useful. It sets no cookies, stores nothing on your device, and does not build a profile of you.</p>
 
 <h2>Purchases</h2>
 <p>If Choru offers purchases, Apple processes the payment. I never see your payment details.</p>

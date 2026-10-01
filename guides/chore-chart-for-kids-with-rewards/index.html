@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -111,7 +113,7 @@
 <article class="article">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › How to Make a Chore Chart for Kids That Lasts</nav>
   <h1>How to Make a Chore Chart for Kids That Lasts</h1>
-  <p class="lede">Most chore charts work for about nine days. Then the stickers run out, nobody checks it, and it turns into fridge art. Here is how to make one that keeps going.</p>
+  <p class="lede">A chore chart is easy to start and hard to keep going. The stickers run out, nobody checks it, and it turns into fridge art. Here is how to make one that lasts.</p>
   <div class="quick-answer"><p><strong>Quick answer:</strong> Give each child a short list of jobs they can finish alone, pay a few points for each, and let them spend the points on rewards you agree on together. Keep the first reward close, and check the work before the points land. In <a href="/">Choru</a>, every chore pays coins, you set the rewards and their prices, and each kid's chores, streak and coins sit together in the Kids tab.</p></div>
 
 <h2>Keep the list short and the jobs real</h2>
@@ -120,7 +122,7 @@
 
 <h2>Points they can spend beat stickers they collect</h2>
 <p>Stickers are fun until there is nothing to do with them. Points that buy something give every chore a reason. Let the kids help write the reward list, with prices: half an hour of extra screen time, picking the film, a day out. Once they have their eye on something, the chart starts running itself.</p>
-<p>Keep the first prices within reach. If the first reward takes a month to earn, the chart is dead by week two.</p>
+<p>Keep the first prices within reach. If the first reward takes a month to earn, the chart may not last that long.</p>
 <p>Streaks help too. In Choru, a streak pays bonus coins when it reaches 3, 7, 14 and 30 days, and every 30 days after that.</p>
 
 <h2>Check it before it counts</h2>
@@ -129,7 +131,7 @@
 
 <h2>How to set it up in Choru</h2>
 <ol>
-  <li>Start a family in Settings, then Family, and set a kid-mode PIN under Settings, Kid mode.</li>
+  <li>Start a family in Settings, then Family. On the way, Choru asks the grown-ups for four digits: the parent PIN that gets any grown-up past a kid's phone lock. Skipped it? Tap your own name there later and choose Set a parent PIN.</li>
   <li>Each kid joins on their own iPhone by scanning the family's code, and marks themselves with <strong>I'm a kid</strong>.</li>
   <li>Add their chores and put them on the kid's list with the For row. Every chore pays coins, and you choose how many.</li>
   <li>Add rewards for each kid in the Kids tab, set their prices, and let the coins pile up.</li>
@@ -140,7 +142,7 @@
 </figure>
 
 <h2>Their own phone, locked to their own list</h2>
-<p>A kid's phone locks itself to their own chores and rewards, so nobody quietly re-prices their own jobs. Any grown-up in the family can get past the lock with the kid-mode PIN.</p>
+<p>A kid's phone locks itself to their own chores and rewards, so nobody quietly re-prices their own jobs. Any grown-up in the family can get past the lock with the parent PIN.</p>
 <figure>
   <img class="screen" src="/assets/shot-kidphone.webp" alt="A kid&#x27;s iPhone in Choru, showing only their own chores for today and the next 7 days" loading="lazy" width="640" height="1284">
   <figcaption>On a kid's phone: their chores, and nothing to re-price.</figcaption>

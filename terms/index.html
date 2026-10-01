@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }

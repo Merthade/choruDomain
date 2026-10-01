@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -123,13 +125,13 @@
     </div>
     <img class="mascot" src="/assets/mascot-ready.webp" alt="" width="440" height="425">
   </div>
-  <p>Most chore trouble comes from the same place: the list lives in somebody's head. The daily jobs survive that, because they are in plain sight. The weekly ones mostly survive it. The jobs that come round every few months do not, and neither does a fair split, because nobody can see who did what.</p>
+  <p>A lot of chore trouble comes from the same place: the list lives in somebody's head. The daily jobs survive that, because they are in plain sight. The weekly ones mostly survive it. The jobs that come round every few months do not, and neither does a fair split, because nobody can see who did what.</p>
   <p>Each guide starts with what works without any app, then the workarounds worth knowing, then how <a href="/">Choru</a> handles it. Where the honest answer is that a simpler tool is enough, the guide says so.</p>
 </article>
 <section style="padding-top: 0;">
   <div class="container guide-cluster">
     <h2>Sharing the load</h2>
-    <p class="cluster-intro">Chores get easier to split once everyone can see them. These guides cover dividing the work between grown-ups and putting one list on every phone in the house.</p>
+    <p class="cluster-intro">Chores get easier to split once everyone can see them. These guides cover dividing the work between grown-ups and putting one list on everyone's iPhone.</p>
     <div class="guide-grid">
       <a class="guide-card" href="/guides/split-chores-with-partner/">
         <h3>How to Split Chores Fairly With Your Partner</h3>

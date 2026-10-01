@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -77,7 +79,7 @@
 <p>Your own chores, streak and coins stay on your phone. Leave from Settings, Family. If you started the family, you can remove it instead, which ends the sharing for everyone.</p>
 
 <h3>How do I set up a phone for a kid?</h3>
-<p>Set a kid-mode PIN first, in Settings, Kid mode. When the kid joins the family, they mark themselves as a kid. A kid's phone then locks itself to their own list, and any grown-up can unlock it with the PIN.</p>
+<p>Choru asks for a parent PIN when you start a family. If you skipped it, tap your own name in Settings, Family and choose Set a parent PIN. When the kid joins the family, they mark themselves as a kid. A kid's phone then locks itself to their own list, and any grown-up can unlock it with the PIN.</p>
 
 <h3>I reinstalled Choru. Where did my chores go?</h3>
 <p>They come back from iCloud once Choru has synced, which can take a moment on a fresh install. If they do not, open Settings, Backups and restore the automatic copy.</p>

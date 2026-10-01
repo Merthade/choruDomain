@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Choru: Family Chore Chart and Chore Tracker for iPhone</title>
-<meta name="description" content="Chores come back when they are due, missed ones carry over, and kids earn coins for rewards you pick. One shared chore chart, on every iPhone in the house.">
+<meta name="description" content="Chores come back when they are due, missed ones carry over, and kids earn coins for rewards you pick. One shared chore chart for the family, each on their own iPhone.">
 <link rel="canonical" href="https://getchoru.com/">
 <meta name="apple-itunes-app" content="app-id=6812494775">
 <meta name="theme-color" content="#120d1f">
@@ -32,7 +32,9 @@
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -121,7 +123,7 @@
       "name": "Where are my chores stored?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On your iPhone and in your own iCloud. Choru has no account of its own, and no server holds your chores. It also keeps an automatic backup copy in your iCloud Drive."
+        "text": "On your iPhone and in your own iCloud. Choru has no account of its own, and no server of mine holds your chores. With iCloud Drive on, it also keeps an automatic backup copy there."
       }
     },
     {
@@ -170,7 +172,7 @@
     <div>
       <span class="eyebrow">Family chore tracker for iPhone</span>
       <h1>Every chore comes back <span class="accent">when it's due</span></h1>
-      <p class="hero-sub">The dishes are obvious. It's the oven, the fridge shelves and the bathroom fan that sneak up on you. Choru keeps track of the chores you do every day and the ones you do every few months, and puts the list on every phone in the house.</p>
+      <p class="hero-sub">The dishes are obvious. It's the oven, the fridge shelves and the bathroom fan that sneak up on you. Choru keeps track of the chores you do every day and the ones you do every few months, and shares the list with your family, each on their own iPhone.</p>
       <div class="cta-row">
         <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Home&amp;mt=8" data-ph="appstore_click" aria-label="Download Choru on the App Store">
           <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60">
@@ -180,7 +182,7 @@
       <div class="android-cta">Someone in the family on Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
       <div class="trust-row">
         <span>Daily to yearly repeats</span>
-        <span>Shared with the whole house</span>
+        <span>Shared with the family</span>
         <span>Coins and rewards for kids</span>
         <span>No account, no ads</span>
       </div>
@@ -196,7 +198,7 @@
   <div class="container">
     <div class="section-head">
       <h2>A chore chart that does the remembering</h2>
-      <p>Everything a chart on the fridge can't do, on everyone's phone.</p>
+      <p>Everything a chart on the fridge can't do, on your family's iPhones.</p>
     </div>
     <div class="feature-grid">
       <div class="feature-card">
@@ -222,7 +224,7 @@
       <div class="feature-card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.6a3.2 3.2 0 010 6.8"/><path d="M18 14.3c1.8.8 3 2.7 3 5.7"/></svg></div>
         <h3>Share the household</h3>
-        <p>Invite the family with a QR code. Everyone sees the shared chores on their own iPhone.</p>
+        <p>Invite the family with a QR code, up to five people. Everyone sees the shared chores on their own iPhone.</p>
       </div>
       <div class="feature-card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.5 9.5c0-1 1.1-1.8 2.5-1.8s2.5.8 2.5 1.8-1.1 1.6-2.5 1.9-2.5.9-2.5 1.9 1.1 1.8 2.5 1.8 2.5-.8 2.5-1.8"/></svg></div>
@@ -273,7 +275,7 @@
           </figure>
           <figure>
             <img class="screen" src="/assets/shot-family.webp" alt="The family&#x27;s join code, ready for another iPhone to scan" loading="lazy" width="640" height="1284">
-            <figcaption>One family, every phone</figcaption>
+            <figcaption>One family, every iPhone</figcaption>
           </figure>
           <figure>
             <img class="screen" src="/assets/shot-kids.webp" alt="The Kids tab: a kid&#x27;s streak, chores and rewards" loading="lazy" width="640" height="1284">
@@ -311,7 +313,7 @@
           </figure>
           <figure>
             <img class="screen" src="/assets/shot-family.webp" alt="" loading="lazy" width="640" height="1284">
-            <figcaption>One family, every phone</figcaption>
+            <figcaption>One family, every iPhone</figcaption>
           </figure>
           <figure>
             <img class="screen" src="/assets/shot-kids.webp" alt="" loading="lazy" width="640" height="1284">
@@ -349,13 +351,13 @@
       </div>
       <div class="step">
         <div class="num">2</div>
-        <h3>Bring in the house</h3>
+        <h3>Bring in the family</h3>
         <p>Start a family in Settings and show the code. Everyone scans it with their own iPhone and sees the same list.</p>
       </div>
       <div class="step">
         <div class="num">3</div>
         <h3>Tick, earn, repeat</h3>
-        <p>Every tick pays coins and keeps the streak going. Each chore comes back by itself when it is due again.</p>
+        <p>Every tick pays coins, and clearing the day's list keeps the streak going. Each chore comes back by itself when it is due again.</p>
       </div>
     </div>
   </div>
@@ -435,7 +437,7 @@
       </details>
       <details>
         <summary>Where are my chores stored?</summary>
-        <p>On your iPhone and in your own iCloud. Choru has no account of its own, and no server holds your chores. It also keeps an automatic backup copy in your iCloud Drive. <a href="/privacy/">Learn more</a></p>
+        <p>On your iPhone and in your own iCloud. Choru has no account of its own, and no server of mine holds your chores. With iCloud Drive on, it also keeps an automatic backup copy there. <a href="/privacy/">Learn more</a></p>
       </details>
       <details>
         <summary>Does Choru have ads, or need an account?</summary>

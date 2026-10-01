@@ -42,7 +42,8 @@ def store_url(campaign):
 
 
 # person_profiles 'identified_only' and nothing ever identifies: anonymous events, no
-# profiles. persistence 'memory': no cookie and nothing in storage. The privacy page says so.
+# profiles. persistence 'memory': no cookie and nothing in storage. No autocapture and no
+# session recording: page views and the data-ph taps only. The privacy page says exactly that.
 ANALYTICS = """<link rel="preconnect" href="https://eu.i.posthog.com">
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing startSessionRecording stopSessionRecording isSessionRecordingStarted".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -50,7 +51,9 @@ ANALYTICS = """<link rel="preconnect" href="https://eu.i.posthog.com">
         posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only',
-            persistence: 'memory'
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
         });
         posthog.register({ app_name: 'choru_web' });
     }
@@ -203,7 +206,7 @@ card="List the chores nobody sees, split by time and taste, and stop keeping sco
 quick="""<strong>Quick answer:</strong> Write down every chore, including the ones that only come round every few months. Split them by how long they take and who minds them least, not one for one. Then keep the list where you both see it, so nobody has to be the one who remembers. A shared chore app like <a href="/">Choru</a> does the remembering: each chore comes back on both phones when it is due.""",
 body=f"""
 <h2>Start with the whole list, not the obvious one</h2>
-<p>Ask two people to list the household chores and you get two different lists. Dishes, laundry and the trash make both. The oven, the fridge shelves, the bathroom fan, the kettle that needs descaling and the dentist appointments usually make only one. Whoever wrote the longer list is the one feeling the load.</p>
+<p>Ask two people to list the household chores and you often get two different lists. Dishes, laundry and the trash make both. The oven, the fridge shelves, the bathroom fan, the kettle that needs descaling and the dentist appointments usually make only one. Whoever wrote the longer list is usually the one feeling the load.</p>
 <p>So write it all down together, in one sitting. If a job has ever made one of you sigh, it goes on the list.</p>
 
 <h2>Split by time and taste, not one for one</h2>
@@ -216,7 +219,7 @@ body=f"""
 </ul>
 
 <h2>Make it visible, so nobody keeps score in their head</h2>
-<p>A split rarely breaks because someone refuses to help. It breaks because the list lives in one person's head. They notice the oven is due, they ask, they remind. That noticing is work too, and it is the part that builds resentment.</p>
+<p>A split often breaks not because someone refuses to help, but because the list lives in one person's head. They notice the oven is due, they ask, they remind. That noticing is work too, and it is the part that builds resentment.</p>
 <p>Put the list somewhere you both see it, with dates. A whiteboard works until the every-three-months jobs fall off it. A shared chore app keeps those coming back on schedule, so neither of you has to be the one who remembers.</p>
 
 <h2>How to set it up in Choru</h2>
@@ -229,7 +232,7 @@ body=f"""
 {figure("shot-editor.webp", "Editing a chore in Choru: Wipe the counters, repeating daily, with a For row to pick who it belongs to and a reward of 3 coins", "Who it is for, how often it comes back, and what it pays.")}
 
 <h2>Check in on the numbers, not the feelings</h2>
-<p>Once a week, look at what actually got done. Choru's Stats count each person's chores for the week, which tends to settle the "I do everything" debate, one way or the other. If one side keeps coming out heavy, move a chore across. No speeches needed.</p>
+<p>Once a week, look at what actually got done. Choru's Stats count each person's chores for the week, which can settle the "I do everything" debate, one way or the other. If one side keeps coming out heavy, move a chore across. No speeches needed.</p>
 {figure("shot-stats.webp", "Choru Stats with the family's chores this week, counted per person", "The week's chores, per person.")}
 <div class="note-box">You each need Choru on your own iPhone, signed in to your own Apple Account. A family can have up to five people.</div>
 """,
@@ -243,7 +246,7 @@ slug="chore-chart-for-kids-with-rewards",
 title="How to Make a Chore Chart for Kids, With Rewards That Work",
 meta="A kids' chore chart that lasts past week two: a short list of real jobs, coins they earn, rewards you pick together, and a quick check before it counts.",
 h1="How to Make a Chore Chart for Kids That Lasts",
-lede="Most chore charts work for about nine days. Then the stickers run out, nobody checks it, and it turns into fridge art. Here is how to make one that keeps going.",
+lede="A chore chart is easy to start and hard to keep going. The stickers run out, nobody checks it, and it turns into fridge art. Here is how to make one that lasts.",
 card="Real jobs, coins they can spend, and a quick check before it counts.",
 quick="""<strong>Quick answer:</strong> Give each child a short list of jobs they can finish alone, pay a few points for each, and let them spend the points on rewards you agree on together. Keep the first reward close, and check the work before the points land. In <a href="/">Choru</a>, every chore pays coins, you set the rewards and their prices, and each kid's chores, streak and coins sit together in the Kids tab.""",
 body=f"""
@@ -253,7 +256,7 @@ body=f"""
 
 <h2>Points they can spend beat stickers they collect</h2>
 <p>Stickers are fun until there is nothing to do with them. Points that buy something give every chore a reason. Let the kids help write the reward list, with prices: half an hour of extra screen time, picking the film, a day out. Once they have their eye on something, the chart starts running itself.</p>
-<p>Keep the first prices within reach. If the first reward takes a month to earn, the chart is dead by week two.</p>
+<p>Keep the first prices within reach. If the first reward takes a month to earn, the chart may not last that long.</p>
 <p>Streaks help too. In Choru, a streak pays bonus coins when it reaches 3, 7, 14 and 30 days, and every 30 days after that.</p>
 
 <h2>Check it before it counts</h2>
@@ -262,7 +265,7 @@ body=f"""
 
 <h2>How to set it up in Choru</h2>
 <ol>
-  <li>Start a family in Settings, then Family, and set a kid-mode PIN under Settings, Kid mode.</li>
+  <li>Start a family in Settings, then Family. On the way, Choru asks the grown-ups for four digits: the parent PIN that gets any grown-up past a kid's phone lock. Skipped it? Tap your own name there later and choose Set a parent PIN.</li>
   <li>Each kid joins on their own iPhone by scanning the family's code, and marks themselves with <strong>I'm a kid</strong>.</li>
   <li>Add their chores and put them on the kid's list with the For row. Every chore pays coins, and you choose how many.</li>
   <li>Add rewards for each kid in the Kids tab, set their prices, and let the coins pile up.</li>
@@ -270,7 +273,7 @@ body=f"""
 {figure("shot-kids.webp", "Choru's Kids tab for Mia: a 21 day streak, her chores for today, and rewards like Pick the film for 12 coins", "Each kid's chores, streak, coins and rewards, on one screen.")}
 
 <h2>Their own phone, locked to their own list</h2>
-<p>A kid's phone locks itself to their own chores and rewards, so nobody quietly re-prices their own jobs. Any grown-up in the family can get past the lock with the kid-mode PIN.</p>
+<p>A kid's phone locks itself to their own chores and rewards, so nobody quietly re-prices their own jobs. Any grown-up in the family can get past the lock with the parent PIN.</p>
 {figure("shot-kidphone.webp", "A kid's iPhone in Choru, showing only their own chores for today and the next 7 days", "On a kid's phone: their chores, and nothing to re-price.")}
 <div class="note-box">Coins are a tally inside the app, not money. What a reward is, and keeping the promise, stays between you and your kids.</div>
 """,
@@ -295,7 +298,7 @@ body=f"""
 <p>Every home is different, so treat this as a first draft and adjust as you go:</p>
 <ul>
   <li><strong>Every 2 weeks:</strong> change the bed sheets, clean the shower screen, wipe out the microwave.</li>
-  <li><strong>Monthly:</strong> clean the fridge shelves, wash the trash cans, dust the baseboards, run the washing machine's cleaning cycle.</li>
+  <li><strong>Monthly:</strong> clean the fridge shelves, wash the trash cans, dust the baseboards, run the washing machine's cleaning cycle, if it has one.</li>
   <li><strong>Every 3 months:</strong> clean the oven, descale the kettle, vacuum under the sofa, wash the shower curtain.</li>
   <li><strong>Every 6 months:</strong> rotate the mattress, wash the pillows and the duvet, clean the bathroom fan cover, clear out the freezer.</li>
   <li><strong>Once a year:</strong> wash the windows inside and out, wash the curtains, clear the gutters.</li>
@@ -348,7 +351,7 @@ body=f"""
   <li><strong>Nothing adds up.</strong> Ticked reminders are tucked away, and there is no view of who did what this week, which is the number that matters when you split chores.</li>
   <li><strong>Nothing for kids.</strong> No points or rewards, and everyone on a shared list can edit everything on it.</li>
   <li><strong>One alert per chore.</strong> Each dated reminder alerts on its own, so a long chore list means a lot of alerts, or none if you switch them off.</li>
-  <li><strong>No streaks.</strong> Nothing marks a good week, which turns out to motivate grown-ups nearly as well as kids.</li>
+  <li><strong>No streaks.</strong> Nothing marks a good week.</li>
 </ul>
 
 <h2>If you stick with Reminders</h2>
@@ -373,20 +376,20 @@ body=f"""
 """,
 related=["deep-cleaning-schedule", "share-chore-list-with-family-iphone", "chore-chart-for-kids-with-rewards"],
 cta_h="A shared list that keeps score, gently",
-cta_p="Repeats, carry-over, coins and streaks, on every phone in the house.",
+cta_p="Repeats, carry-over, coins and streaks, shared with your family.",
 ),
 # ---------------------------------------------------------------- sharing
 dict(
 slug="share-chore-list-with-family-iphone",
 title="How to Share a Chore List With Your Family on iPhone",
-meta="Three ways to put the household chores on every iPhone in the house, from a shared note to a family chore app, and what each one is good for.",
+meta="Three ways to share the household chores with your family on iPhone, from a shared note to a family chore app, and what each one is good for.",
 h1="How to Share a Chore List With Your Family on iPhone",
-lede="A chore list only works if everyone can see it. The fridge door works until someone is not at home. Here are three ways to put the list on every phone in the house, and what each is good for.",
+lede="A chore list only works if everyone can see it. The fridge door works until someone is not at home. Here are three ways to put the list on your family's iPhones, and what each is good for.",
 card="A shared note, a shared Reminders list, or a family chore app, and what each is good for.",
 quick="""<strong>Quick answer:</strong> For a one-off list, share a checklist in the built-in Notes app or a list in Reminders. For chores that repeat and belong to someone, use a family chore app. In <a href="/">Choru</a>, start a family in Settings, show the code, and each person scans it with their own iPhone. Everyone then sees the shared chores on their own phone.""",
 body=f"""
 <h2>1. A shared note</h2>
-<p>Quick and free. Share a checklist in the Notes app, and everyone can tick items off. It falls apart with chores that repeat: a ticked item stays ticked until somebody unticks it, and nobody knows when it was last done.</p>
+<p>Quick and free. Share a checklist in the Notes app, and everyone can tick items off. It falls apart with chores that repeat: a ticked item stays ticked until somebody unticks it, and the note cannot tell you when a job is due again.</p>
 
 <h2>2. A shared list in Reminders</h2>
 <p>Better. The built-in Reminders app can repeat, and in a shared list you can assign items to people. For a couple with a short list, it works. What it lacks is any tally of who did what, and anything for kids. There is a <a href="/guides/chores-in-reminders-app/">longer look at Reminders for chores</a>.</p>
@@ -404,14 +407,13 @@ body=f"""
 <h2>Good to know</h2>
 <ul>
   <li><strong>Up to five people.</strong> A family in Choru can have five members, each on their own iPhone with their own Apple Account.</li>
-  <li><strong>One plan covers the family.</strong> Anyone who joins through the code can use Choru without a plan of their own.</li>
   <li><strong>Show the code, do not send it.</strong> Anyone who scans it can join. If it ever gets out, change the code: everyone already in stays in, and the old code stops working.</li>
   <li><strong>Leaving is easy.</strong> Leave from Settings, Family. Your own chores, streak and coins stay on your phone.</li>
   <li><strong>Kids can join too.</strong> A kid's phone locks itself to their own list. More in the <a href="/guides/chore-chart-for-kids-with-rewards/">kids' chore chart guide</a>.</li>
 </ul>
 """,
 related=["split-chores-with-partner", "chore-chart-for-kids-with-rewards", "chores-in-reminders-app"],
-cta_h="One list, on every phone in the house",
+cta_h="One chore list for the whole family",
 cta_p="Start a family, show the code, and everyone sees the shared chores.",
 ),
 ]
@@ -512,7 +514,7 @@ for p in PAGES:
 CLUSTERS = [
     ("Sharing the load",
      """Chores get easier to split once everyone can see them. These guides cover dividing the
-     work between grown-ups and putting one list on every phone in the house.""",
+     work between grown-ups and putting one list on everyone's iPhone.""",
      ["split-chores-with-partner", "share-chore-list-with-family-iphone"]),
     ("Kids and chores",
      """Kids do chores for the same reason grown-ups go to work: something in it for them. A short
@@ -601,7 +603,7 @@ hub_body = f"""<article class="article">
     </div>
     <img class="mascot" src="/assets/mascot-ready.webp" alt="" width="440" height="425">
   </div>
-  <p>Most chore trouble comes from the same place: the list lives in somebody's head. The daily jobs survive that, because they are in plain sight. The weekly ones mostly survive it. The jobs that come round every few months do not, and neither does a fair split, because nobody can see who did what.</p>
+  <p>A lot of chore trouble comes from the same place: the list lives in somebody's head. The daily jobs survive that, because they are in plain sight. The weekly ones mostly survive it. The jobs that come round every few months do not, and neither does a fair split, because nobody can see who did what.</p>
   <p>Each guide starts with what works without any app, then the workarounds worth knowing, then how <a href="/">Choru</a> handles it. Where the honest answer is that a simpler tool is enough, the guide says so.</p>
 </article>
 <section style="padding-top: 0;">
@@ -645,7 +647,7 @@ FEATURES = [
     ("repeat", "Repeats that fit real chores", "Daily, on set weekdays, weekly, monthly, quarterly, or every few days, weeks, months or years."),
     ("carry", "Missed ones carry over", "A chore you missed moves to today as one row, showing how late it is. Not one copy for every day you missed."),
     ("anytime", "Anytime tasks", "For jobs with no fixed date. Tick one off and it comes back a month, three months, six months or a year later."),
-    ("people", "Share the household", "Invite the family with a QR code. Everyone sees the shared chores on their own iPhone."),
+    ("people", "Share the household", "Invite the family with a QR code, up to five people. Everyone sees the shared chores on their own iPhone."),
     ("coin", "Coins and rewards you pick", "Every chore pays coins. Set your own rewards and their prices, then spend the coins on them."),
     ("kid", "A Kids tab", "Each kid's chores, streak and coins in one place. Their ticks can wait for a grown-up's OK."),
     ("flame", "A streak with days off", "Clear today's list to grow the streak. Rest days and days away keep it safe, and milestones pay bonus coins."),
@@ -655,7 +657,7 @@ SHOTS = [
     ("shot-done.webp", "Today's chores all ticked off, and Choru the dragon resting", "One tick at a time"),
     ("shot-chores.webp", "The Chores tab: what is due today and in the next 7 days, each with its repeat", "Every chore on its own rhythm"),
     ("shot-editor.webp", "Editing a chore: its repeat, who it is for, and how many coins it pays", "Set it once, it repeats"),
-    ("shot-family.webp", "The family's join code, ready for another iPhone to scan", "One family, every phone"),
+    ("shot-family.webp", "The family's join code, ready for another iPhone to scan", "One family, every iPhone"),
     ("shot-kids.webp", "The Kids tab: a kid's streak, chores and rewards", "A Kids tab for the children"),
     ("shot-rewards.webp", "Rewards with their prices in coins, like an hour of screen time or a day out", "Earn coins for every chore"),
     ("shot-stats.webp", "Stats: your streak, coins, and the family's chores this week", "See what got done"),
@@ -694,8 +696,8 @@ HOME_FAQ = [
      the days away and the streak carries across the trip.""",
      None),
     ("Where are my chores stored?",
-     """On your iPhone and in your own iCloud. Choru has no account of its own, and no server holds
-     your chores. It also keeps an automatic backup copy in your iCloud Drive.""",
+     """On your iPhone and in your own iCloud. Choru has no account of its own, and no server of mine
+     holds your chores. With iCloud Drive on, it also keeps an automatic backup copy there.""",
      "/privacy/"),
     ("Does Choru have ads, or need an account?",
      """No ads, and no account to make. Choru uses the Apple Account your iPhone is already signed in
@@ -745,7 +747,7 @@ def marquee_set(hidden):
 
 HOME_TITLE = "Choru: Family Chore Chart and Chore Tracker for iPhone"
 HOME_DESC = ("Chores come back when they are due, missed ones carry over, and kids earn coins for "
-             "rewards you pick. One shared chore chart, on every iPhone in the house.")
+             "rewards you pick. One shared chore chart for the family, each on their own iPhone.")
 HOME_OG = ("Every chore comes back when it is due. Share the list with the house, keep a streak, "
            "and spend the coins on rewards you pick.")
 STORE = store_url(CT_HOME)
@@ -757,7 +759,7 @@ home_body = f"""
     <div>
       <span class="eyebrow">Family chore tracker for iPhone</span>
       <h1>Every chore comes back <span class="accent">when it's due</span></h1>
-      <p class="hero-sub">The dishes are obvious. It's the oven, the fridge shelves and the bathroom fan that sneak up on you. Choru keeps track of the chores you do every day and the ones you do every few months, and puts the list on every phone in the house.</p>
+      <p class="hero-sub">The dishes are obvious. It's the oven, the fridge shelves and the bathroom fan that sneak up on you. Choru keeps track of the chores you do every day and the ones you do every few months, and shares the list with your family, each on their own iPhone.</p>
       <div class="cta-row">
         {badge(CT_HOME)}
         <a class="btn-secondary" href="#how-it-works">See how it works</a>
@@ -765,7 +767,7 @@ home_body = f"""
       <div class="android-cta">Someone in the family on Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
       <div class="trust-row">
         <span>Daily to yearly repeats</span>
-        <span>Shared with the whole house</span>
+        <span>Shared with the family</span>
         <span>Coins and rewards for kids</span>
         <span>No account, no ads</span>
       </div>
@@ -781,7 +783,7 @@ home_body = f"""
   <div class="container">
     <div class="section-head">
       <h2>A chore chart that does the remembering</h2>
-      <p>Everything a chart on the fridge can't do, on everyone's phone.</p>
+      <p>Everything a chart on the fridge can't do, on your family's iPhones.</p>
     </div>
     <div class="feature-grid">
 {feature_cards()}
@@ -821,13 +823,13 @@ home_body = f"""
       </div>
       <div class="step">
         <div class="num">2</div>
-        <h3>Bring in the house</h3>
+        <h3>Bring in the family</h3>
         <p>Start a family in Settings and show the code. Everyone scans it with their own iPhone and sees the same list.</p>
       </div>
       <div class="step">
         <div class="num">3</div>
         <h3>Tick, earn, repeat</h3>
-        <p>Every tick pays coins and keeps the streak going. Each chore comes back by itself when it is due again.</p>
+        <p>Every tick pays coins, and clearing the day's list keeps the streak going. Each chore comes back by itself when it is due again.</p>
       </div>
     </div>
   </div>
@@ -915,7 +917,7 @@ body="""
 <p>Your own chores, streak and coins stay on your phone. Leave from Settings, Family. If you started the family, you can remove it instead, which ends the sharing for everyone.</p>
 
 <h3>How do I set up a phone for a kid?</h3>
-<p>Set a kid-mode PIN first, in Settings, Kid mode. When the kid joins the family, they mark themselves as a kid. A kid's phone then locks itself to their own list, and any grown-up can unlock it with the PIN.</p>
+<p>Choru asks for a parent PIN when you start a family. If you skipped it, tap your own name in Settings, Family and choose Set a parent PIN. When the kid joins the family, they mark themselves as a kid. A kid's phone then locks itself to their own list, and any grown-up can unlock it with the PIN.</p>
 
 <h3>I reinstalled Choru. Where did my chores go?</h3>
 <p>They come back from iCloud once Choru has synced, which can take a moment on a fresh install. If they do not, open Settings, Backups and restore the automatic copy.</p>
@@ -971,7 +973,7 @@ body="""
 <p>Analytics can be turned off at any time in Settings, Help out, "Share anonymous usage". The app respects it immediately.</p>
 
 <h2>This website</h2>
-<p>getchoru.com counts page views and taps on its App Store links with PostHog, hosted in the EU, so I can see which pages are useful. It sets no cookies, stores nothing on your device, and does not build a profile of you.</p>
+<p>getchoru.com counts page views, and taps on its App Store links and a few buttons, with PostHog, hosted in the EU, so I can see which pages are useful. It sets no cookies, stores nothing on your device, and does not build a profile of you.</p>
 
 <h2>Purchases</h2>
 <p>If Choru offers purchases, Apple processes the payment. I never see your payment details.</p>
