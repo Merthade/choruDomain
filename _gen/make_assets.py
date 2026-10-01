@@ -88,7 +88,25 @@ def shell(img):
     top = bez + rimw + round(sw * ISLAND["top_ratio"])
     ix = ox + bez + rimw + (sw - iw) // 2
     d.rounded_rectangle([ix, top, ix + iw, top + ih], radius=ih // 2, fill=(0, 0, 0, 255))
+    out.alpha_composite(camera_lens(ih), (ix + iw - ih, top))
     return out
+
+
+def camera_lens(ih):
+    """The front camera at the island's right end (a plain black pill reads as fake):
+    concentric with the right cap, a dark ring, a navy glass, one small glint.
+    Drawn at 4x and scaled down, so the edges are smooth."""
+    s = 4
+    size = ih * s
+    lens = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lens)
+    c, r = size / 2, size * 0.19
+    d.ellipse([c - r, c - r, c + r, c + r], fill=(26, 26, 32, 255))
+    g = r * 0.68
+    d.ellipse([c - g, c - g, c + g, c + g], fill=(12, 17, 34, 255))
+    h, hx, hy = r * 0.2, c - r * 0.3, c - r * 0.32
+    d.ellipse([hx - h, hy - h, hx + h, hy + h], fill=(70, 78, 112, 200))
+    return lens.resize((ih, ih), Image.LANCZOS)
 
 
 def save_webp(img, name, quality=82):
