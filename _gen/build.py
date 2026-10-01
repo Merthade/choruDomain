@@ -312,7 +312,7 @@ cta_p="Coins for every chore, rewards you pick together, and a grown-up check be
 # ---------------------------------------------------------------- deep cleaning
 dict(
 slug="deep-cleaning-schedule",
-title="How to Keep a Deep Cleaning Schedule: Monthly, Quarterly, Yearly",
+title="Deep Cleaning Schedule: Monthly, Quarterly, Yearly Jobs",
 meta="The oven, the fridge shelves, the bathroom fan: the jobs that come round every few months get forgotten. A schedule that brings each one back when due.",
 h1="How to Keep a Deep Cleaning Schedule",
 lede="Nobody forgets the dishes. The dishes are right there in the sink, looking at you. It is the oven, the fridge shelves and the bathroom fan that sneak up on you, because nothing reminds you until they are gross.",
@@ -359,7 +359,7 @@ cta_p="Daily to yearly repeats, and a missed chore carries over instead of disap
 dict(
 slug="chores-in-reminders-app",
 title="Can You Use the iPhone Reminders App for Chores?",
-meta="The built-in Reminders app can repeat chores and share a list with your family. What it does well, where it falls short for a household, and when a chore app fits better.",
+meta="The built-in Reminders app can repeat chores and share a list. What it does well, where it falls short for a household, and when a chore app fits better.",
 h1="Can You Use the iPhone Reminders App for Chores?",
 lede="It is already on your phone, it syncs through iCloud, and it can repeat. So why not run the house on the built-in Reminders app? For some homes it is enough. Here is how to tell.",
 card="What the built-in app handles well, where it falls short, and when that matters.",
@@ -661,7 +661,7 @@ hub_head_ld = ld({
     "url": f"{DOMAIN}/guides/",
 }) + "\n" + faq_ld(hub_items)
 write("guides/index.html",
-      page("Chore Guides: Splitting Chores, Kids' Charts, Cleaning Schedules",
+      page("Chore Guides: Splitting Chores, Kids and Cleaning",
            "Practical guides to household chores: splitting chores fairly, chore charts for kids, deep cleaning schedules, and sharing a chore list on iPhone.",
            f"{DOMAIN}/guides/", hub_body, CT_GUIDE, hub_head_ld))
 
@@ -783,7 +783,7 @@ def marquee_set(hidden):
 
 HOME_TITLE = "Choru: Family Chore Chart and Chore Tracker for iPhone"
 HOME_DESC = ("Chores come back when they are due, missed ones carry over, and kids earn coins for "
-             "rewards you pick. One shared chore chart for the family, each on their own iPhone.")
+             "rewards you pick. A shared chore chart for your family's iPhones.")
 HOME_OG = ("Every chore comes back when it is due. Share the list with the house, keep a streak, "
            "and spend the coins on rewards you pick.")
 STORE = store_url(CT_HOME)

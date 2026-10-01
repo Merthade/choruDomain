@@ -125,8 +125,10 @@ def main():
             fails.append(f"{where}: {pg.h1} h1 elements")
         if not pg.title or not pg.desc:
             fails.append(f"{where}: missing title or description")
-        elif len(pg.desc) > 170:
-            fails.append(f"{where}: description {len(pg.desc)} chars")
+        elif len(pg.desc) > 160:
+            fails.append(f"{where}: description {len(pg.desc)} chars (Google cuts at about 160)")
+        if pg.title and len(pg.title) > 60:
+            fails.append(f"{where}: title {len(pg.title)} chars (Google cuts at about 60)")
         expected = DOMAIN + ("/404.html" if rel == "/404.html" else rel)
         if pg.canonical != expected:
             fails.append(f"{where}: canonical {pg.canonical} != {expected}")
