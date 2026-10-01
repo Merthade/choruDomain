@@ -6,7 +6,7 @@
 
 Checks: every internal link, anchor and image resolves; image width/height match the file;
 JSON-LD parses; one h1, a title, a description and a self-canonical per page; App Store
-links carry both pt and ct; the sitemap lists exactly the pages; and the visible copy has
+links carry both pt and ct, and never sit beside a 'Coming soon' (ON_STORE is all or nothing); the sitemap lists exactly the pages; and the visible copy has
 no em or en dashes, no hype words from brand.md, and no named competitor.
 """
 import json
@@ -180,6 +180,19 @@ def main():
         for name in COMPETITORS:
             if re.search(r"\b" + re.escape(name) + r"\b", copy):
                 fails.append(f"{where}: names a competitor: {name}")
+
+    # ON_STORE in build.py: either every download is a store link or every one reads
+    # "Coming soon". A mix, or a Smart App Banner while coming soon, is a half-done switch.
+    soon_pages, store_pages = [], []
+    for rel in pages:
+        raw = open(target(rel), encoding="utf-8").read()
+        soon = "soon-pill" in raw or "nav-cta--soon" in raw
+        store = "apps.apple.com/app/" in raw or "apple-itunes-app" in raw
+        if soon and store:
+            fails.append(f"{rel}: both 'Coming soon' and an App Store link or banner")
+        (soon_pages if soon else store_pages if store else []).append(rel)
+    if soon_pages and store_pages:
+        fails.append(f"site: coming soon on {len(soon_pages)} pages, store links on {sorted(store_pages)}")
 
     sm = ElementTree.parse(os.path.join(ROOT, "sitemap.xml")).getroot()
     locs = sorted(e.text for e in sm.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc"))

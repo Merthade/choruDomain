@@ -310,3 +310,24 @@ a.article-cta:hover { text-decoration: none; }
   .hub-head { flex-direction: column-reverse; align-items: flex-start; }
   .hub-head .mascot { width: 120px; }
 }
+
+/* ---------- Coming soon (ON_STORE = False in _gen/build.py) ---------- */
+/* Not Apple's badge: an app that is not out yet gets no "Download" artwork */
+.soon-pill {
+  display: inline-flex; align-items: center; gap: 10px; height: 60px; padding: 0 22px;
+  border-radius: 13px; border: 1px solid rgba(180, 139, 255, 0.40);
+  background: var(--accent-dim); color: var(--text); font-weight: 650; font-size: 16.5px;
+  cursor: default;
+}
+.soon-pill svg {
+  width: 22px; height: 22px; fill: none; stroke: var(--accent);
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.nav-cta--soon {
+  background: var(--accent-dim); color: var(--accent-soft) !important;
+  border: 1px solid rgba(180, 139, 255, 0.35); cursor: default;
+}
+.nav-cta--soon:hover { background: var(--accent-dim); }
+.footer-soon { color: var(--muted); font-size: 14.5px; }
+/* The CTA boxes are links only when there is a store page to go to */
+div.cta-band:hover, div.article-cta:hover { transform: none; border-color: rgba(180, 139, 255, 0.32); }

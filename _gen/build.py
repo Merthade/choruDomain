@@ -22,6 +22,10 @@ APP_ID = "6812494775"
 STORE_CANONICAL = f"https://apps.apple.com/app/id{APP_ID}"
 TODAY = "2026-10-01"
 MIN_IOS = "26.5"            # IPHONEOS_DEPLOYMENT_TARGET of the 1.0 build
+# False until Choru is on the App Store: every download button reads "Coming soon", the
+# Smart App Banner and the JSON-LD downloadUrl stay out (an App Store link to an app that
+# is not out yet is a dead page). Launch day: True, rebuild, check, push.
+ON_STORE = False
 
 # ---- App Analytics campaign attribution (AlarmPlanner's rules, same provider) ----------
 # Apple's campaign-link form is /app/apple-store/id<id>?pt=&ct=&mt=8, and BOTH tokens are
@@ -93,7 +97,7 @@ HEADER_TPL = """<header class="site-header">
       <a href="/#how-it-works">How it works</a>
       <a href="/guides/">Guides</a>
       <a href="/#faq">FAQ</a>
-      <a class="nav-cta" href="{store}" data-ph="appstore_click">Download</a>
+      {nav_cta}
     </div>
   </nav>
 </header>"""
@@ -110,7 +114,7 @@ FOOTER_TPL = """<footer class="site-footer">
       </div>
       <div class="footer-links">
         <a href="/guides/">Guides</a>
-        <a href="{store}" data-ph="appstore_click">App Store</a>
+        {footer_store}
         <a href="/support/">Support</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
@@ -123,12 +127,19 @@ FOOTER_TPL = """<footer class="site-footer">
 </footer>"""
 
 
+SMART_BANNER = f'<meta name="apple-itunes-app" content="app-id={APP_ID}">\n' if ON_STORE else ""
+
+
 def header(campaign=CT_HOME):
-    return HEADER_TPL.format(store=store_url(campaign))
+    nav = (f'<a class="nav-cta" href="{store_url(campaign)}" data-ph="appstore_click">Download</a>' if ON_STORE
+           else '<span class="nav-cta nav-cta--soon">Coming soon</span>')
+    return HEADER_TPL.format(nav_cta=nav)
 
 
 def footer(campaign=CT_HOME):
-    return FOOTER_TPL.format(store=store_url(campaign), min_ios=MIN_IOS)
+    store = (f'<a href="{store_url(campaign)}" data-ph="appstore_click">App Store</a>' if ON_STORE
+             else '<span class="footer-soon">App Store: coming soon</span>')
+    return FOOTER_TPL.format(footer_store=store, min_ios=MIN_IOS)
 
 
 def head(title, desc, canonical, og_type="article", ogtitle=None, ogdesc=None):
@@ -139,8 +150,7 @@ def head(title, desc, canonical, og_type="article", ogtitle=None, ogdesc=None):
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{canonical}">
-<meta name="apple-itunes-app" content="app-id={APP_ID}">
-<meta name="theme-color" content="#120d1f">
+{SMART_BANNER}<meta name="theme-color" content="#120d1f">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -161,11 +171,29 @@ def head(title, desc, canonical, og_type="article", ogtitle=None, ogdesc=None):
 {ANALYTICS}"""
 
 
+def cta_band():
+    inner = """<h2>Let the list do the remembering</h2>
+      <p>Add the chores once. Choru brings each one back when it is due.</p>
+      <div class="cta-row">
+        {pill}
+      </div>"""
+    if not ON_STORE:
+        return f'    <div class="cta-band">\n      {inner.format(pill=SOON_PILL)}\n    </div>'
+    badge_img = '<span class="badge-link"><img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60"></span>'
+    return (f'    <a class="cta-band" href="{store_url(CT_HOME)}" data-ph="appstore_click" aria-label="Download Choru on the App Store">\n'
+            f'      {inner.format(pill=badge_img)}\n    </a>')
+
+
 def ld(data):
     return f'<script type="application/ld+json">\n{json.dumps(data, indent=2, ensure_ascii=False)}\n</script>'
 
 
+SOON_PILL = """<span class="soon-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Coming soon to the App Store</span>"""
+
+
 def badge(campaign, label="Download Choru on the App Store"):
+    if not ON_STORE:
+        return SOON_PILL
     return f"""<a class="badge-link" href="{store_url(campaign)}" data-ph="appstore_click" aria-label="{label}">
           <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60">
         </a>"""
@@ -433,6 +461,14 @@ def related_html(slugs):
 
 
 def cta_html(h, ptext, campaign):
+    if not ON_STORE:
+        return f"""<div class="article-cta">
+    <h2>{h}</h2>
+    <p>{ptext}</p>
+    <div class="cta-row">
+      {SOON_PILL}
+    </div>
+  </div>"""
     # The ENTIRE box is one anchor (no nested links: the badge is a decorative span)
     return f"""<a class="article-cta" href="{store_url(campaign)}" data-ph="appstore_click" aria-label="Download Choru on the App Store">
     <h2>{h}</h2>
@@ -716,7 +752,7 @@ def home_faq_details():
         if href is None:
             link = ""
         elif href.startswith("#"):
-            link = f' <a href="{href}">Get the app</a>'
+            link = f' <a href="{href}">Get the app</a>' if ON_STORE else ""
         else:
             link = f' <a href="{href}">Learn more</a>'
         out.append(f"""      <details>
@@ -863,15 +899,7 @@ home_body = f"""
 <!-- ============ CTA ============ -->
 <section>
   <div class="container">
-    <a class="cta-band" href="{STORE}" data-ph="appstore_click" aria-label="Download Choru on the App Store">
-      <h2>Let the list do the remembering</h2>
-      <p>Add the chores once. Choru brings each one back when it is due.</p>
-      <div class="cta-row">
-        <span class="badge-link">
-          <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60">
-        </span>
-      </div>
-    </a>
+{cta_band()}
     <div class="android-cta android-cta--center">Someone in the family on Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
   </div>
 </section>
@@ -884,9 +912,9 @@ home_ld = ld({
     "applicationCategory": "HomeApplication",
     "description": "Family chore tracker for iPhone. Chores repeat on their own schedule, missed ones carry over, the list is shared with the household, and every chore earns coins for rewards you pick.",
     "url": f"{DOMAIN}/",
-    "downloadUrl": STORE_CANONICAL,
     "author": {"@type": "Person", "name": "Emils Ozols", "url": "https://ozols.dev"},
     "image": f"{DOMAIN}/assets/icon-512.png",
+    **({"downloadUrl": STORE_CANONICAL} if ON_STORE else {}),
 }) + "\n" + faq_ld(HOME_FAQ)
 write("index.html", page(HOME_TITLE, HOME_DESC, f"{DOMAIN}/", home_body, CT_HOME, home_ld,
                          og_type="website", ogdesc=HOME_OG))
