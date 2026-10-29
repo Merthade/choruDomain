@@ -19,13 +19,12 @@ SITE = os.path.dirname(GEN)
 DOMAIN = "https://getchoru.com"
 APP_ID = "6812494775"
 # The plain product URL, for structured data: a reference, not a click to attribute.
-STORE_CANONICAL = f"https://apps.apple.com/app/id{APP_ID}"
+STORE_CANONICAL = f"https://apps.apple.com/us/app/choru-chore-chart-rewards/id{APP_ID}"
 TODAY = "2026-10-01"
 MIN_IOS = "26.5"            # IPHONEOS_DEPLOYMENT_TARGET of the 1.0 build
-# False until Choru is on the App Store: every download button reads "Coming soon", the
-# Smart App Banner and the JSON-LD downloadUrl stay out (an App Store link to an app that
-# is not out yet is a dead page). Launch day: True, rebuild, check, push.
-ON_STORE = False
+# True since 2026-10-29, the day 1.0 went live. False puts every download button back to
+# "Coming soon" and takes out the Smart App Banner and the JSON-LD downloadUrl.
+ON_STORE = True
 
 # ---- App Analytics campaign attribution (AlarmPlanner's rules, same provider) ----------
 # Apple's campaign-link form is /app/apple-store/id<id>?pt=&ct=&mt=8, and BOTH tokens are
