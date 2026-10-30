@@ -205,7 +205,21 @@ def figure(src, alt, caption):
 </figure>"""
 
 
+# Every WebP <img> falls back to its PNG twin (make_assets.py `png_twin`) when the WebP fails:
+# some company networks block image/webp outright, and a <picture> source would not help, since
+# the browser picks the WebP it supports and never retries. Inline, so it is attached before the
+# image can fail.
+WEBP_IMG = re.compile(r'(<img\b[^>]*?\bsrc="(/assets/[^"]+)\.webp")')
+
+
+def webp_fallback(text):
+    return WEBP_IMG.sub(
+        lambda m: m.group(1) + f' onerror="this.onerror=null;this.src=\'{m.group(2)}.png\'"', text)
+
+
 def write(rel, text):
+    if rel.endswith(".html"):
+        text = webp_fallback(text)
     path = os.path.join(SITE, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:

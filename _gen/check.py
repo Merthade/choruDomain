@@ -5,7 +5,7 @@
   python3 _gen/check.py <root>     another copy (the positive control breaks one on purpose)
 
 Checks: every internal link, anchor and image resolves; image width/height match the file;
-JSON-LD parses; one h1, a title, a description and a self-canonical per page; App Store
+JSON-LD parses; one h1, a title, a description and a self-canonical per page; every WebP <img> falls back to an existing PNG twin; App Store
 links carry both pt and ct, and never sit beside a 'Coming soon' (ON_STORE is all or nothing); the sitemap lists exactly the pages; and the visible copy has
 no em or en dashes, no hype words from brand.md, and no named competitor.
 """
@@ -160,6 +160,13 @@ def main():
             if not os.path.isfile(path):
                 fails.append(f"{where}: missing image {src}")
                 continue
+            if src.endswith(".webp"):
+                # Networks that block image/webp get the PNG twin (build.py webp_fallback).
+                twin = src[:-len(".webp")] + ".png"
+                if f"this.src='{twin}'" not in (img.get("onerror") or ""):
+                    fails.append(f"{where}: {src} has no onerror fallback to {twin}")
+                elif not os.path.isfile(target(twin)):
+                    fails.append(f"{where}: {src} falls back to a missing {twin}")
             if src.endswith((".png", ".webp")) and "width" in img:
                 from PIL import Image
                 # width/height reserve the layout box: the ratio must match the file, the

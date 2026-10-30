@@ -12,6 +12,7 @@ Needs Pillow. Run from anywhere: python3 _gen/make_assets.py
 """
 import io
 import os
+import sys
 from PIL import Image, ImageDraw, ImageFont
 
 GEN = os.path.dirname(os.path.abspath(__file__))
@@ -113,6 +114,17 @@ def save_webp(img, name, quality=82):
     path = os.path.join(OUT, name)
     img.save(path, "WEBP", quality=quality, method=6)
     print(f"{name:22s} {img.size[0]}x{img.size[1]}  {os.path.getsize(path) // 1024}KB")
+    png_twin(name)
+
+
+def png_twin(name):
+    """The WebP's pixels again as a full-colour PNG. Some company networks refuse image/webp
+    (Emil's work laptop, 2026-10-30: a security error on every .webp, the PNGs load); build.py
+    gives each WebP <img> an onerror that swaps in this file. Only those visitors download it.
+    No 256-colour quantising: Pillow's octree tinted the screenshots pink."""
+    twin = name[:-len(".webp")] + ".png"
+    Image.open(os.path.join(OUT, name)).save(os.path.join(OUT, twin), "PNG", optimize=True)
+    print(f"{twin:22s} (fallback)  {os.path.getsize(os.path.join(OUT, twin)) // 1024}KB")
 
 
 def largest_png(imageset):
@@ -172,6 +184,11 @@ def icons():
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
+    if sys.argv[1:] == ["--twins"]:     # PNG twins for the WebPs already in assets/, nothing else
+        for name in sorted(os.listdir(OUT)):
+            if name.endswith(".webp"):
+                png_twin(name)
+        sys.exit(0)
     icons()
     for name, raw in SHOTS.items():
         framed = shell(Image.open(os.path.join(RAW, raw)))
