@@ -812,7 +812,6 @@ home_body = f"""
       <p class="hero-sub">The dishes are obvious. It's the oven, the fridge shelves and the bathroom fan that sneak up on you. Choru keeps track of the chores you do every day and the ones you do every few months, and shares the list with your family, each on their own iPhone.</p>
       <div class="cta-row">
         {badge(CT_HOME)}
-        <a class="btn-secondary" href="#how-it-works">See how it works</a>
         <span class="cta-qr" aria-hidden="true"><img src="/assets/qr-appstore.svg" alt="" width="84" height="84"><span>On a computer? Scan with your iPhone camera to open the App Store.</span></span>
       </div>
       <div class="android-cta">Someone in the family on Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
