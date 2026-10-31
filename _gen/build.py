@@ -490,6 +490,7 @@ def cta_html(h, ptext, campaign):
       <span class="badge-link">
         <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60">
       </span>
+      <span class="cta-qr" aria-hidden="true"><img src="/assets/qr-appstore.svg" alt="" width="84" height="84"><span>On a computer? Scan with your iPhone camera to open the App Store.</span></span>
     </div>
   </a>"""
 
@@ -812,6 +813,7 @@ home_body = f"""
       <div class="cta-row">
         {badge(CT_HOME)}
         <a class="btn-secondary" href="#how-it-works">See how it works</a>
+        <span class="cta-qr" aria-hidden="true"><img src="/assets/qr-appstore.svg" alt="" width="84" height="84"><span>On a computer? Scan with your iPhone camera to open the App Store.</span></span>
       </div>
       <div class="android-cta">Someone in the family on Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
       <div class="trust-row">

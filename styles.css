@@ -252,6 +252,13 @@ a.cta-band:hover { text-decoration: none; }
 .footer-more { color: var(--muted); font-size: 14px; line-height: 1.8; margin-top: 22px; }
 .footer-more a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
 
+/* Desktop visitors cannot install from the App Store button, so the CTA carries a QR code (2026-11-01). */
+.cta-qr { display: none; }
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .cta-qr { display: inline-flex; align-items: center; gap: 12px; max-width: 260px; text-align: left; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+  .cta-qr img { width: 84px; height: 84px; border-radius: 8px; flex: none; }
+}
+
 /* ---------- Guide article pages ---------- */
 .article { max-width: 760px; margin: 0 auto; padding: 48px 24px 20px; }
 .breadcrumb { font-size: 14px; color: var(--muted); margin-bottom: 22px; }
