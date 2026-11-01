@@ -462,7 +462,7 @@ cta_p="Start a family, show the code, and everyone sees the shared chores.",
 # Guides written by Holocron's SEO autopilot: one JSON per guide in _gen/guides/ (2026-11-02).
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.expanduser("~/Documents/Holocron/tools/seo-autopilot"))
-from guide_files import load_guides, add_to_clusters, apply_backlinks, guide_top, quick_box  # noqa: E402
+from guide_files import load_guides, add_to_clusters, apply_backlinks, guide_top, quick_box, guide_head  # noqa: E402
 AP_QUICK = '<div class="quick-answer"><p>{}</p></div>'
 EXTRA_GUIDES = load_guides(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "guides"), style="choru")
 PAGES += EXTRA_GUIDES
@@ -557,14 +557,14 @@ for p in PAGES:
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › {p['h1']}</nav>
   <h1>{p['h1']}</h1>
   <p class="lede">{p['lede']}</p>
-  {guide_top('choru')}
+  {guide_top('choru', p)}
   {quick_box(p['quick'], AP_QUICK)}
 {p['body']}
 {cta_html(p['cta_h'], p['cta_p'], CT_GUIDE)}
 {related_html(p['related'])}
 </article>"""
     write(f"guides/{p['slug']}/index.html",
-          page(p["title"], p["meta"], canonical, body, CT_GUIDE, article_ld(p, canonical)))
+          guide_head(page(p["title"], p["meta"], canonical, body, CT_GUIDE, article_ld(p, canonical)), p))
 
 # =========================================================================================
 # GUIDES HUB
