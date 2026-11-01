@@ -464,7 +464,7 @@ cta_p="Start a family, show the code, and everyone sees the shared chores.",
 # Guides written by Holocron's SEO autopilot: one JSON per guide in _gen/guides/ (2026-11-02).
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.expanduser("~/Documents/Holocron/tools/seo-autopilot"))
-from guide_files import load_guides, add_to_clusters, apply_backlinks, guide_top, quick_box, guide_head, guide_bottom, attach_heroes  # noqa: E402
+from guide_files import load_guides, add_to_clusters, apply_backlinks, guide_top, quick_box, guide_head, guide_bottom, attach_heroes, unwrap_unknown  # noqa: E402
 from site_extras import patch_home_rating, features_hub, feature_extras, whats_new, about as about_page  # noqa: E402
 AP_QUICK = '<div class="quick-answer"><p>{}</p></div>'
 EXTRA_GUIDES = load_guides(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "guides"), style="choru")
@@ -575,6 +575,7 @@ PAGE_JS += SHARED_FX
 
 
 def render_article(p, section="guides", crumb="Guides", campaign=CT_GUIDE, extra=""):
+    p = dict(p, body=unwrap_unknown(p["body"], {x["slug"] for x in PAGES}, {f["slug"] for f in FEATURE_PAGES}))
     canonical = f"{DOMAIN}/{section}/{p['slug']}/"
     body = f"""<article class="article">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/{section}/">{crumb}</a> › {p['h1']}</nav>
