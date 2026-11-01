@@ -20,7 +20,8 @@ GEN = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(GEN)
 DOMAIN = "https://getchoru.com"
 
-HYPE = [r"\bgame[- ]changer\b", r"\brevolutionary\b", r"\blife[- ]changing\b", r"\bthe best\b",
+HYPE = [r"\bgame[- ]changer\b", r"\brevolutionary\b", r"\blife[- ]changing\b", r"\bthe best\b(?![^.!?]*\?)",  # a reader's question ("What is the best nap time?") is fine; a claim is not
+       
         r"#1\b", r"\bguaranteed?\b", r"\bnever forget\b", r"\blimited time\b", r"\bact now\b",
         r"\bdon'?t miss out\b", r"\bcrush\b", r"\bsmash\b", r"\bdominate\b"]
 COMPETITORS = ["OurHome", "Sweepy", "Tody", "S'moresUp", "BusyKid", "Greenlight", "Homey",
