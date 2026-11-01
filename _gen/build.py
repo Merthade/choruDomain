@@ -561,6 +561,19 @@ def page(title, desc, canonical, body, campaign=CT_HOME, extra_head="", og_type=
 """
 
 
+# Shared footer, QR card and knock-out carousel (Holocron site_extras, 2026-11-01; same as alarmclockplanner.com)
+from site_extras import standard_footer, SHARED_FX  # noqa: E402
+
+
+def footer(campaign=CT_HOME):
+    compare = []
+    return standard_footer("choru", "Choru", "The family chore chart that does the remembering.", store_url(campaign), FEATURE_PAGES,
+                           [("Guides", "/guides/"), ("What's New", "/whats-new/"), ("About", "/about/"), ("Support", "/support/"), ("Privacy", "/privacy/"), ("Terms", "/terms/")], compare)
+
+
+PAGE_JS += SHARED_FX
+
+
 def render_article(p, section="guides", crumb="Guides", campaign=CT_GUIDE, extra=""):
     canonical = f"{DOMAIN}/{section}/{p['slug']}/"
     body = f"""<article class="article">
