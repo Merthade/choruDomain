@@ -152,7 +152,7 @@ def main():
                     other = pages.get(href.split("#")[0] or "/")
                     if other is None or frag not in other.ids:
                         fails.append(f"{where}: anchor {href} has no target")
-            elif not href.startswith(("https://", "mailto:")):
+            elif not href.startswith(("https://", "mailto:", "sms:")):
                 fails.append(f"{where}: odd link {href}")
         for img in pg.imgs:
             src = img.get("src", "")

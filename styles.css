@@ -341,3 +341,8 @@ a.article-cta:hover { text-decoration: none; }
 .footer-soon { color: var(--muted); font-size: 14.5px; }
 /* The CTA boxes are links only when there is a store page to go to */
 div.cta-band:hover, div.article-cta:hover { transform: none; border-color: rgba(180, 139, 255, 0.32); }
+
+/* Feature cards link to their /features/ page once it exists (whole card clickable). */
+.feature-card{position:relative}
+.feature-card h3 a{color:inherit;text-decoration:none}
+.feature-card h3 a::after{content:"";position:absolute;inset:0;border-radius:inherit}
