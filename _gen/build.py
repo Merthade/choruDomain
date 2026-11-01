@@ -459,6 +459,13 @@ cta_p="Start a family, show the code, and everyone sees the shared chores.",
 ),
 ]
 
+# Guides written by Holocron's SEO autopilot: one JSON per guide in _gen/guides/ (2026-11-02).
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.expanduser("~/Documents/Holocron/tools/seo-autopilot"))
+from guide_files import load_guides, add_to_clusters  # noqa: E402
+EXTRA_GUIDES = load_guides(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "guides"), style="choru")
+PAGES += EXTRA_GUIDES
+
 BY_SLUG = {p["slug"]: p for p in PAGES}
 
 
@@ -575,6 +582,7 @@ CLUSTERS = [
      months that slip, and a list that does not repeat cannot catch them.""",
      ["deep-cleaning-schedule", "chores-in-reminders-app"]),
 ]
+CLUSTERS = add_to_clusters(CLUSTERS, EXTRA_GUIDES, style="choru")
 _clustered = [s for _, _, slugs in CLUSTERS for s in slugs]
 assert sorted(_clustered) == sorted(BY_SLUG), (
     f"hub out of sync: missing {sorted(set(BY_SLUG) - set(_clustered))}, "
