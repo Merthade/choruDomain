@@ -96,5 +96,22 @@
   ]
  ],
  "published": "2026-11-01",
- "status": "published"
+ "status": "published",
+ "link_from": [
+  {
+   "page": "deep-cleaning-schedule",
+   "after_heading": "Why the rare jobs get forgotten",
+   "sentence": "Daily jobs need a trigger too, and <a href=\"/guides/how-to-manage-household-chores/\">how to manage household chores</a> shows how tying each one to something you already do, like finishing dinner, turns it into a habit."
+  },
+  {
+   "page": "split-chores-with-partner",
+   "after_heading": "Start with the whole list, not the obvious one",
+   "sentence": "If you are building that list from scratch, <a href=\"/guides/how-to-manage-household-chores/\">how to manage household chores</a> walks through the house room by room and gives every job a rhythm, from daily to yearly."
+  },
+  {
+   "page": "chores-in-reminders-app",
+   "after_heading": "If you stick with Reminders",
+   "sentence": "Whichever app holds the list, <a href=\"/guides/how-to-manage-household-chores/\">how to manage household chores</a> covers the system behind it: one owner per chore, short timed bursts and a plan for the days you miss."
+  }
+ ]
 }
