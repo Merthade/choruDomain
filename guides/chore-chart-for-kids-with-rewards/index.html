@@ -114,6 +114,49 @@
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › How to Make a Chore Chart for Kids That Lasts</nav>
   <h1>How to Make a Chore Chart for Kids That Lasts</h1>
   <p class="lede">A chore chart is easy to start and hard to keep going. The stickers run out, nobody checks it, and it turns into fridge art. Here is how to make one that lasts.</p>
+  <style>
+.ap-get{margin:22px 0 30px;display:flex;flex-direction:column;gap:12px;max-width:560px}
+.ap-get-btn{display:block;text-align:center;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;
+  background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-get-btn:hover{filter:brightness(1.06)}
+.ap-get-card{display:none;align-items:center;gap:16px;padding:14px 16px;border:1px solid rgba(128,128,128,.3);border-radius:14px}
+.ap-get-card img{width:96px;height:96px;flex:none;border-radius:8px;background:#fff}
+.ap-get-card strong{display:block;margin-bottom:3px}.ap-get-card span{display:block;opacity:.75;font-size:.92em}
+.ap-sms{display:inline-block;margin-top:6px;font-size:.92em}
+.ap-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 10px;
+  border-radius:14px;border:1px solid rgba(128,128,128,.3);background:var(--bg,var(--surface,#fff));color:inherit;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:13px;line-height:1.25;transform:translateY(140%);transition:transform .25s ease}
+.ap-float.on{transform:none}
+.ap-float img{width:34px;height:34px;border-radius:8px}
+.ap-float b{display:block;font-size:13.5px}.ap-float small{opacity:.7}
+.ap-float a.go{margin-left:6px;padding:9px 12px;border-radius:10px;font-weight:700;font-size:12px;letter-spacing:.03em;
+  text-transform:uppercase;text-decoration:none;background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-float button{border:0;background:none;color:inherit;opacity:.5;font-size:16px;cursor:pointer;padding:2px 4px}
+.ap-float .phone{display:none}
+@media (min-width:900px) and (hover:hover) and (pointer:fine){.ap-get-card{display:flex}}
+@media (max-width:899px),(hover:none){.ap-float .computer{display:none}.ap-float .phone{display:inline-block}}
+@media (prefers-reduced-motion:reduce){.ap-float{transition:none}}
+</style>
+<style>:root{--ap-on-accent:#1c0f33}</style>
+<div class="ap-get" id="ap-get">
+  <a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_GuideTop&amp;mt=8" data-ph="appstore_click">Get Choru on the App Store</a>
+  <div class="ap-get-card">
+    <img src="/assets/qr-appstore.svg" alt="QR code that opens Choru on the App Store" width="96" height="96">
+    <div><strong>Choru is an iPhone app</strong><span>Point your iPhone camera at the code to open the App Store.</span>
+      <a class="ap-sms" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click">or text me the link</a></div>
+  </div>
+</div>
+<aside class="ap-float" id="ap-float" aria-label="Choru on the App Store">
+  <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+  <span><b>Choru</b><small>Family chore chart</small></span>
+  <a class="go computer" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click">Text me the link</a>
+  <a class="go phone" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_GuideTop&amp;mt=8" data-ph="appstore_click">Get</a>
+  <button type="button" aria-label="Hide" onclick="this.parentNode.remove();try{sessionStorage.setItem('apFloat','0')}catch(e){}">&times;</button>
+</aside>
+<script>(function(){var f=document.getElementById('ap-float'),g=document.getElementById('ap-get');if(!f||!g)return;
+try{if(sessionStorage.getItem('apFloat')==='0'){f.remove();return}}catch(e){}
+if(!('IntersectionObserver' in window)){f.classList.add('on');return}
+new IntersectionObserver(function(es){var e=es[0];f.classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0)}).observe(g)})();</script>
   <div class="quick-answer"><p><strong>Quick answer:</strong> Give each child a short list of jobs they can finish alone, pay a few points for each, and let them spend the points on rewards you agree on together. Keep the first reward close, and check the work before the points land. In <a href="/">Choru</a>, every chore pays coins, you set the rewards and their prices, and each kid's chores, streak and coins sit together in the Kids tab.</p></div>
 
 <h2>Keep the list short and the jobs real</h2>
