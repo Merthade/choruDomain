@@ -15,6 +15,11 @@ import os
 import sys
 from PIL import Image, ImageDraw, ImageFont
 
+# Apple's own product bezel since 2026-11-01 (Holocron brand.md; bezel PNGs in ~/Documents/Xcode/AppleBezels,
+# never in this repo). The bezel carries the Dynamic Island and camera, so nothing is painted on the capture.
+sys.path.insert(0, os.path.expanduser("~/Documents/Holocron/tools/web-frames"))
+from apple_bezel import frame as apple_frame  # noqa: E402
+
 GEN = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(GEN)
 APP = os.path.dirname(SITE)                      # the Choru app repo this site sits in
@@ -55,42 +60,9 @@ MASCOTS = {
 
 
 def shell(img):
-    """AlarmPlanner's frame_web.py shell (buttons protrude) plus the store Dynamic Island."""
-    img = img.convert("RGBA")
-    sw, height = img.size
-    scr_r = int(sw * SCREEN_R_RATIO)
-    bez = max(6, int(sw * BEZEL_RATIO))
-    rimw = max(2, int(sw * RIM_RATIO))
-    bwid = max(3, rimw * 2)
+    """The capture in Apple's iPhone bezel (Dynamic Island and camera included)."""
+    return apple_frame(img)
 
-    fw, fh = sw + (bez + rimw) * 2, height + (bez + rimw) * 2
-    W, H = fw + bwid * 2, fh
-    ox = bwid
-    out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(out)
-
-    unit = fh / 100
-    for y0, y1 in [(20, 26), (30, 40), (42, 52)]:                     # action, vol up, vol down
-        d.rounded_rectangle([2, int(unit * y0), ox + 2, int(unit * y1)],
-                            radius=bwid // 2, fill=RIM_COLOR)
-    d.rounded_rectangle([ox + fw - 2, int(unit * 33), W - 2, int(unit * 50)],   # power
-                        radius=bwid // 2, fill=RIM_COLOR)
-
-    d.rounded_rectangle([(ox, 0), (ox + fw - 1, fh - 1)], radius=scr_r + bez + rimw, fill=RIM_COLOR)
-    d.rounded_rectangle([(ox + rimw, rimw), (ox + fw - rimw - 1, fh - rimw - 1)],
-                        radius=scr_r + bez, fill=(8, 8, 10, 255))
-
-    m = Image.new("L", img.size, 0)
-    ImageDraw.Draw(m).rounded_rectangle([(0, 0), img.size], radius=scr_r, fill=255)
-    img.putalpha(m)
-    out.paste(img, (ox + bez + rimw, bez + rimw), img)
-
-    iw, ih = round(sw * ISLAND["w_ratio"]), round(sw * ISLAND["h_ratio"])
-    top = bez + rimw + round(sw * ISLAND["top_ratio"])
-    ix = ox + bez + rimw + (sw - iw) // 2
-    d.rounded_rectangle([ix, top, ix + iw, top + ih], radius=ih // 2, fill=(0, 0, 0, 255))
-    out.alpha_composite(camera_lens(ih), (ix + iw - ih, top))
-    return out
 
 
 def camera_lens(ih):
