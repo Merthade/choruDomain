@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recurring Chores App: Repeats That Fit | Choru</title>
+<meta name="description" content="Choru repeats a chore daily, on chosen weekdays, weekly, monthly, quarterly, or every N days, weeks, months or years. See every option and its limits.">
+<link rel="canonical" href="https://getchoru.com/features/chore-repeats/">
+<meta name="apple-itunes-app" content="app-id=6812494775">
+<meta name="theme-color" content="#120d1f">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Choru">
+<meta property="og:title" content="Recurring Chores App: Repeats That Fit | Choru">
+<meta property="og:description" content="Choru repeats a chore daily, on chosen weekdays, weekly, monthly, quarterly, or every N days, weeks, months or years. See every option and its limits.">
+<meta property="og:url" content="https://getchoru.com/features/chore-repeats/">
+<meta property="og:image" content="https://getchoru.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ozolsdev">
+<meta name="twitter:title" content="Recurring Chores App: Repeats That Fit | Choru">
+<meta name="twitter:description" content="Choru repeats a chore daily, on chosen weekdays, weekly, monthly, quarterly, or every N days, weeks, months or years. See every option and its limits.">
+<meta name="twitter:image" content="https://getchoru.com/assets/og-image.png">
+<link rel="preconnect" href="https://eu.i.posthog.com">
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing startSessionRecording stopSessionRecording isSessionRecordingStarted".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) && location.hostname !== '') {
+        posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
+        });
+        posthog.register({ app_name: 'choru_web' });
+    }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Repeats that fit real chores",
+  "description": "Choru repeats a chore daily, on chosen weekdays, weekly, monthly, quarterly, or every N days, weeks, months or years. See every option and its limits.",
+  "image": "https://getchoru.com/assets/og-image.png",
+  "datePublished": "2026-10-01",
+  "dateModified": "2026-10-01",
+  "author": {
+    "@type": "Person",
+    "name": "Emils Ozols",
+    "url": "https://ozols.dev"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Choru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getchoru.com/assets/icon-512.png"
+    }
+  },
+  "mainEntityOfPage": "https://getchoru.com/features/chore-repeats/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getchoru.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://getchoru.com/features/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Repeats that fit real chores",
+      "item": "https://getchoru.com/features/chore-repeats/"
+    }
+  ]
+}
+</script>
+<meta name="robots" content="max-image-preview:large">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="/">
+      <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+      Choru
+    </a>
+    <div class="nav-links">
+      <a href="/features/">Features</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#faq">FAQ</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<article class="article">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/features/">Features</a> › Repeats that fit real chores</nav>
+  <h1>Repeats that fit real chores</h1>
+  <p class="lede">Choru lets a chore repeat daily, on the weekdays you pick, weekly, monthly, quarterly, or every few days, weeks, months or years. You set the pattern once and the chore shows up on the right days of the calendar.</p>
+  <style>
+.ap-get{margin:22px auto 30px;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:440px;text-align:center}
+.ap-get-btn{display:block;width:100%;text-align:center;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;
+  background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-get-btn:hover{filter:brightness(1.06)}
+.ap-get-card{display:none;width:100%;align-items:center;gap:16px;padding:14px 16px;text-align:left;border-radius:14px;
+  border:1px solid color-mix(in srgb,var(--accent,var(--green,#2563eb)) 30%,transparent);
+  background:color-mix(in srgb,var(--accent,var(--green,#2563eb)) 6%,transparent)}
+.ap-get-card img{width:104px;height:104px;flex:none;border-radius:10px;background:#fff;padding:7px;box-sizing:border-box}
+.ap-get-card .t{display:block;font-weight:700;line-height:1.25}
+.ap-get-card .s{display:block;margin-top:4px;font-size:.88em;line-height:1.4;opacity:.72}
+.ap-sms{display:inline-block;margin-top:8px;font-size:.9em;font-weight:600;color:var(--accent,var(--green,#2563eb));
+  text-decoration:underline;text-underline-offset:3px}
+.ap-end{margin:40px auto 10px;max-width:440px;text-align:center}
+.ap-end h2{margin:0 0 14px}
+.ap-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 10px;
+  border-radius:14px;border:1px solid rgba(128,128,128,.3);background:var(--bg,var(--surface,#fff));color:inherit;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:13px;line-height:1.25;transform:translateY(140%);transition:transform .25s ease}
+.ap-float.on{transform:none}
+.ap-float img{width:34px;height:34px;border-radius:8px}
+.ap-float b{display:block;font-size:13.5px}.ap-float small{opacity:.7}
+.ap-float a.go{margin-left:6px;padding:9px 12px;border-radius:10px;font-weight:700;font-size:12px;letter-spacing:.03em;
+  text-transform:uppercase;text-decoration:none;background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-float button{border:0;background:none;color:inherit;opacity:.5;font-size:16px;cursor:pointer;padding:2px 4px}
+.ap-float .phone{display:none}
+@media (min-width:900px) and (hover:hover) and (pointer:fine){.ap-get-card{display:flex}}
+@media (max-width:899px),(hover:none){.ap-float .computer{display:none}.ap-float .phone{display:inline-block}}
+@media (prefers-reduced-motion:reduce){.ap-float{transition:none}}
+</style>
+<style>:root{--ap-on-accent:#1c0f33}</style>
+<div class="ap-get" id="ap-get">
+  <a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get Choru on the App Store</a>
+  <div class="ap-get-card">
+    <img src="/assets/qr-appstore.svg" alt="QR code that opens Choru on the App Store" width="104" height="104">
+    <span><span class="t">Choru is an iPhone app</span><span class="s">Point your iPhone camera at the code to install it.</span>
+      <a class="ap-sms" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Copy&amp;mt=8">or text me the link</a></span>
+  </div>
+</div>
+<aside class="ap-float" id="ap-float" aria-label="Choru on the App Store">
+  <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+  <span><b>Choru</b><small>Family chore chart</small></span>
+  <a class="go computer" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Copy&amp;mt=8">Text me the link</a>
+  <a class="go phone" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get</a>
+  <button type="button" aria-label="Hide" onclick="this.parentNode.remove();try{sessionStorage.setItem('apFloat','0')}catch(e){}">&times;</button>
+</aside>
+<script>(function(){  // sms: opens Messages on a Mac; elsewhere nothing reliably handles it, so offer Copy link (Emil, 2026-11-02)
+var mac=/Mac/i.test(navigator.platform||'')||/Macintosh/.test(navigator.userAgent);if(mac)return;
+document.querySelectorAll('[data-sms]').forEach(function(a){var u=a.getAttribute('data-copy'),big=a.classList.contains('go');
+a.textContent=big?'Copy link':'or copy the link';a.href=u;a.setAttribute('data-ph','copy_link_click');
+a.addEventListener('click',function(e){if(!navigator.clipboard)return;e.preventDefault();
+navigator.clipboard.writeText(u).then(function(){var t=a.textContent;a.textContent=big?'Copied':'Link copied';
+setTimeout(function(){a.textContent=t},1800)},function(){location.href=u})})})})();</script>
+<script>(function(){var f=document.getElementById('ap-float'),g=document.getElementById('ap-get');if(!f||!g)return;
+try{if(sessionStorage.getItem('apFloat')==='0'){f.remove();return}}catch(e){}
+if(!('IntersectionObserver' in window)){f.classList.add('on');return}
+new IntersectionObserver(function(es){var e=es[0];f.classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0)}).observe(g)})();</script>
+  
+<style>
+.ap-table{overflow-x:auto;margin:20px 0 26px;-webkit-overflow-scrolling:touch}
+.ap-table table{width:100%;border-collapse:collapse;font-size:.95em;line-height:1.45}
+.ap-table th,.ap-table td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(128,128,128,.28)}
+.ap-table thead th{font-weight:700;border-bottom-width:2px;white-space:nowrap}
+.ap-table td:first-child{min-width:11em}
+.ap-table td:last-child,.ap-table th:last-child{white-space:nowrap}
+.ap-table td:last-child a{font-weight:600}
+.ap-toc{margin:18px 0 28px;padding:14px 18px;border:1px solid rgba(128,128,128,.28);border-radius:12px}
+.ap-toc strong{display:block;font-size:.85em;letter-spacing:.04em;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.ap-toc ol{margin:0;padding-left:1.3em}.ap-toc li{margin:3px 0}
+h2[id],h3[id]{scroll-margin-top:84px}
+</style>
+<div class="ap-toc" role="navigation" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#what-it-does">What the repeat setting does</a></li><li><a href="#how-it-works">How to set a repeat, step by step</a></li><li><a href="#options">Every repeat option</a></li><li><a href="#when-to-use">When each repeat is the right tool</a></li><li><a href="#limits">What it does not do</a></li></ol></div>
+<h2 id="what-it-does">What the repeat setting does</h2>
+<p>Every dated chore in Choru has a <strong>Repeat</strong> setting. Pick one of seven choices, and the chore lands on the matching days of the <a href="/features/chore-calendar/">chore calendar</a> on its own, today, next week and a year from now. Wipe the counters every day, take the bins out on Tuesday and Friday, descale the kettle every three months: one chore each, set once.</p>
+<p>The Clock app is built for alarms: a time of day that rings. That suits "get up at 7". A chore is different. It is a job that is due on a day and stays due until you do it, and some jobs come round every three weeks or every quarter, which is awkward to express as an alarm. In Choru the repeat is a rule about days, and each day's occurrence is something you can tick off.</p>
+
+<figure><img class="screen" src="/assets/shot-editor.webp" onerror="this.onerror=null;this.src='/assets/shot-editor.png'" alt="Choru's Edit chore screen with the Repeat row set to Daily and a Starts date of Thu, 27 Aug below it" loading="lazy" width="640" height="1306"><figcaption>The Edit chore screen. The Repeat row sits under the tag and the people, with the Starts date beneath it.</figcaption></figure>
+
+<h2 id="how-it-works">How to set a repeat, step by step</h2>
+<ol>
+<li>Tap <strong>+</strong> (Add chore) on the Calendar or Chores tab. To edit a chore, tap its row.</li>
+<li>Type the name of the chore and choose a tag, such as Kitchen or Bathroom.</li>
+<li>Tap the <strong>Repeat</strong> menu in the schedule card and choose a kind (the full list is in <a href="#options">the options below</a>).</li>
+<li>If you chose <strong>Specific days</strong>, tap the seven day letters to switch days on and off. If you chose <strong>Custom</strong>, use the <strong>Every</strong> stepper for the number and the menu beside it for days, weeks, months or years.</li>
+<li>Tap the <strong>Starts</strong> row to open a month and pick the first day. A weekly chore falls on the weekday of that date, so start it on the day you want it to land.</li>
+<li>Tap the check mark, top right, to save.</li>
+</ol>
+<p>If you would rather not type each chore, Settings has a starter list of common jobs by room. Quarterly ones such as cleaning the oven, scrubbing the grout and washing the pillows are already marked with the right repeat. The slower ones start spread over the coming week, so ten chores do not all fall due on the same day.</p>
+
+<h2 id="options">Every repeat option</h2>
+<div class="ap-table"><table>
+<thead><tr><th>Repeat</th><th>When the chore is due</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Does not repeat</td><td>Once, on the day you choose</td><td>Book the boiler service</td></tr>
+<tr><td>Daily</td><td>Every day from the start date</td><td>Wipe the counters</td></tr>
+<tr><td>Specific days</td><td>The weekdays you tick, in your region's week order</td><td>Bins on Tue and Fri</td></tr>
+<tr><td>Weekly</td><td>Every 7 days from the start date</td><td>Change the bed sheets</td></tr>
+<tr><td>Monthly</td><td>Once a month, on the start date's day of the month</td><td>Clean the fridge</td></tr>
+<tr><td>Quarterly</td><td>Every 3 months</td><td>Descale the kettle</td></tr>
+<tr><td>Custom</td><td>Every N days, weeks, months or years</td><td>Water the plants every 5 days</td></tr>
+</tbody>
+</table></div>
+<p>Custom starts at 2 and has a ceiling that depends on the unit, because past it the next unit up is the better choice:</p>
+<div class="ap-table"><table>
+<thead><tr><th>Unit</th><th>Range</th></tr></thead>
+<tbody>
+<tr><td>Days</td><td>2 to 30</td></tr>
+<tr><td>Weeks</td><td>2 to 12</td></tr>
+<tr><td>Months</td><td>2 to 11</td></tr>
+<tr><td>Years</td><td>2 to 10</td></tr>
+</tbody>
+</table></div>
+<p>Some details are worth knowing. Specific days reads back in plain words: "Weekdays" for Monday to Friday, "Weekends" for Saturday and Sunday, otherwise something like "Mon, Wed and Fri". A monthly chore started on the 31st lands on the last day of shorter months. And changing a repeat later is safe: Choru says "Changes apply from today. Past days keep the schedule they had." Your streak and past ticks do not move.</p>
+
+<h2 id="when-to-use">When each repeat is the right tool</h2>
+<h3 id="ap-daily-jobs-with-no-fuss">Daily jobs with no fuss</h3>
+<p>Dishes, counters, a quick tidy. Choose Daily and it appears every day. If your household never does chores on certain days, set those in Settings as Rest days instead of editing each chore. Nothing is due on a rest day.</p>
+<h3 id="ap-jobs-that-follow-the-week">Jobs that follow the week</h3>
+<p>Bins on Tuesday and Friday, school bags on Sunday evening. Specific days covers any mix of weekdays, so you do not need two chores for one job.</p>
+<h3 id="ap-seasonal-and-quarterly-deep-cleaning">Seasonal and quarterly deep cleaning</h3>
+<p>Oven, grout, windows, mattress. Quarterly puts them on a calendar without you holding the dates in your head. The <a href="/guides/deep-cleaning-schedule/">deep cleaning schedule guide</a> shows how to split these across rooms.</p>
+<h3 id="ap-every-few-days-or-weeks">Every few days or weeks</h3>
+<p>Houseplants every 5 days, hoovering behind the sofa every 3 weeks, the shower head every 2 months. Custom handles intervals that a weekly or monthly choice cannot.</p>
+<h3 id="ap-once-a-year-or-twice">Once a year, or twice</h3>
+<p>Gutters, the boiler service, the smoke alarm batteries. A dated chore cannot repeat yearly, but an anytime task can come back a month, 3 months, 6 months or a year after you tick it. See <a href="#limits">the limits</a>.</p>
+
+<h2 id="limits">What it does not do</h2>
+<ul>
+<li><strong>No yearly repeat on its own.</strong> The Custom stepper starts at 2, so "every year" and "every 12 months" cannot be set. The shortest year-based choice is every 2 years.</li>
+<li><strong>No "third Tuesday of the month".</strong> Monthly repeats on the start date's day of the month, not on a weekday position.</li>
+<li><strong>No repeat that waits for you.</strong> A dated chore stays on its schedule whether or not you did it last time, and a missed one is carried over. If you want a job that comes back a set time after you finish it, use an anytime task instead. Those can come back a month, 3 months, 6 months or a year after you tick them.</li>
+<li><strong>No time of day.</strong> A repeat decides the day. It does not ring at a set hour, which is what the Clock app is for.</li>
+</ul>
+<p>A missed chore carries over to today as one row that shows how many days late it is. To put the chores on shared lists, read <a href="/guides/share-chore-list-with-family-iphone/">how to share a chore list with family</a>.</p>
+
+<section class="guide-faq">
+  <h2>Frequently asked questions</h2>
+  <h3>What is a good recurring chores app for different schedules?</h3>
+  <p>Look for one that does more than daily and weekly. Choru repeats a chore daily, on the weekdays you tick, weekly, monthly, quarterly, or every 2 or more days, weeks, months or years, so a quarterly oven clean and a daily wipe-down sit in the same list.</p>
+  <h3>How do I set a chore every 3 months?</h3>
+  <p>Open the chore, tap the Repeat menu and choose Quarterly. It comes round every 3 months from the Starts date. You can also pick Custom and set Every 3 months.</p>
+  <h3>Can I repeat a chore on certain days of the week?</h3>
+  <p>Yes. Choose Specific days and tap the day letters you want, for example Tuesday and Friday. Choru shows Monday to Friday as Weekdays and Saturday and Sunday as Weekends.</p>
+  <h3>What happens if I change a chore&#x27;s repeat later?</h3>
+  <p>The change applies from today. Days before today keep the schedule they had, so your streak, flames and past ticks stay as they were.</p>
+  <h3>Can a chore repeat once a year?</h3>
+  <p>Not as a dated chore. Custom starts at 2, so the shortest year-based repeat there is every 2 years. An anytime task can be set to Yearly and comes back a year after you tick it off.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good recurring chores app for different schedules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look for one that does more than daily and weekly. Choru repeats a chore daily, on the weekdays you tick, weekly, monthly, quarterly, or every 2 or more days, weeks, months or years, so a quarterly oven clean and a daily wipe-down sit in the same list."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I set a chore every 3 months?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the chore, tap the Repeat menu and choose Quarterly. It comes round every 3 months from the Starts date. You can also pick Custom and set Every 3 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I repeat a chore on certain days of the week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose Specific days and tap the day letters you want, for example Tuesday and Friday. Choru shows Monday to Friday as Weekdays and Saturday and Sunday as Weekends."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I change a chore's repeat later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The change applies from today. Days before today keep the schedule they had, so your streak, flames and past ticks stay as they were."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a chore repeat once a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not as a dated chore. Custom starts at 2, so the shortest year-based repeat there is every 2 years. An anytime task can be set to Yearly and comes back a year after you tick it off."
+      }
+    }
+  ]
+}
+</script>
+<section class="guide-sources">
+  <h2>Sources</h2>
+  <ol>
+  <li><a href="https://support.apple.com/guide/iphone/set-an-alarm-iph2909d3a74/ios" rel="noopener">Apple Support: iPhone User Guide, Clock</a></li>
+  </ol>
+</section>
+<div class="ap-end"><h2>Set a chore once and let it repeat</h2><a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_FeatureEnd&amp;mt=8" data-ph="appstore_click">Get Choru on the App Store</a></div>
+<div class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/guides/deep-cleaning-schedule/">How to Keep a Deep Cleaning Schedule</a></li>
+      <li><a href="/guides/chores-in-reminders-app/">Can You Use the iPhone Reminders App for Chores?</a></li>
+    </ul>
+    <p><a href="/guides/">All guides</a></p>
+  </div>
+<style>
+.ap-rating{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;font-size:15px;opacity:.92}
+.ap-rating .st{position:relative;display:inline-block;letter-spacing:2px;color:rgba(127,127,127,.35)}
+.ap-rating .st i{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap;color:#f5b301;font-style:normal}
+.ap-rating b{font-weight:700}
+.ap-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin:24px 0 8px}
+.ap-cards a.ap-card{display:flex;flex-direction:column;border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;
+ border:1px solid rgba(127,127,127,.22);background:rgba(127,127,127,.06)}
+.ap-cards a.ap-card:hover{border-color:rgba(127,127,127,.45)}
+.ap-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.ap-card .tx{padding:14px 16px 16px}
+.ap-card h2,.ap-card h3{font-size:18px;margin:0 0 6px;line-height:1.3}
+.ap-card p{margin:0;font-size:15px;opacity:.8;line-height:1.5}
+.ap-rel{border-top:1px solid rgba(127,127,127,.22);padding:22px 0 0;margin:28px 0 0}
+.ap-rel h2{font-size:20px;margin:0 0 10px}
+.ap-release{border-top:1px solid rgba(127,127,127,.22);padding:18px 0 4px}
+.ap-release h2{font-size:20px;margin:0 0 4px}
+.ap-release .when{font-size:14px;opacity:.7;margin:0 0 8px}
+.ap-release ul{margin:6px 0 10px;padding-left:20px}
+@media (max-width:520px){.ap-cards{grid-template-columns:1fr}}
+</style><section class="ap-rel"><h2>More features</h2><div class="ap-cards"><a class="ap-card" href="/features/anytime-tasks/"><div class="tx"><h3>Anytime tasks that come back later</h3><p>Jobs with no fixed date come back 1, 3, 6 or 12 months after you tick them off.</p></div></a><a class="ap-card" href="/features/coins-and-rewards/"><div class="tx"><h3>Coins and rewards you pick</h3><p>Every chore pays 1 to 3 coins, and you write the rewards, set their prices and spend the coins.</p></div></a><a class="ap-card" href="/features/family-sharing/"><div class="tx"><h3>Share the household with up to five people</h3><p>Invite the family with a QR code, up to five people, and change the code any time it gets out.</p></div></a></div><p><a href="/features/">All features</a></p></section>
+</article>
+</main>
+
+<style>
+.sf{border-top:1px solid var(--border,rgba(127,127,127,.22));padding:44px 0 34px;font-size:14px;color:var(--muted,#9aa6bf)}
+.sf a{color:var(--muted,#9aa6bf);text-decoration:none}.sf a:hover{color:var(--text,#fff);text-decoration:none}
+.sf-brand{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-bottom:22px}
+.sf-name{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;color:var(--text,#fff)}
+.sf-name img{width:30px;height:30px;border-radius:8px}
+.sf-note{margin:0;font-size:13px;line-height:1.5}
+.sf-dl{margin-left:auto;padding:10px 16px;border-radius:10px;font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;
+  background:var(--accent,#34d477);color:var(--ap-on-accent,#06210f)!important}
+.sf-dl:hover{filter:brightness(1.06)}
+.sf-main{display:flex;flex-wrap:wrap;gap:8px 22px;padding-bottom:20px;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-main a{color:var(--accent,#34d477);font-size:14.5px}.sf-main a:hover{color:var(--text,#fff)}
+.sf a.cur{color:var(--accent,#34d477);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.sf-sec{padding:18px 0;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-sec:last-of-type{border-bottom:0}
+.sf-label{display:block;margin-bottom:12px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text,#fff)}
+.sf-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px 18px;line-height:1.4}
+.sf-grid>a,.sf-grid>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sf-note{white-space:nowrap}
+.sf-grid>a{color:var(--muted,#9aa6bf);opacity:.8}.sf-grid>a:hover{opacity:1;color:var(--text,#fff)}
+.sf-grid .on{color:var(--accent,#34d477);font-weight:700}
+.sf-legal{margin:18px 0 0;font-size:12px;opacity:.7}
+@media (max-width:900px){.sf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sf-dl{margin-left:0}}
+</style>
+<footer class="site-footer sf">
+  <div class="container">
+    <div class="sf-brand">
+      <div class="sf-name"><img src="/assets/apple-touch-icon.png" alt="" width="30" height="30">Choru</div>
+      <p class="sf-note">The family chore chart that does the remembering.</p>
+      <a class="sf-dl" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download on the App Store</a>
+    </div>
+    <div class="sf-main" role="navigation" aria-label="Footer"><a href="/features/">Features</a><a href="/guides/">Guides</a><a href="/whats-new/">What's New</a><a href="/about/">About</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div class="sf-sec"><span class="sf-label">Features</span><div class="sf-grid"><a href="/features/anytime-tasks/">Anytime tasks that come back later</a><a href="/features/chore-repeats/">Repeats that fit real chores</a><a href="/features/coins-and-rewards/">Coins and rewards you pick</a><a href="/features/family-sharing/">Share the household with up to five people</a><a href="/features/missed-chores/">Missed chores carry over as one row</a><a href="/features/streaks/">A chore streak that survives days off</a></div></div><div class="sf-sec"><span class="sf-label">More apps by the same developer</span><div class="sf-grid"><a href="https://alarmclockplanner.com/">Alarm Clock Planner</a><a href="https://remireminder.app/">Remi</a><a href="https://risemorning.app/">Rise</a><a href="https://getscooch.com/">Scooch</a><a href="https://getcharactersheet.com/">CharacterSheet</a></div></div>
+    <p class="sf-legal">© <a href="https://ozols.dev" rel="author">Emils Ozols</a>. Apple, iPhone, and the App Store badge are trademarks of Apple Inc.</p>
+  </div>
+  <script>document.querySelectorAll('.sf a').forEach(function(a){if(a.pathname===location.pathname)a.classList.add('cur')});</script>
+</footer>
+<script>
+    // posthog.capture exists only after posthog.init, which is skipped on localhost: guard it,
+    // so a preview click still works and no tracking call can stop the page responding.
+    function track(name) {
+        try {
+            if (window.posthog && typeof posthog.capture === 'function') {
+                posthog.capture(name, { page: location.pathname });
+            }
+        } catch (e) {}
+    }
+    document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-ph]');
+        if (el) track(el.getAttribute('data-ph'));
+    });
+    document.querySelectorAll('[data-android]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            btn.parentElement.innerHTML = '<span class="android-cta-done">Thanks. Your interest in an Android version has been noted.</span>';
+            track('android_waitlist_signup');
+        });
+    });
+</script><style>
+.cta-qr{border:1px solid color-mix(in srgb,var(--accent,#34d477) 32%,transparent);background:color-mix(in srgb,var(--accent,#34d477) 7%,transparent);
+  border-radius:14px;padding:10px 14px 10px 10px;gap:12px}
+.cta-qr img{background:#fff;padding:6px;border-radius:9px;box-sizing:border-box}
+</style><script>
+// Shared by every app site (Holocron tools/seo-autopilot/site_fx_shared.js, inlined by each generator):
+// tap a screenshot in the "See it in action" carousel and it falls out; knock them all out for a reward.
+// Decoration only; off for prefers-reduced-motion except the plain removal.
+(function () {
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var T = function (k) { return (window.AP_T && window.AP_T[k]) || k; };
+  var css = '' +
+    '.shots-marquee figure{cursor:pointer;transition:width .45s ease,margin .45s ease,opacity .3s ease}' +
+    '.shots-marquee figure.gone{width:0!important;margin-right:0!important;opacity:0}' +
+    '.ko-fall{position:fixed;z-index:60;pointer-events:none;margin:0}' +
+    '.ko-win{display:none;text-align:center;padding:30px 16px 34px}' +
+    '.ko-win.on{display:block;animation:koIn .5s cubic-bezier(.2,.9,.3,1.3)}' +
+    '.ko-win h3{font-size:26px;margin:0 0 6px}.ko-win p{color:var(--muted);margin:0 0 18px}' +
+    '.ko-win .badge-link{display:inline-flex}.ko-win button{display:block;margin:16px auto 0;background:none;border:0;color:var(--accent);font:inherit;font-size:14px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}' +
+    '@keyframes koIn{0%{opacity:0;transform:scale(.85)}100%{opacity:1;transform:none}}';;
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+  function ready(fn) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  ready(function () {
+    // ---------- 4. tap a screenshot and it falls out of the carousel; knock them all out for a reward ----------
+    var mq = document.querySelector('.shots-marquee');
+    if (mq) {
+      var sets = [].slice.call(mq.querySelectorAll('.shots-set'));
+      var total = sets[0].children.length, left = total, track = mq.querySelector('.shots-track');
+      var store = mq.querySelector('a.badge-link') || document.querySelector('.hero a.badge-link');
+      var win = document.createElement('div');
+      win.className = 'ko-win';
+      win.innerHTML = '<h3>' + T('Good job, you broke it.') + '</h3><p>' + T('Here is your reward: the real thing, on your iPhone.') + '</p>' +
+        (store ? store.outerHTML : '') + '<button type="button">' + T('Put them all back') + '</button>';
+      mq.parentNode.insertBefore(win, mq.nextSibling);
+      win.querySelector('button').addEventListener('click', function () {
+        sets.forEach(function (st) { [].forEach.call(st.children, function (f) { f.classList.remove('gone'); f.style.display = ''; }); });
+        left = total; speed(); mq.style.display = ''; win.classList.remove('on');
+      });
+      function speed() {   // fewer screens, shorter loop: keep the scroll speed the same
+        var a = track.getAnimations ? track.getAnimations()[0] : null;
+        if (a && a.updatePlaybackRate) a.updatePlaybackRate(total / Math.max(left, 1));
+      }
+      mq.addEventListener('click', function (e) {
+        var fig = e.target.closest('figure');
+        if (!fig || fig.classList.contains('gone')) return;
+        var i = [].indexOf.call(fig.parentNode.children, fig);
+        var r = fig.getBoundingClientRect(), ghost = fig.cloneNode(true);
+        ghost.className = 'ko-fall'; ghost.style.left = r.left + 'px'; ghost.style.top = r.top + 'px'; ghost.style.width = r.width + 'px';
+        document.body.appendChild(ghost);
+        // Every fall is different: a pop in a random direction, then a drop off screen with its own drift and spin.
+        var rnd = function (a, b) { return a + Math.random() * (b - a); };
+        var popA = rnd(-150, -30) * Math.PI / 180, pop = rnd(30, 90);          // upward-ish, left or right
+        var px = Math.cos(popA) * pop, py = Math.sin(popA) * pop;
+        var ex = rnd(-420, 420), spin = rnd(-220, 220), tilt = rnd(-25, 25);
+        var drop = innerHeight - r.top + 250;
+        var kind = Math.floor(Math.random() * 3);                               // 0 tumble, 1 flip, 2 shrink away
+        var end = kind === 1 ? 'translate(' + ex + 'px,' + drop + 'px) rotateY(180deg) rotate(' + spin / 2 + 'deg)'
+                : kind === 2 ? 'translate(' + ex * 0.6 + 'px,' + drop * 0.8 + 'px) rotate(' + spin + 'deg) scale(.4)'
+                : 'translate(' + ex + 'px,' + drop + 'px) rotate(' + spin + 'deg)';
+        if (!still && ghost.animate) {
+          ghost.style.perspective = '800px';
+          ghost.animate([{ transform: 'translate(0,0) rotate(0)', opacity: 1 },
+                         { transform: 'translate(' + px + 'px,' + py + 'px) rotate(' + tilt + 'deg)', opacity: 1, offset: rnd(0.14, 0.24) },
+                         { transform: end, opacity: kind === 2 ? 0 : 1 }],
+                        { duration: rnd(900, 1500), easing: 'cubic-bezier(.4,0,.9,.6)' }).onfinish = function () { ghost.remove(); };
+        } else ghost.remove();
+        sets.forEach(function (st) { var f = st.children[i]; if (f) f.classList.add('gone'); });
+        left -= 1;
+        setTimeout(function () {
+          sets.forEach(function (st) { var f = st.children[i]; if (f) f.style.display = 'none'; });
+          speed();
+          if (left === 0) { mq.style.display = 'none'; win.classList.add('on'); }
+        }, 460);
+      });
+    }
+
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+ "slug": "chore-repeats",
+ "kind": "feature",
+ "title": "Recurring Chores App: Repeats That Fit | Choru",
+ "meta": "Choru repeats a chore daily, on chosen weekdays, weekly, monthly, quarterly, or every N days, weeks, months or years. See every option and its limits.",
+ "h1": "Repeats that fit real chores",
+ "lede": "Choru lets a chore repeat daily, on the weekdays you pick, weekly, monthly, quarterly, or every few days, weeks, months or years. You set the pattern once and the chore shows up on the right days of the calendar.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What the repeat setting does</h2>\n<p>Every dated chore in Choru has a <strong>Repeat</strong> setting. Pick one of seven choices, and the chore lands on the matching days of the <a href=\"/features/chore-calendar/\">chore calendar</a> on its own, today, next week and a year from now. Wipe the counters every day, take the bins out on Tuesday and Friday, descale the kettle every three months: one chore each, set once.</p>\n<p>The Clock app is built for alarms: a time of day that rings. That suits \"get up at 7\". A chore is different. It is a job that is due on a day and stays due until you do it, and some jobs come round every three weeks or every quarter, which is awkward to express as an alarm. In Choru the repeat is a rule about days, and each day's occurrence is something you can tick off.</p>\n\n<figure><img class=\"screen\" src=\"/assets/shot-editor.webp\" alt=\"Choru's Edit chore screen with the Repeat row set to Daily and a Starts date of Thu, 27 Aug below it\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Edit chore screen. The Repeat row sits under the tag and the people, with the Starts date beneath it.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How to set a repeat, step by step</h2>\n<ol>\n<li>Tap <strong>+</strong> (Add chore) on the Calendar or Chores tab. To edit a chore, tap its row.</li>\n<li>Type the name of the chore and choose a tag, such as Kitchen or Bathroom.</li>\n<li>Tap the <strong>Repeat</strong> menu in the schedule card and choose a kind (the full list is in <a href=\"#options\">the options below</a>).</li>\n<li>If you chose <strong>Specific days</strong>, tap the seven day letters to switch days on and off. If you chose <strong>Custom</strong>, use the <strong>Every</strong> stepper for the number and the menu beside it for days, weeks, months or years.</li>\n<li>Tap the <strong>Starts</strong> row to open a month and pick the first day. A weekly chore falls on the weekday of that date, so start it on the day you want it to land.</li>\n<li>Tap the check mark, top right, to save.</li>\n</ol>\n<p>If you would rather not type each chore, Settings has a starter list of common jobs by room. Quarterly ones such as cleaning the oven, scrubbing the grout and washing the pillows are already marked with the right repeat. The slower ones start spread over the coming week, so ten chores do not all fall due on the same day.</p>\n\n<h2 id=\"options\">Every repeat option</h2>\n<table>\n<thead><tr><th>Repeat</th><th>When the chore is due</th><th>Example</th></tr></thead>\n<tbody>\n<tr><td>Does not repeat</td><td>Once, on the day you choose</td><td>Book the boiler service</td></tr>\n<tr><td>Daily</td><td>Every day from the start date</td><td>Wipe the counters</td></tr>\n<tr><td>Specific days</td><td>The weekdays you tick, in your region's week order</td><td>Bins on Tue and Fri</td></tr>\n<tr><td>Weekly</td><td>Every 7 days from the start date</td><td>Change the bed sheets</td></tr>\n<tr><td>Monthly</td><td>Once a month, on the start date's day of the month</td><td>Clean the fridge</td></tr>\n<tr><td>Quarterly</td><td>Every 3 months</td><td>Descale the kettle</td></tr>\n<tr><td>Custom</td><td>Every N days, weeks, months or years</td><td>Water the plants every 5 days</td></tr>\n</tbody>\n</table>\n<p>Custom starts at 2 and has a ceiling that depends on the unit, because past it the next unit up is the better choice:</p>\n<table>\n<thead><tr><th>Unit</th><th>Range</th></tr></thead>\n<tbody>\n<tr><td>Days</td><td>2 to 30</td></tr>\n<tr><td>Weeks</td><td>2 to 12</td></tr>\n<tr><td>Months</td><td>2 to 11</td></tr>\n<tr><td>Years</td><td>2 to 10</td></tr>\n</tbody>\n</table>\n<p>Some details are worth knowing. Specific days reads back in plain words: \"Weekdays\" for Monday to Friday, \"Weekends\" for Saturday and Sunday, otherwise something like \"Mon, Wed and Fri\". A monthly chore started on the 31st lands on the last day of shorter months. And changing a repeat later is safe: Choru says \"Changes apply from today. Past days keep the schedule they had.\" Your streak and past ticks do not move.</p>\n\n<h2 id=\"when-to-use\">When each repeat is the right tool</h2>\n<h3>Daily jobs with no fuss</h3>\n<p>Dishes, counters, a quick tidy. Choose Daily and it appears every day. If your household never does chores on certain days, set those in Settings as Rest days instead of editing each chore. Nothing is due on a rest day.</p>\n<h3>Jobs that follow the week</h3>\n<p>Bins on Tuesday and Friday, school bags on Sunday evening. Specific days covers any mix of weekdays, so you do not need two chores for one job.</p>\n<h3>Seasonal and quarterly deep cleaning</h3>\n<p>Oven, grout, windows, mattress. Quarterly puts them on a calendar without you holding the dates in your head. The <a href=\"/guides/deep-cleaning-schedule/\">deep cleaning schedule guide</a> shows how to split these across rooms.</p>\n<h3>Every few days or weeks</h3>\n<p>Houseplants every 5 days, hoovering behind the sofa every 3 weeks, the shower head every 2 months. Custom handles intervals that a weekly or monthly choice cannot.</p>\n<h3>Once a year, or twice</h3>\n<p>Gutters, the boiler service, the smoke alarm batteries. A dated chore cannot repeat yearly, but an anytime task can come back a month, 3 months, 6 months or a year after you tick it. See <a href=\"#limits\">the limits</a>.</p>\n\n<h2 id=\"limits\">What it does not do</h2>\n<ul>\n<li><strong>No yearly repeat on its own.</strong> The Custom stepper starts at 2, so \"every year\" and \"every 12 months\" cannot be set. The shortest year-based choice is every 2 years.</li>\n<li><strong>No \"third Tuesday of the month\".</strong> Monthly repeats on the start date's day of the month, not on a weekday position.</li>\n<li><strong>No repeat that waits for you.</strong> A dated chore stays on its schedule whether or not you did it last time, and a missed one is carried over. If you want a job that comes back a set time after you finish it, use an anytime task instead. Those can come back a month, 3 months, 6 months or a year after you tick them.</li>\n<li><strong>No time of day.</strong> A repeat decides the day. It does not ring at a set hour, which is what the Clock app is for.</li>\n</ul>\n<p>A missed chore carries over to today as one row that shows how many days late it is. To put the chores on shared lists, read <a href=\"/guides/share-chore-list-with-family-iphone/\">how to share a chore list with family</a>.</p>\n",
+ "related": [
+  "deep-cleaning-schedule",
+  "how-to-manage-household-chores",
+  "chores-in-reminders-app"
+ ],
+ "cta_h": "Set a chore once and let it repeat",
+ "cta_p": "Choru is a chore app for iPhone with repeats that fit real jobs. Download it from the App Store.",
+ "card": "Daily, on set weekdays, weekly, monthly, quarterly, or every few days, weeks, months or years, with past days left alone when you change a schedule.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "What is a good recurring chores app for different schedules?",
+   "Look for one that does more than daily and weekly. Choru repeats a chore daily, on the weekdays you tick, weekly, monthly, quarterly, or every 2 or more days, weeks, months or years, so a quarterly oven clean and a daily wipe-down sit in the same list."
+  ],
+  [
+   "How do I set a chore every 3 months?",
+   "Open the chore, tap the Repeat menu and choose Quarterly. It comes round every 3 months from the Starts date. You can also pick Custom and set Every 3 months."
+  ],
+  [
+   "Can I repeat a chore on certain days of the week?",
+   "Yes. Choose Specific days and tap the day letters you want, for example Tuesday and Friday. Choru shows Monday to Friday as Weekdays and Saturday and Sunday as Weekends."
+  ],
+  [
+   "What happens if I change a chore's repeat later?",
+   "The change applies from today. Days before today keep the schedule they had, so your streak, flames and past ticks stay as they were."
+  ],
+  [
+   "Can a chore repeat once a year?",
+   "Not as a dated chore. Custom starts at 2, so the shortest year-based repeat there is every 2 years. An anytime task can be set to Yearly and comes back a year after you tick it off."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: iPhone User Guide, Clock",
+   "https://support.apple.com/guide/iphone/set-an-alarm-iph2909d3a74/ios"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "choru",
+ "why": "Answers 'recurring chores app', 'chore schedule app', 'quarterly cleaning schedule app' and 'chore every 3 months' with the exact repeat kinds and limits.",
+ "targets": [
+  "recurring chores app",
+  "chore schedule app",
+  "quarterly cleaning schedule app",
+  "chore every 3 months",
+  "app for daily chores"
+ ],
+ "hero_prompt": "A kitchen counter at morning light with an iPhone leaning against a mug, showing a calendar with a few days softly marked. Beside it a descaler bottle and a sponge, as if a quarterly job is about to be done.",
+ "hero_alt": "An iPhone on a kitchen counter next to a descaler bottle and a sponge, showing a chore calendar with repeating chores.",
+ "app_evidence": [
+  "Seven repeat kinds: Does not repeat, Daily, Specific days, Weekly, Monthly, Quarterly, Custom -> Models.swift:19-44",
+  "Custom units days, weeks, months, years; max 30, 12, 11, 10 -> Models.swift:49-69",
+  "Custom stepper range starts at 2 -> EditorControls.swift Stepper in: 2...customUnit.maxInterval; ChoreSchedule.swift ChoreScheduleSpec.normalized max(2, interval)",
+  "Weekly is every 7 days, monthly every 1 month, quarterly every 3 months from the start date -> Models.swift:116-160",
+  "Monthly on the 31st clamps in short months -> Models.swift (everyNMonths comment)",
+  "Specific days: seven locale-ordered chips; reads back Weekdays / Weekends / list -> EditorControls.swift weekdayChips; Models.swift:1091-1105",
+  "Repeat menu, Starts row, check mark to save -> EditorControls.swift ChoreScheduleCard; ChoreEditorView.swift save()",
+  "Changes apply from today, past keeps schedule -> EditorControls.swift:166; ChoreSchedule.swift applySchedule",
+  "Rest days in Settings: nothing due, streak carries over -> SettingsView.swift:916-922",
+  "Starter list with quarterly picks, slow ones spread over the coming week -> StarterLibrary.swift:97-122,172-186; StarterLibrarySheet.swift:36",
+  "Anytime tasks come back 1, 3, 6 or 12 months after ticking -> AnytimeRepeat.swift:31-61",
+  "Anytime Dated toggle exists in editor -> ChoreEditorView.swift:187 (AnytimeRepeatCard)"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/choru-chore-repeats-2.json",
+  "summary": "All previous findings are fixed: the three dead /features/anytime-tasks/ links are now plain text, the dead /features/missed-chores/ link was replaced by the suggested sentence (verified true in DayChoreList.swift and ChoreRow.swift), and the apple.com/ios source is gone. The missing hero image is not a blocker: the published chore-calendar feature page has no hero either, and remaining internal links (/features/chore-calendar/, /guides/deep-cleaning-schedule/, /guides/share-chore-list-with-family-iphone/) all exist in the site cache.",
+  "issues": [],
+  "app_claims": 2,
+  "schema": [
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}

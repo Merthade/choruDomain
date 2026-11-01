@@ -1,0 +1,106 @@
+{
+ "slug": "family-sharing",
+ "kind": "feature",
+ "title": "Shared Family Chore App, Up to 5 People | Choru",
+ "meta": "Choru shares one chore list across up to five iPhones. Scan a QR code to join, see who did what, and change the code if it gets out. Here is how it works.",
+ "h1": "Share the household with up to five people",
+ "lede": "One person starts a family in Choru and shows a QR code. Everyone else scans it and joins the same chore list, up to five people in all.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What family sharing does</h2>\n<p>Choru lets up to five people share one household on their own iPhones. One person starts the family and shows a QR code in Settings. Each other person scans it with Choru and joins the same chores, with their own name and colour. The list is stored in iCloud, so there is no separate Choru account to make.</p>\n<p>The Clock app works well for a time of day on one phone, and an alarm there belongs to that phone alone. A household chore needs the opposite: one list that several people see, tick and get credit for. That is what the family adds, with a name on every tick so the house can see who did what.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-family.webp\" alt=\"Choru's Scan to join panel over Settings, showing a QR code, a Done button and a Change the code button\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The family code in Settings, with Change the code under the Done button.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How it works, step by step</h2>\n<p>The person who starts the family:</p>\n<ol>\n<li>Open Settings and find the <strong>Family</strong> section. With nobody in it yet, you see <strong>Start a family</strong> and <strong>Join a family</strong>.</li>\n<li>Tap <strong>Start a family</strong>. Choru asks for your name first, because it keeps score by name.</li>\n<li>Wait while Choru prepares the family in iCloud. Then it offers a four digit PIN for grown-ups, which you can skip with <strong>Not now</strong>. It is used on kids' phones, see <a href=\"/guides/chore-chart-for-kids-with-rewards/\">a chore chart for kids with rewards</a>.</li>\n<li>A panel titled <strong>Scan to join</strong> shows the QR code. Keep it open.</li>\n</ol>\n<p>Everyone else:</p>\n<ol>\n<li>Open Choru. On a new phone, tap <strong>Join a family</strong> on the first screen. On a phone already in use, go to Settings, Family, <strong>Join a family</strong>.</li>\n<li>Point the camera at the QR code. Allow camera access if Choru asks. If it was refused, Choru shows a button to the iOS settings.</li>\n<li>Choru asks <strong>Join this family?</strong> and says that your chores, ticks and coins come with you and that you can leave at any time and keep everything. Tap <strong>Join</strong>.</li>\n<li>Give your name if Choru cannot tell who you are. It matches your Apple Account first, so a reinstall or a new phone claims the person you already were instead of adding a second one.</li>\n</ol>\n<p>Once a family exists, the Family section shows <strong>Show the family code</strong> instead. Anyone in the family can open it to invite the next person. For the wider picture of sharing a list, read <a href=\"/guides/share-chore-list-with-family-iphone/\">how to share a chore list with family on iPhone</a>.</p>\n\n<h2 id=\"options\">Options and variations</h2>\n<table>\n<thead><tr><th>Setting</th><th>What it does</th><th>Who can use it</th></tr></thead>\n<tbody>\n<tr><td>Start a family</td><td>Makes the family and the QR code</td><td>Needs the trial or the unlock</td></tr>\n<tr><td>Join a family</td><td>Scans a code and joins after you confirm</td><td>Anyone with the code</td></tr>\n<tr><td>Show the family code</td><td>Shows the same QR code again</td><td>Anyone in the family</td></tr>\n<tr><td>Change the code</td><td>Makes a new code, and the old one stops working at once</td><td>The person who started the family</td></tr>\n<tr><td>Name and colour</td><td>Renames a person or changes their colour</td><td>You for yourself, the starter for others</td></tr>\n<tr><td>Remove from family</td><td>Takes a person out</td><td>The starter</td></tr>\n<tr><td>Kids</td><td>Marks people as kids, with their own list</td><td>The starter</td></tr>\n<tr><td>All chores on my day</td><td>Counts other grown-ups' chores on your day</td><td>Each grown-up, on their own phone</td></tr>\n</tbody>\n</table>\n<p>Changing the code does not remove anyone. People already in stay in. Only a stale QR code stops working, and the scanner tells the person that the code has been changed. A bare iCloud link does not open a family either. Choru only accepts its own code.</p>\n<p>Kids are members too. A kid has their own list and rewards, set up from the Kids tab. How coins and rewards work is covered in <a href=\"/guides/chore-chart-for-kids-with-rewards/\">a chore chart for kids with rewards</a>.</p>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>Two adults, one flat</h3>\n<p>You and your partner both tick chores on your own phones and see the same list. The steps for dividing the jobs are in <a href=\"/guides/split-chores-with-partner/\">how to split chores with a partner</a>.</p>\n<h3>A family with kids</h3>\n<p>Each child joins by scanning the code on their own phone. Mark them as a kid and they see only their own chores and rewards. The reward side is in <a href=\"/guides/chore-chart-for-kids-with-rewards/\">a chore chart for kids with rewards</a>.</p>\n<h3>A house with a flatmate or a grown-up child</h3>\n<p>Anyone can join with the code, and any grown-up can show it. When someone moves out, the starter removes them, and their past ticks and coins stay in the history.</p>\n<h3>A new phone or a reinstall</h3>\n<p>Scan the code again. Because Choru matches your Apple Account, you are the same person as before, not a second you.</p>\n<h3>A code that ended up somewhere it should not</h3>\n<p>Open Show the family code as the starter and tap <strong>Change the code</strong>. Confirm, and the old code is dead while the family carries on.</p>\n\n<h2 id=\"limits\">What it does not do</h2>\n<ul>\n<li><strong>Five people at most.</strong> A full family shows a message instead of a code: \"Your family is full: 5 people is the most a family can have. Remove someone to make room for someone new.\" A scan of a full family is refused too.</li>\n<li><strong>No link to send.</strong> The code is shown on screen and scanned in person. It never expires on its own, so change it if it gets out.</li>\n<li><strong>Everyone needs iCloud.</strong> A phone not signed in to iCloud cannot make the invite and is told to sign in first.</li>\n<li><strong>Only the starter manages the people.</strong> Removing, renaming others and marking kids belong to the person who started the family. That person cannot be removed.</li>\n<li><strong>It needs a plan.</strong> Choru has no free version. Starting a family needs the trial or the unlock. If someone in the family holds a plan, the family phones are covered. If the last plan lapses, they lock again.</li>\n<li>Choru runs on iPhone with iOS 26.5 or later.</li>\n</ul>\n<p>This is separate from Apple's own <a href=\"https://support.apple.com/guide/iphone/set-up-family-sharing-iph33ee7c0a9/ios\" rel=\"noopener\">Family Sharing</a>, which shares eligible app purchases and other content in an Apple family group. A Choru family is joined by its own QR code.</p>\n",
+ "related": [
+  "share-chore-list-with-family-iphone",
+  "split-chores-with-partner",
+  "chore-chart-for-kids-with-rewards"
+ ],
+ "cta_h": "Start a family in Choru",
+ "cta_p": "Download Choru, open Settings and tap Start a family. Your household can be on the same list in a few minutes.",
+ "card": "Invite the family with a QR code, up to five people, and change the code any time it gets out.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "Is there a shared family chore app for iPhone?",
+   "Yes. In Choru, one person starts a family in Settings and shows a QR code, and the others scan it on their own iPhones. Everyone then ticks chores on the same list, with a name on each tick."
+  ],
+  [
+   "How do I share Choru with my family?",
+   "Open Settings, then Family, and tap Start a family. Enter your name, wait for the invite, and show the QR code. Each person taps Join a family, scans it and confirms with Join."
+  ],
+  [
+   "How many people can join a family in Choru?",
+   "Up to five, counting the person who started it. When the family is full, Choru shows no code and says that 5 people is the most a family can have. Remove someone to make room."
+  ],
+  [
+   "Can I use a chore app for couples?",
+   "Yes. A couple is simply a family of two. Both of you scan once, then see the same chores and who did them. By default another grown-up's chores do not count on your day, and you can switch that on."
+  ],
+  [
+   "What if the family code is shared with the wrong person?",
+   "The person who started the family opens Show the family code and taps Change the code. The old code stops working right away, and everyone already in the family stays in."
+  ],
+  [
+   "Does it cost anything to share?",
+   "Choru has no free version. Starting a family needs the trial or the unlock. Someone in the family holding a plan also covers the other phones in it."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: iPhone Family Sharing guide",
+   "https://support.apple.com/guide/iphone/set-up-family-sharing-iph33ee7c0a9/ios"
+  ],
+  [
+   "Apple Support: Apple software releases (iOS 27.2 is current)",
+   "https://support.apple.com/en-us/100100"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "choru",
+ "why": "Answers the shared family chore app, family chore sharing iPhone and chore app for couples searches, plus the 'how do you share an app with family' confusion with Apple Family Sharing.",
+ "targets": [
+  "shared family chore app",
+  "family chore sharing iphone",
+  "chore app for couples",
+  "shared chore app family",
+  "how do you share app with family"
+ ],
+ "hero_prompt": "A couple and a teenager sit on a sofa, and one person holds up an iPhone showing a large QR code while the other two point their phones at it. No text or words are visible anywhere in the scene.",
+ "hero_alt": "Three people on a sofa scanning a QR code on an iPhone to join one shared household chore list.",
+ "app_evidence": [
+  "Max five people -> Member.swift:882 (FamilyPlan.maxPeople = 5), isFull :892",
+  "Full family message on Show the family code -> SettingsView.swift:420-422",
+  "Scan of a full family refused -> Family.swift:2157-2162",
+  "Start a family / Join a family rows when empty, Show the family code after -> SettingsView.swift:401-426",
+  "Start and show code gated by plan; join is not gated -> SettingsView.swift:404, 409, 425; Store.swift:857-858 (hard mode, no free version)",
+  "Name first, then share, then four digit PIN with Not now, then QR -> Family.swift:2535-2541, 2656-2707",
+  "Scan to join panel, Change the code owner only, caption text -> Family.swift:2772-2810",
+  "Change the code keeps everyone in -> Family.swift:2821, InviteCode.swift:13-17",
+  "QR carries choru://join with share URL and 8 character code; bare icloud link refused -> InviteCode.swift:46-98; Family.swift:2111-2130",
+  "Stale code message -> Family.swift:2169-2170",
+  "Join this family? alert, Join / Not now, text about nothing lost -> JoinConfirmation.swift:67-99",
+  "Both doors in: first screen or Settings -> Family -> Join a family -> Family.swift:2787",
+  "Camera denied leads to iOS Settings button -> FamilyScannerView.swift:87-113",
+  "Identity matched by Apple Account, reinstall claims same person -> Family.swift:159-167, 232-236",
+  "No iCloud account error -> Family.swift:546-547",
+  "Anyone in the family can show the code, only owner changes it -> SettingsView.swift:412-415; Family.swift:1023-1027, 2795",
+  "Owner cannot be removed -> Family.swift:293-296",
+  "Remove from family owner menu, ticks and coins stay in history -> SettingsView.swift:522, 246",
+  "Kids are members, owner marks kids -> SettingsView.swift:457-466; Family.swift:2720",
+  "Kids see only their own chores and rewards -> SettingsView.swift:482",
+  "All chores on my day row (SettingsView.swift:636), other grown-ups' chores not on your day by default -> SettingsView.swift:451-456",
+  "A phone covered by another person's plan; lapse locks everyone -> Member.swift:872-890; Store.swift:838-847",
+  "No free version, hard mode -> Store.swift:825-833",
+  "iOS 26.5 minimum -> Choru.xcodeproj/project.pbxproj:422 IPHONEOS_DEPLOYMENT_TARGET"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/choru-family-sharing-2.json",
+  "summary": "All four blocking findings are fixed: the toggle row now reads 'All chores on my day' and the kids row 'Kids', matching SettingsView.swift:636 and :646, and the dead /features/kids-tab/ and /features/coins-and-rewards/ links are gone, replaced by plain text or the existing chore-chart-for-kids-with-rewards guide. No em or en dashes and no competitor named; the old optional screenshot-reshoot note was not blocking and is dropped.",
+  "issues": [],
+  "app_claims": 5,
+  "schema": []
+ },
+ "approved": "2026-11-01"
+}

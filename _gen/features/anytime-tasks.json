@@ -1,0 +1,98 @@
+{
+ "slug": "anytime-tasks",
+ "kind": "feature",
+ "title": "Anytime Tasks That Come Back Later | Choru",
+ "meta": "Choru anytime tasks have no due date. Tick one off and it returns 1, 3, 6 or 12 months later. Ideal for deep cleaning and occasional chores.",
+ "h1": "Anytime tasks that come back later",
+ "lede": "Some jobs never get a due date: the oven, the windows, the wardrobe. In Choru you tick them off whenever you get to them, and they return on their own a month to a year later.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What anytime tasks do</h2>\n<p>An anytime task is a chore with no date. It sits on your Chores tab until you have a free hour, you tick it off, and it stays ticked. If you gave it a repeat, it comes back unticked after the gap you chose: 1 month, 3 months, 6 months or 1 year after the tick.</p>\n<p>A deep-clean job such as \"descale the kettle\" has no natural day, and you do not want to be told you are late. Choru counts the gap from the day you actually did the job, so the schedule follows your real life, not a date you guessed months ago.</p>\n<p>An anytime task is never overdue. When it comes back it is simply open again, never late. It cannot bury your list in red or break a streak. For dated chores that repeat on a calendar, see <a href=\"/features/chore-repeats/\">Repeats that fit real chores</a>.</p>\n\n<h2 id=\"how-it-works\">How it works in the app</h2>\n<ol>\n<li>Open the <strong>Chores</strong> tab and tap <strong>+</strong>.</li>\n<li>Type a title, for example \"Clean the oven\". Under the title, switch the segmented control from <strong>Dated</strong> to <strong>Anytime</strong>. The editor title changes to \"New anytime task\" and the schedule card is replaced by a <strong>Repeat</strong> picker.</li>\n<li>Optionally pick a tag such as Kitchen, and set the coin reward. A caption under the picker says exactly what will happen, for example \"Comes back unticked 3 months after you tick it off.\"</li>\n<li>Tap the checkmark to save. The task appears in the Anytime group at the bottom of the Chores tab, or inside its tag's group when you sort by Group, marked with a sparkle where a dated chore shows its repeat symbol.</li>\n<li>When you do the job, tap the circle on its card. The card shows the title struck through, a green tick, and \"Back\" with the date it returns, for example \"Back 11 Dec\".</li>\n<li>Do nothing more. Choru checks when the app opens and again at midnight, and the task is open again on the morning it is due.</li>\n</ol>\n<figure><img class=\"screen\" src=\"/assets/shot-editor.webp\" alt=\"Choru's editor with the Dated and Anytime switch under the chore title\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Dated | Anytime switch sits right under the title. Here it is on Dated; choosing Anytime removes the date and leaves only the Repeat picker.</figcaption></figure>\n<p>The card also shows when you last did it, for example \"Every 3 months &middot; done 5 Jun\", and that last-done date stays after the task comes back.</p>\n\n<h2 id=\"options\">Every option</h2>\n<table>\n<thead><tr><th>Setting</th><th>Choices</th><th>What happens</th></tr></thead>\n<tbody>\n<tr><td>Repeat</td><td>Does not repeat</td><td>Stays done once you tick it</td></tr>\n<tr><td>Repeat</td><td>Monthly</td><td>Back 1 month after the tick</td></tr>\n<tr><td>Repeat</td><td>Every 3 months</td><td>Back 3 months after the tick</td></tr>\n<tr><td>Repeat</td><td>Every 6 months</td><td>Back 6 months after the tick</td></tr>\n<tr><td>Repeat</td><td>Yearly</td><td>Back 1 year after the tick</td></tr>\n<tr><td>Coins</td><td>1 to 3</td><td>Paid on every tick, and every past tick keeps its coins</td></tr>\n<tr><td>Tag</td><td>One tag per task</td><td>Files the card in that tag's group when the list is sorted by Group</td></tr>\n</tbody>\n</table>\n<p>Those five repeat choices are the whole list. There is no custom interval, no weekday and no date field. Coins feed the same purse as dated chores, which the <a href=\"/guides/chore-chart-for-kids-with-rewards/\">chore chart for kids with rewards</a> guide explains.</p>\n<p>A few more details. An anytime task can be made on a kid's phone and stays on that kid's list. In kid mode the coin card and the Delete button are hidden, so only a grown-up reprices or removes a task. Swipe a card left, or open it and tap the trash button, to delete. If it has already paid coins, it leaves your list but those coins stay in the purse. Editing a task also shows a Dated | Anytime switch, so a grown-up can turn an anytime task into a dated chore, and a dated chore can become an anytime task from its own editor.</p>\n\n<h2 id=\"when-to-use\">When to use it</h2>\n<h3>Deep cleaning that happens in bursts</h3>\n<p>Oven, fridge, windows, behind the sofa. Add each as a quarterly or six-monthly anytime task, tag it by room, and tick them as you get round to them. The <a href=\"/guides/deep-cleaning-schedule/\">deep cleaning schedule guide</a> shows how to split these jobs across a year.</p>\n<h3>Jobs you do when you have a free hour</h3>\n<p>When today's list is cleared, Choru offers a link: \"Got a free moment? Add an anytime task\", or \"Want to do more?\" with the number of anytime tasks waiting. It takes you straight to the list.</p>\n<h3>Yearly household admin</h3>\n<p>Clear out the gutters, swap the winter clothes, check the smoke alarm batteries. A yearly gap counted from the tick means a job done late this year comes back a full year after, not a few weeks later.</p>\n<h3>One-off projects</h3>\n<p>\"Sort out the wardrobe\" or \"clear the loft\" are jobs you do once. Leave Repeat on <strong>Does not repeat</strong> and it stays ticked as a small record of what you got through.</p>\n<h3>Chores for the kids' bigger jobs</h3>\n<p>A bedroom tidy-up every month earns coins without a due date to argue about. Pair it with the <a href=\"/guides/chore-chart-for-kids-with-rewards/\">chore chart for kids with rewards</a> guide.</p>\n\n<h2 id=\"limits\">Limits</h2>\n<ul>\n<li><strong>No fixed date.</strong> The gap counts from the tick. If you need the oven cleaned on a set date every quarter, use a dated chore set to Quarterly instead. See <a href=\"#options\">the options table</a>.</li>\n<li><strong>Only five gaps.</strong> No \"every 2 months\" and no custom interval.</li>\n<li><strong>It does not nag.</strong> The code that brings a task back only unticks it. It is not scheduled for a day, so nothing marks it as due.</li>\n<li><strong>Back at midnight, not at a time.</strong> The return date is the start of that day.</li>\n<li><strong>Whole months.</strong> The gap is measured in calendar months from the tick day, not in days.</li>\n<li><strong>No free version.</strong> Choru launched with a paywall: a yearly plan with a 7-day trial, or a one-time lifetime purchase. Ticking tasks needs the plan or the trial.</li>\n</ul>",
+ "related": [
+  "deep-cleaning-schedule",
+  "how-to-manage-household-chores",
+  "chores-in-reminders-app"
+ ],
+ "cta_h": "Put the oven on a 3-month loop",
+ "cta_p": "Add an anytime task in Choru, tick it when it is done, and let it come back on its own.",
+ "card": "Jobs with no fixed date come back 1, 3, 6 or 12 months after you tick them off.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "What is a deep cleaning schedule app for?",
+   "It keeps track of big jobs that do not happen every week. In Choru, an anytime task such as cleaning the oven comes back 1, 3, 6 or 12 months after you tick it, so the list refills itself."
+  ],
+  [
+   "Can I have chores with no due date?",
+   "Yes. Switch a new item from Dated to Anytime. It has no date, never goes overdue and does not break a streak. It sits on your Chores tab until you tick it."
+  ],
+  [
+   "How does the house cleaning checklist come back later?",
+   "You pick Monthly, Every 3 months, Every 6 months or Yearly. Choru counts from the day you tick the task and unticks it when the gap has passed, checked at launch and at midnight."
+  ],
+  [
+   "Is there an occasional chores tracker with a custom interval?",
+   "Not for anytime tasks. The choices are Does not repeat, Monthly, Every 3 months, Every 6 months and Yearly. For a rhythm like every 2 weeks, use a dated chore instead."
+  ],
+  [
+   "Do I keep my coins when the task comes back?",
+   "Yes. Each finished cycle is saved with its coins before the task is unticked, so earnings stay in the purse. Deleting a task that has paid coins also keeps them."
+  ],
+  [
+   "Is Choru a free house cleaning schedule app?",
+   "No. Choru has no free version: a yearly plan with a 7-day trial, or a one-time lifetime purchase. Ticking tasks needs one of them."
+  ]
+ ],
+ "sources": [],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "choru",
+ "why": "Answers 'chores with no due date', 'occasional chores tracker' and the deep cleaning / house cleaning schedule app searches, where readers want jobs that return after a gap rather than on a calendar date.",
+ "targets": [
+  "deep cleaning schedule app",
+  "house cleaning schedule app",
+  "house cleaning checklist app",
+  "occasional chores tracker",
+  "chores with no due date"
+ ],
+ "hero_prompt": "A kitchen counter in soft morning light, an iPhone propped against a tiled wall showing a ticked-off task list, with a freshly cleaned oven door open behind it. No people and no text in the scene.",
+ "hero_alt": "An iPhone on a kitchen counter next to a freshly cleaned oven, illustrating an anytime task being ticked off in Choru.",
+ "app_evidence": [
+  "Repeat choices are Does not repeat, Monthly, Every 3 months, Every 6 months, Yearly -> AnytimeRepeat.swift:31-48",
+  "Caption under the picker: counted from the tick -> AnytimeRepeat.swift:53-61",
+  "Gap counted from the tick, back at start of day -> AnytimeRepeat.swift:92-99",
+  "Never late, no calendar schedule -> AnytimeRepeat.swift:8-11",
+  "Reopen checks at launch and at midnight -> AnytimeRepeat.swift:147-159, ContentView.swift:316, ContentView.swift:567",
+  "Past cycle saved with its coins when it comes back -> AnytimeRepeat.swift:134-142",
+  "Last done date kept across cycles -> AnytimeRepeat.swift:101-105; AnytimeRow.swift:86-93",
+  "Card shows 'Back <date>' for done repeating task -> AnytimeRow.swift:95-103",
+  "Sparkles marks anytime on the meta row, under the Date sort the task sits in the Anytime group, under Group sort in its tag's group -> AnytimeRow.swift:7-12, 74-84; ChoreListTab.swift:445-460",
+  "Dated | Anytime switch, Repeat card replaces schedule card, title 'New anytime task' -> ChoreEditorView.swift:167-188, 214",
+  "One tag, coins, kid mode hides coins and Delete -> AnytimeTaskSheet.swift:90-103; new-task placeholder is 'Title (e.g. Descale the coffee machine)' -> ChoreEditorView.swift:156",
+  "Coins 1 to 3 -> Coins.swift:27-28; Models.swift:807-810",
+  "Anytime task made on a kid's phone stays on their list -> AnytimeTaskSheet.swift:165-166",
+  "Delete keeps coins already paid -> ChoreSchedule.swift:239-250; AnytimeTaskSheet.swift:125-135; ChoreListTab.swift:186-198",
+  "Swipe to delete, parent only -> ChoreListTab.swift:506-513",
+  "Dated and anytime convert both ways -> AnytimeTaskSheet.swift:76-88; ChoreEditorView.swift:11-16, ChoreSchedule.swift:201-210, 231-237",
+  "Free moment link on Today -> DayChoreList.swift:464-483",
+  "No custom interval, no date field -> AnytimeRepeat.swift:31-36 (five cases only); AnytimeTaskSheet.swift:5-7",
+  "Return only unticks the task, no scheduling -> AnytimeRepeat.swift:126-144",
+  "Hard paywall, no free version -> Store.swift:830-833, 857-858; ticking gated -> ChoreListTab.swift:595; yearly with 7-day trial and lifetime -> Store.swift:824-826",
+  "Anytime sorts last in the list when sorted by Date -> ChoreSchedule.swift:265-281; ChoreListTab.swift:450-451",
+  "shot-editor.webp shows the Dated | Anytime switch under the title (opened and checked); size 640x1306 from index.html:274"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/choru-anytime-tasks-2.json",
+  "summary": "All eleven round-1 issues are fixed: the Anytime-group placement and Group-sort tag row, the wardrobe placeholder claim, the quarterly dated-chore limit, both dead links (now /guides/chore-chart-for-kids-with-rewards/, which exists), the Clock/Reminders comparison and its three sources, the code-comment quote and the figcaption. No em or en dashes and no competitor named; nothing still wrong.",
+  "issues": [],
+  "app_claims": 11,
+  "schema": [
+   "missing sources",
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}

@@ -1,0 +1,92 @@
+{
+ "slug": "missed-chores",
+ "kind": "feature",
+ "title": "Missed Chores Carry Over as One Row | Choru",
+ "meta": "Choru moves a missed chore to today as one red row that shows how many days late it is. See how overdue chores are counted, ticked and cleared.",
+ "h1": "Missed chores carry over as one row",
+ "lede": "A chore you miss moves to today as a single red row, with the days it is late shown on the card. One row per chore, however many times it slipped.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What happens to a chore you miss</h2>\n<p>When a chore goes undone, Choru moves it to today as one red row. The row says how late it is, such as <strong>3d</strong> on the calendar or <strong>3 days late</strong> on the Chores tab. A weekly chore skipped twice is still one row, not two.</p>\n<p>The Clock app is a good tool for a time of day: an alarm goes off, and you dismiss it. An alarm has no memory of the job behind it. A chore is different, because it stays due until somebody does it. Choru keeps the job in view every day and counts the days it has stood open, which a ringing alarm cannot do.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-mess.webp\" alt=\"Choru's Calendar tab with three red overdue chore rows, each marked 1d, above today's other chores, and Choru the dragon under a pile of mess\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>Three missed chores, each one red row marked 1d, above the chores due today.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How it works, step by step</h2>\n<ol>\n<li>Set a chore to repeat in the chore editor. Details are in <a href=\"/features/chore-repeats/\">repeats that fit real chores</a>.</li>\n<li>Miss a day. The chore then appears at the top of the Calendar tab on today, in red, with its late count in the corner of the card.</li>\n<li>Look at the header. Choru the dragon shows a status line such as \"3 overdue\" and, during the day, sits under a pile of mess.</li>\n<li>Tick the circle on the red row when you do the chore. The row turns green and strikes through, and tomorrow it is gone.</li>\n<li>If you did it yesterday and forgot to tick, press and hold the circle and choose <strong>Done yesterday</strong>. That marks yesterday as done.</li>\n</ol>\n<p>Choru counts the days you skipped, not the span back to the first miss. If a chore was missed Tuesday, rested on Wednesday and missed Thursday, it reads 2 days late. A rest day or an away day is never counted.</p>\n<p>An overdue chore also becomes a daily one until you do it. A weekly vacuum missed on Tuesday is due again on Wednesday and Thursday, and each of those days counts as missed. Once you do it, it goes back to its normal schedule.</p>\n\n<h2 id=\"options\">Options and variations</h2>\n<table>\n<thead><tr><th>Where</th><th>What you see</th><th>What you can do</th></tr></thead>\n<tbody>\n<tr><td>Today, Calendar tab</td><td>One red row per overdue chore, above the rest</td><td>Tick it, hold the circle for <strong>Done yesterday</strong>, tap the row to edit</td></tr>\n<tr><td>A past day</td><td>The pile as it stood on that day</td><td>Look back; the late count there is smaller</td></tr>\n<tr><td>A future day</td><td>Only what is scheduled</td><td>Nothing is carried onto next week</td></tr>\n<tr><td>Chores tab</td><td>The same chore labelled \"3 days late\"</td><td>Same circle, same menu</td></tr>\n<tr><td>Daily digest</td><td>A title like \"2 today, 3 overdue\"</td><td>Read it in the notification</td></tr>\n<tr><td>Widget</td><td>Overdue chores marked as overdue</td><td>Read at a glance from the home screen</td></tr>\n<tr><td>Swipe a red row left</td><td><strong>Delete</strong></td><td>Stops the chore from today and keeps its history</td></tr>\n</tbody>\n</table>\n<p>The count has a ceiling. A chore missed on 365 days or more reads \"> 1 year late\", or <strong>1y+</strong> on the short card, because the exact number stops being useful.</p>\n<p>One more tool for a heavy day is in <a href=\"/features/chore-calendar/\">the chore calendar</a>: the <strong>Tomorrow</strong> swipe moves a due chore one day, once, until you do it. That swipe is on ordinary rows, not on the red ones.</p>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>After a busy week</h3>\n<p>You come back to the app on Sunday and see what slipped, without scrolling a month of days. Each missed chore is one row, so the list stays short enough to start on.</p>\n<h3>A weekly chore that kept sliding</h3>\n<p>The bins or the sheets get skipped twice. Choru shows one row with the days it has stood open, and one tick clears it. You are not asked to tick every missed week.</p>\n<h3>Forgot to tick last night</h3>\n<p>You did the dishes yesterday and never opened the app. Hold the circle, choose <strong>Done yesterday</strong>, and yesterday is settled as done.</p>\n<h3>Splitting the house with a partner</h3>\n<p>In a shared household you can see what is behind. The setup is in <a href=\"/guides/split-chores-with-partner/\">how to split chores with a partner</a>.</p>\n<h3>Coming back from a trip</h3>\n<p>Days you were away are skipped, not counted as late. Chores do not pile up while the household is paused.</p>\n\n<h2 id=\"limits\">What it does not do</h2>\n<ul>\n<li>Ticking a red row settles today only. The days you skipped stay missed. Choru does not wipe a backlog with one tap.</li>\n<li><strong>Done yesterday</strong> on the red row reaches back one day only. The red row itself never sweeps up older days.</li>\n<li>A future day never shows carried rows, so you cannot see next week's debt in advance.</li>\n<li>A chore you delete stops owing anything from that day. Its old misses stay in the history.</li>\n<li>There is no free version. Ticking, including Done yesterday, needs the trial or the unlock.</li>\n<li>Choru is for iPhone and needs iOS 26.5 or later.</li>\n</ul>\n<p>For the bigger picture of dividing a household's jobs, read <a href=\"/guides/how-to-manage-household-chores/\">how to manage household chores</a>. Jobs with no due date belong in anytime tasks, on the Chores tab.</p>",
+ "related": [
+  "how-to-manage-household-chores",
+  "split-chores-with-partner",
+  "share-chore-list-with-family-iphone"
+ ],
+ "cta_h": "Catch up on what slipped",
+ "cta_p": "Choru is a chore app for iPhone that keeps every missed chore in view as one row.",
+ "card": "A chore you missed moves to today as one row, showing how late it is.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "How does an overdue chores app handle a chore I missed?",
+   "Choru moves it to today as one red row with its late count, for example 3 days late. It stays on top of the Calendar tab until you tick it."
+  ],
+  [
+   "Do missed chores carry over if I skip several times?",
+   "Yes, as a single row. A weekly chore missed twice is one row, and the count reads the number of days it was due and not done. Rest and away days are not counted."
+  ],
+  [
+   "What happens when I tick an overdue chore in the chore app?",
+   "The row turns green and settles today, and it is gone from tomorrow. The days you skipped stay recorded as missed. If you did it yesterday, hold the circle and choose Done yesterday."
+  ],
+  [
+   "How far back does Done yesterday reach?",
+   "One day. The red row's menu offers yesterday only, and a tick on the row itself settles today."
+  ],
+  [
+   "Does the overdue chore count show anywhere besides the calendar?",
+   "Yes. The status line above the calendar shows the count, the daily digest title can say how many are overdue, and the widget marks overdue chores."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: Set an alarm in Clock on iPhone",
+   "https://support.apple.com/guide/iphone/set-an-alarm-iph2909d3a74/ios"
+  ],
+  [
+   "Apple: iOS, the latest iPhone software",
+   "https://www.apple.com/ios/"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "choru",
+ "why": "Answers overdue chores app, missed chores carry over and chore app overdue searches by showing how Choru turns a missed chore into one counted row.",
+ "targets": [
+  "overdue chores app",
+  "missed chores carry over",
+  "chore app overdue"
+ ],
+ "hero_prompt": "A hallway table in evening light with an iPhone leaning on a stack of folded towels, its screen showing a few red chore rows at the top of a purple list. A laundry basket and a pair of shoes sit beside it, and no text is visible.",
+ "hero_alt": "An iPhone on a hallway table showing Choru's red overdue chore rows, each missed chore carried over to today as one row.",
+ "app_evidence": [
+  "One row per chore, however many cycles missed -> DayChoreList.swift:42-47, 62-84",
+  "Late count is days skipped, rest days not counted -> DayChoreList.swift:65-68; Models.swift:1457-1458",
+  "Overdue chore due daily until done -> Models.swift:1448-1455, 1486-1495",
+  "Row stands for today; tick settles today only, skipped days stay missed -> DayChoreList.swift:69-77, 629-634",
+  "Short card '3d' / long '3 days late' / '1y+' and '> 1 year late' cap at 365 missed days (a count, rest days excluded) -> ChoreRow.swift:399-406, 788-806; Models.swift:1444",
+  "Done yesterday via long press of circle, yesterday only -> ChoreRow.swift:298-323; Models.swift:1729-1737; DayChoreList.swift:579-585",
+  "Past day shows the pile as it stood, future day nothing, today the carried rows -> CalendarTab.swift:594-604; DayChoreList.swift:90-94",
+  "Status line counts overdue -> shot-mess.webp ('3 overdue'), CalendarTab.swift:689",
+  "Digest title 'N today, N overdue' -> DigestPlan.swift:106-111, DailyDigest.swift:100-103,127",
+  "Widget marks overdue -> WidgetViews.swift:120",
+  "Carried rows have only a left-swipe Delete; Tomorrow swipe is on ordinary rows -> DayChoreList.swift:217-219, 241-251, 380-395",
+  "Deleted chore owes nothing -> Models.swift:1468-1471",
+  "Away/rest days stepped over -> Models.swift:1457-1458, 1488",
+  "Ticks and Done yesterday gated, no free mode -> DayChoreList.swift:589-599; Onboarding/Store.swift:849-858",
+  "Chores tab shows 'N days late' with the same backdate menu -> ChoreListTab.swift:29, 577; ChoreRow.swift:774",
+  "iOS 26.5 minimum -> existing chore-calendar.json evidence (homepage index.html:47)"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/choru-missed-chores-2.json",
+  "summary": "All previous findings are fixed: the ticked row now stays green until tomorrow, the Done yesterday limit and FAQ no longer claim older days cannot be ticked, the 1-year cap is described as 365 missed days, the dragon's mess is limited to daytime, the outdated iOS sentence and the broken anytime-tasks link are gone. New sentences match the code and contain no em or en dashes or competitor names; the apple.com/ios source now backs no sentence but is harmless.",
+  "issues": [],
+  "app_claims": 8,
+  "schema": []
+ },
+ "approved": "2026-11-01"
+}

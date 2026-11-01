@@ -1,0 +1,99 @@
+{
+ "slug": "coins-and-rewards",
+ "kind": "feature",
+ "title": "Chore Reward App: Coins and Rewards You Pick | Choru",
+ "meta": "Choru pays 1 to 3 coins for every chore you tick. You write the rewards, set the prices and spend the coins. See how it works and where it stops.",
+ "h1": "Coins and rewards you pick",
+ "lede": "Every chore you tick in Choru pays 1 to 3 coins. You write the rewards and set their prices, then spend the coins on them. Nothing is preset, so \"an hour of screen time\" or \"a night off\" costs exactly what you decide.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What coins and rewards do</h2>\n<p>Each chore has a coin value of 1, 2 or 3. When you tick it off, that many coins go into your balance. The <strong>Rewards</strong> tab shows the balance and your list of rewards, each with a name, an icon and a price. When the balance covers a price, tap <strong>Spend</strong>. The coins fly out of the pile, the card lights up, and the reward shows as claimed until a grown-up marks it used. Coins are a tally inside the app, not money.</p>\n<p>The Clock app and Screen Time do different jobs. Clock rings at a time you set. Apple's Screen Time lets a parent set schedules and time allowances for a child's apps (<a href=\"#limits\">see the limits</a>), but it has no idea whether the dishes got done. Choru links the work to the prize: chores earn coins, coins buy the rewards you wrote. It does not lock or unlock anything on the phone, so the reward is a deal your household keeps.</p>\n\n<figure><img class=\"screen\" src=\"/assets/shot-rewards.webp\" alt=\"Choru's Rewards tab with a balance of 153 coins above a list of rewards: an hour of screen time for 10, takeaway tonight for 25, a night off for 40, a new toy for 80 and a day out for 150\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Rewards tab. Every card has a price in coins and a Spend button once you can afford it.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How to set it up, step by step</h2>\n<ol>\n<li>Open a chore (tap its row, or tap <strong>+</strong> for a new one). In the <strong>Reward</strong> card, drag the slider or tap the minus and plus buttons to pick 1, 2 or 3 coins. The caption reads \"Coins earned each time you tick it off.\"</li>\n<li>Tap the check mark to save. Ticking the chore now pays that many coins.</li>\n<li>Open the <strong>Rewards</strong> tab and tap <strong>+</strong> (Add reward).</li>\n<li>Type the reward, for example \"An hour of screen time\". Type its price in the <strong>Costs</strong> field. It takes digits only.</li>\n<li>Check the line under the price. It estimates how often you could earn this reward, such as \"At the current pace this could be earned about every 8 days.\" Raise or lower the price until that feels right.</li>\n<li>Pick an icon from the grid and tap the check mark. The card appears in the list.</li>\n<li>When you can afford it, tap <strong>Spend</strong>. Later, a grown-up taps <strong>Mark used</strong> and confirms, and the reward can be claimed again.</li>\n</ol>\n\n<figure><img class=\"screen\" src=\"/assets/shot-editor.webp\" alt=\"Choru's Edit chore screen with the Reward card set to 3 coins and the caption Coins earned each time you tick it off\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Reward card on the Edit chore screen. The slider runs from 1 to 3 coins.</figcaption></figure>\n\n<h2 id=\"options\">Every option</h2>\n<table>\n<thead><tr><th>Setting</th><th>Choices</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td>Coins per chore</td><td>1, 2 or 3 per tick</td><td>Edit chore, Reward card</td></tr>\n<tr><td>Reward name</td><td>Any text</td><td>New reward</td></tr>\n<tr><td>Reward price</td><td>Any whole number from 1 to 32,767</td><td>New reward, Costs</td></tr>\n<tr><td>Reward icon</td><td>One from a grid of symbols: games, food, toys, trips, sport, animals and more</td><td>New reward</td></tr>\n<tr><td>Delete reward</td><td>Asks first. Coins from past spends on it come back</td><td>Edit reward</td></tr>\n<tr><td>Spending history</td><td>A list of your spends</td><td>Rewards tab, bottom button</td></tr>\n</tbody>\n</table>\n<p>Coins also come from other places. <a href=\"/features/anytime-tasks/\">Anytime tasks</a> pay the same way. A <a href=\"/features/chore-calendar/\">streak</a> of days with every chore done adds a bonus at day 3 (5 coins), day 7 (10), day 14 (20) and every 30 days (50). When a chore is on several people's lists, everyone who helped takes its full price, not a share of it.</p>\n<p>The balance is worked out from the ticks and the spends, never stored as a loose number. Un-tick a chore and its coins go with it. Re-price a reward later and past spends keep the price they had. The balance never shows below zero.</p>\n<p>Below your own rewards, Choru offers up to two cards of its own, always labelled \"From Choru\": a gift box for 100 coins that holds two streak freezes, a streak freeze for 100 coins (you can hold two), and a mystery chest for 1,000 coins that unlocks a gold app icon.</p>\n\n<h2 id=\"when-to-use\">When it fits</h2>\n<h3>Kids who want screen time</h3>\n<p>Write \"An hour of screen time\" at 10 coins. A child ticks chores, watches the balance grow and spends it on their own. The <a href=\"/guides/chore-chart-for-kids-with-rewards/\">chore chart with rewards guide</a> covers how to choose prices.</p>\n<h3>A household with one big goal</h3>\n<p>A day out at 150 coins gives a family a shared target. Greyed-out rewards stay visible with a lock, so the goal stays in front of everyone.</p>\n<h3>Grown-ups rewarding themselves</h3>\n<p>Takeaway after a week of bins and laundry, or a night off with no chores. Adults have their own balance and rewards, so it works without any kids.</p>\n<h3>Splitting work fairly between partners</h3>\n<p>Give the heavy jobs 3 coins and the quick ones 1. The coins show who carried what. See <a href=\"/guides/split-chores-with-partner/\">how to split chores with a partner</a>.</p>\n<h3>Kids on their own phones</h3>\n<p>In kid mode, a child can spend and claim. Adding or editing rewards and the coin slider are hidden, and only a grown-up can mark a reward used. See <a href=\"/features/family-sharing/\">family sharing</a> for the setup.</p>\n\n<h2 id=\"limits\">What it does not do</h2>\n<ul>\n<li><strong>No real enforcement.</strong> Choru has no Screen Time integration. Spending \"an hour of screen time\" records the claim. It does not unlock a game or change an app limit. Apple's Screen Time settings stay as you set them.</li>\n<li><strong>No more than 3 coins per chore.</strong> The slider stops at 3 and cannot go lower than 1. A chore always pays something.</li>\n<li><strong>No cash or payouts.</strong> Coins are a tally and cannot be converted to money.</li>\n<li><strong>One claim at a time.</strong> A reward that is claimed and not yet marked used cannot be bought again.</li>\n<li><strong>Needs a Choru plan.</strong> The app has no free tier at launch, so spending coins requires an active plan or a family member who holds one.</li>\n</ul>\n<p>For missed days that affect the streak and its bonus, read <a href=\"/features/missed-chores/\">missed chores carry over as one row</a>.</p>\n",
+ "related": [
+  "chore-chart-for-kids-with-rewards",
+  "split-chores-with-partner",
+  "how-to-manage-household-chores"
+ ],
+ "cta_h": "Let chores earn the rewards you pick",
+ "cta_p": "Choru is a chore app for iPhone where every chore pays coins and you set the rewards. Download it from the App Store.",
+ "card": "Every chore pays 1 to 3 coins, and you write the rewards, set their prices and spend the coins.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "What is a good chore reward app for kids?",
+   "Look for one where you decide the rewards, not the app. In Choru, each chore pays 1 to 3 coins and you write rewards such as an hour of screen time, then price them. A child can spend the coins on their own phone."
+  ],
+  [
+   "Is there a free chore reward app?",
+   "Choru has no free version at launch. It uses a paid plan, and a family member's plan can cover the others in the same family. Check the App Store listing for current prices."
+  ],
+  [
+   "Can adults use a chore point system too?",
+   "Yes. Adults earn coins from their own chores and have their own rewards, like takeaway or a night off. Nothing in the coin system needs kids."
+  ],
+  [
+   "Can chores earn screen time automatically?",
+   "Not on the phone itself. Choru tracks the coins and the claimed reward, but it does not change Apple's Screen Time settings. A grown-up gives the time and marks the reward used."
+  ],
+  [
+   "How many coins does a chore pay?",
+   "You choose 1, 2 or 3 coins for each chore. Streak milestones add bonus coins, and Choru shows the balance on the Rewards tab."
+  ],
+  [
+   "What happens to my coins if I un-tick a chore?",
+   "The coins from that tick leave the balance. Choru works the balance out from ticks and spends, so it never drifts. If you had already spent those coins, the balance shows zero until new chores cover the gap, then climbs again."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: Set up parental controls to manage your child's iPhone or iPad",
+   "https://support.apple.com/en-us/105121"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "choru",
+ "why": "Answers 'chore reward app', 'chore points system app', 'chores to earn screen time' and 'chore reward app for adults' with the exact coin range, reward options and limits.",
+ "targets": [
+  "chore reward app",
+  "chore reward app for kids",
+  "chore points system app",
+  "chores to earn screen time",
+  "chore reward chart app"
+ ],
+ "hero_prompt": "A family kitchen table in late afternoon with an iPhone propped against a fruit bowl, showing a pile of gold coins and a short list of rewards. A child's hand reaches for the phone while a half-finished dish rack sits behind.",
+ "hero_alt": "An iPhone on a kitchen table showing Choru's coin balance and a list of rewards a family has chosen.",
+ "app_evidence": [
+  "Coins per chore 1 to 3 -> Coins.swift:27-28; Models.swift:808-809",
+  "Coin slider with caption 'Coins earned each time you tick it off.' and minus/plus -> EditorControls.swift:290-331",
+  "Coin card hidden in kid mode -> ChoreEditorView.swift:192",
+  "Reward editor: name, Costs (digits only, >0), icon grid, pace caption, delete alert -> RewardEditSheet.swift:116-145,170-185,93-101",
+  "Pace line wording 'about every N days' -> RewardEditSheet.swift:183-184",
+  "Balance is a ledger, un-tick removes coins, never below zero, history snapshots -> Coins.swift:9-38",
+  "Everyone who helped takes the chore's full price -> Coins.swift:74-96",
+  "Anytime tasks pay from same purse -> Coins.swift:128-136",
+  "Streak bonus 3:5, 7:10, 14:20, every 30:50 -> Streaks.swift:557-566",
+  "Spend button, Mark used, claimed state, lock when out of reach -> RewardCard.swift:117-170",
+  "One open claim at a time -> Coins.swift:185-186",
+  "Mark used confirm alert 'It can be claimed again after this.' -> RewardsTab.swift:202-210",
+  "Kid mode hides add and edit reward, mark used grown-up only -> RewardsTab.swift:147-150,185",
+  "Spending history button -> RewardsTab.swift:159-165; RewardHistorySheet.swift:31",
+  "Delete reward: coins come back -> RewardEditSheet.swift:99",
+  "Choru shop: gift box 100 (two freezes), freeze 100 cap 2, mystery chest 1000 gold icon, 'From Choru', under own rewards -> Models.swift:940-961; Shop.swift:144-190; RewardsTab.swift:335-349",
+  "No Screen Time integration -> grep for FamilyControls, ManagedSettings, ScreenTime finds nothing in the source",
+  "No free tier, hard paywall; family plan covers others -> Onboarding/Store.swift:~832 Entitlement.mode = .hard; Store.swift coveredByFamily",
+  "Coins are a tally, not money -> index.html FAQ 'What are the coins for?'"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/choru-coins-and-rewards-2.json",
+  "summary": "All seven round-1 findings are fixed: both dead links are gone (streak now links to the existing chore-calendar page), the streak wording, the 32,767 price cap and the overdrawn-balance FAQ match the code, and the sources are cleaned up. No em or en dashes and no competitors named. Nothing open.",
+  "issues": [],
+  "app_claims": 6,
+  "schema": [
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}

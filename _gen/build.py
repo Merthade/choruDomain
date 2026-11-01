@@ -482,7 +482,7 @@ BY_SLUG = {p["slug"]: p for p in PAGES}
 
 
 def related_html(slugs):
-    items = "\n".join(f'      <li><a href="/guides/{s}/">{BY_SLUG[s]["h1"]}</a></li>' for s in slugs)
+    items = "\n".join(f'      <li><a href="/guides/{s}/">{BY_SLUG[s]["h1"]}</a></li>' for s in slugs if s in BY_SLUG)
     return f"""<div class="related">
     <h2>Related guides</h2>
     <ul>

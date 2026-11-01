@@ -1,0 +1,103 @@
+{
+ "slug": "streaks",
+ "kind": "feature",
+ "title": "Chore Streak With Rest Days and Days Away | Choru",
+ "meta": "Choru's chore streak counts days you cleared the list. Rest days, days away and quiet days keep it safe, and two freezes cover a miss.",
+ "h1": "A chore streak that survives days off",
+ "lede": "Choru counts the days you cleared everything that was due. Rest days, days away and days with nothing due carry the streak across instead of breaking it.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What the streak counts</h2>\n<p>A day earns a flame when it had at least one chore due and every one of them is done. The streak is the number of those days in a row. A day with nothing due, a weekly rest day or a day you marked as away does not add to the count, and it does not break it either.</p>\n<p>The Clock app is made for alarms, a time of day that rings. A streak is a different job: it has to know what was due on each day and whether you did it. Choru works that out from your chore schedule, so a household that only has chores on weekdays can still reach a long streak, because the weekend counts as a bridge and not as a miss.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-done.webp\" alt=\"Choru's Calendar tab with a week of orange flames on every cleared day, a counter of 150 coins and a 32 day streak, and all five chores ticked\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>Every cleared day carries a flame. The counter at the top right shows coins and the streak.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How it works, step by step</h2>\n<ol>\n<li>Add chores with a repeat in the chore editor. See <a href=\"/features/chore-repeats/\">repeats that fit real chores</a>.</li>\n<li>Tick each chore on the Calendar tab as you do it. When the last chore due that day is ticked, the day gets a flame and the streak goes up by one.</li>\n<li>Read the number in the counter at the top right of the Calendar tab, next to your coins. Tap it to open <strong>Stats</strong>, which shows the streak, your longest run and the bonus coming next.</li>\n<li>To set a weekly day off, open <strong>Settings</strong>, go to the <strong>Away</strong> section and tap the weekday chips under <strong>Rest days</strong>.</li>\n<li>To log a trip, tap <strong>Days away</strong> in the same section. Tap each day you were away, or will be, then tap <strong>Mark as away</strong>.</li>\n</ol>\n<p>Today never breaks a streak before it is over. If today is not cleared yet, the count starts from yesterday, so you keep the number until midnight.</p>\n<p>Late ticks still count. If you forget to tick before bed, open the app in the morning and mark yesterday, and yesterday is cleared on its own. Only yesterday can be marked late; older days are history. Ticking an overdue chore counts for today, so the days it was missed stay as they were. The <a href=\"/features/missed-chores/\">missed chores</a> page explains overdue chores.</p>\n\n<h2 id=\"options\">Every way a day can turn out</h2>\n<table>\n<thead><tr><th>Day</th><th>Flame</th><th>Effect on the streak</th></tr></thead>\n<tbody>\n<tr><td>Everything due is done</td><td>Yes</td><td>Adds 1</td></tr>\n<tr><td>Nothing was due</td><td>No</td><td>Carries across</td></tr>\n<tr><td>Weekly rest day</td><td>No</td><td>Carries across</td></tr>\n<tr><td>Day away</td><td>No</td><td>Carries across</td></tr>\n<tr><td>Chore moved with Tomorrow, decided that day</td><td>Yes</td><td>Adds 1</td></tr>\n<tr><td>Ticked, waiting for a grown-up to approve (when approval is on for that child)</td><td>Not yet</td><td>Carries across, lights when approved</td></tr>\n<tr><td>Something due and still open</td><td>No</td><td>Breaks the run</td></tr>\n<tr><td>A missed day with a freeze held</td><td>Snowflake</td><td>Carries across</td></tr>\n</tbody>\n</table>\n<p><strong>Rest days.</strong> Pick any weekdays. A change starts tomorrow and never reaches back, so you cannot add a rest day to erase an old miss. A rest day you clear anyway carries the streak across like any other rest day; it does not add a flame.</p>\n<p><strong>Days away.</strong> You can mark days from a year back to a year ahead, as many trips as you like. Marking a past day stops it counting as missed, so the sheet reminds you to mark only days you were really away. If you come back to a pile of overdue chores after three or more days without ticking, Choru also asks whether you were on vacation and opens the same sheet with those days filled in.</p>\n<p><strong>Streak freezes.</strong> Your first two freezes come in the gift box in the Rewards tab (100 coins). After that each freeze costs 100 coins, and you can hold two at once. A freeze covers the next day you miss, automatically, oldest miss first. It only covers days after the day you bought it, never today, so buy it before you need it. A freeze buys time to catch up; the days you did not do remain visible.</p>\n<p><strong>Bonus coins.</strong> A run pays 5 coins at 3 days, 10 at 7 days, 20 at 14 days and 50 at 30 days, then 50 more every 30 days. A bonus stays paid if the run breaks later. See <a href=\"/features/coins-and-rewards/\">coins and rewards</a>.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-stats.webp\" alt=\"Choru's Stats panel showing a 32 day streak at the top, a tile for the longest run of 32 days and a tile for the next bonus of 50 coins at 60 days\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>Stats shows the current streak, your longest run and the next bonus.</figcaption></figure>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>Chores only on weekdays</h3>\n<p>Set Saturday and Sunday as rest days, or just leave them with no chores. The streak runs through the weekend and a Friday-to-Monday run keeps its number.</p>\n<h3>A holiday or a work trip</h3>\n<p>Mark the days in <strong>Days away</strong> before you leave. Nothing new falls due while you are gone, so no pile builds up while you are away.</p>\n<h3>One rest day a week</h3>\n<p>If you want one fixed day off, such as Sunday, tick that chip once. It is part of the schedule, so you do not spend anything to rest and the streak does not pause.</p>\n<h3>A kid who needs a visible run</h3>\n<p>Each person has their own streak, and the family scoreboard shows it next to their coins. If you turn on <strong>Need a grown-up's OK</strong> for a child, their ticks wait for approval and the flame lights when a grown-up approves. The setup is in <a href=\"/features/kids-tab/\">the Kids tab</a>.</p>\n<h3>A bad day you saw coming</h3>\n<p>Buy a freeze a day or more ahead. If you do miss a day, it is saved without you doing anything.</p>\n\n<h2 id=\"limits\">What it does not do</h2>\n<ul>\n<li>It cannot be repaired afterwards. A freeze bought today does not cover yesterday, and ticking an overdue chore later does not light the days it was missed.</li>\n<li>You cannot hold more than two freezes by buying them, so a streak cannot be bought outright.</li>\n<li>Days older than yesterday cannot be marked late.</li>\n<li>A rest day change does not apply to the past.</li>\n<li>Days with nothing due do not add to the count. A run of 10 is ten cleared days.</li>\n<li>There is no free version. Ticking needs the trial or the unlock. See <a href=\"/features/family-sharing/\">family sharing</a> for how one plan covers a household.</li>\n<li>Choru is for iPhone and needs iOS 26.5 or later.</li>\n</ul>\n<p>For a plan that fits a whole household, read <a href=\"/guides/how-to-manage-household-chores/\">how to manage household chores</a>.</p>",
+ "related": [
+  "how-to-manage-household-chores",
+  "chore-chart-for-kids-with-rewards",
+  "share-chore-list-with-family-iphone"
+ ],
+ "cta_h": "Start a streak that forgives a day off",
+ "cta_p": "Choru is a chore app for iPhone. Rest days, days away and two freezes keep your streak safe.",
+ "card": "Clear today's list to grow the streak. Rest days and days away keep it safe.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "Is a chore streak app fair if I only have chores on some days?",
+   "In Choru, yes. A day with nothing due carries the streak across, so weekday-only chores do not cap a run at five. Only a day with a chore due and still open breaks it."
+  ],
+  [
+   "How do rest days work with a streak?",
+   "Open Settings, find Away and tap the weekdays under Rest days. Nothing is due on those days and the streak carries across. A change starts tomorrow, so it cannot erase an earlier miss."
+  ],
+  [
+   "Is it okay to have one rest day a week?",
+   "In Choru it is built in. One fixed rest day, such as Sunday, costs nothing and does not pause the streak. If you clear the list on a rest day anyway, the day still carries the streak across, but it does not add to the count."
+  ],
+  [
+   "What keeps the streak safe when I am away?",
+   "Mark the days under Settings, Away, Days away. Nothing is due on them and the count carries across. You can plan a year ahead, or log a trip afterwards."
+  ],
+  [
+   "Is there a kids chore streak?",
+   "Each person has their own streak. If a child's ticks need a grown-up's OK, the flame lights once a grown-up approves, and the run is not broken meanwhile."
+  ],
+  [
+   "What does a streak freeze do?",
+   "It saves the next day you miss, automatically. It costs 100 coins, you can hold two, and it only covers days after you bought it. It never covers today."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: Set an alarm in Clock on iPhone",
+   "https://support.apple.com/guide/iphone/set-an-alarm-iph2909d3a74/ios"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "choru",
+ "why": "Answers chore streak app, streak rest day and kids chore streak searches by showing how Choru's streak treats rest days, days away and quiet days. The one rest day a week questions get a direct answer.",
+ "targets": [
+  "chore streak app",
+  "streak rest day",
+  "kids chore streak",
+  "one rest day a week streak"
+ ],
+ "hero_prompt": "A kitchen counter in morning light with an iPhone propped against a fruit bowl, its screen showing a purple calendar week with orange flames on most days and a gap on the weekend. A mug and a folded tea towel sit beside it, and no text is visible.",
+ "hero_alt": "An iPhone on a kitchen counter showing Choru's calendar week with flames on the cleared days and a weekend rest gap that keeps the chore streak going.",
+ "app_evidence": [
+  "Day earns a flame when something was due and all of it is done -> Streaks.swift:10-12, 270-354",
+  "Nothing due, rest day or away day bridges the run without a flame -> Streaks.swift:13-19, 248-265, 353",
+  "Weekday-only chores would otherwise cap a streak at five -> Streaks.swift:14-15",
+  "A cleared rest day or away day is neutral (carries, no flame); only the legacy pause window lights -> Streaks.swift:251-264",
+  "Today does not break a run before it ends -> Streaks.swift:488-503",
+  "Late ticks count on their own day, only yesterday can be backdated; overdue ticks do not light older days -> Streaks.swift:42-53, 321; Models.swift:1729-1737",
+  "Moving a chore with Tomorrow on the day earns the day -> Streaks.swift:293-312",
+  "Skipping a chore is no longer possible in the app (Chore.skip has no callers); no table row -> Streaks.swift:313-319",
+  "Ticked awaiting review bridges, lights when approved; review is opt-in per kid, off by default -> Streaks.swift:66-74, 324, 352; Member.swift:32-36; SettingsView.swift:659-665",
+  "Rest days: weekday chips under Settings, Away, Rest days; change starts tomorrow, never into the past -> SettingsView.swift:885-923, 946-957; Models.swift:437-460",
+  "Days away sheet: tap days, button 'Mark as away', past days stop counting as missed, caption text -> AwayDaysSheet.swift:63, 72-79",
+  "Days away range one year back and ahead -> AwayDaysSheet.swift:103-109",
+  "Vacation question needs 3+ overdue chores, one 3+ days late, something due in the gap; opens sheet prefilled -> WelcomeBack.swift:42-44, 56-74, 98-110; AwayDaysSheet.swift:5-8",
+  "Freeze: 100 coins, held cap 2, buying blocked at cap; first two freezes come from the gift box -> Models.swift:954, 961; RewardsTab.swift:331-350, 368",
+  "Gift box 100 coins holds two freezes; card is shown until opened then the freeze card -> Models.swift:950, 981; RewardsTab.swift:342-345",
+  "Freeze automatic, oldest miss first, only days after purchase, never today -> Streaks.swift:199-204, 220-233",
+  "Milestone bonus 3:5, 7:10, 14:20, 30 and every 30:50, paid on reaching, not taken back -> Streaks.swift:559-566, 547-556",
+  "Counter at top right of Calendar opens Stats -> CalendarTab.swift:467, 492; shot-done.webp",
+  "Stats shows streak, longest run tile, next bonus tile -> StatsPanel.swift:309, 420-428; shot-stats.webp",
+  "Each person has their own streak on the scoreboard -> Scoreboard.swift:5-47; shot-stats.webp",
+  "Empty-day message 'Nothing was due, so your streak carried straight across it.' -> DayChoreList.swift:489",
+  "No free version, ticking gated in hard mode -> Onboarding/Store.swift:833, 855-858",
+  "Anybody's plan unlocks the whole family -> Onboarding/Store.swift:838-847",
+  "iOS 26.5 minimum -> existing feature pages (chore-calendar.json evidence), projects/choru.md Key files"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/choru-streaks-2.json",
+  "summary": "Every round-1 finding is fixed: the backlog sweep and Chore skipped row are gone, cleared rest days now carry without a flame, kid approval and the vacation prompt are stated as conditional, the gift-box path to the first freezes is explained, and the away-days line and iOS source are corrected. All new sentences match the code and all links resolve. Non-blocking leftovers from round 1: the optional Clock sentence was kept, and streaks.hero.webp still does not exist, so generate it or publish without a hero.",
+  "issues": [],
+  "app_claims": 14,
+  "schema": [
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}
