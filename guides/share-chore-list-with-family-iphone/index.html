@@ -116,14 +116,20 @@
   <h1>How to Share a Chore List With Your Family on iPhone</h1>
   <p class="lede">A chore list only works if everyone can see it. The fridge door works until someone is not at home. Here are three ways to put the list on your family's iPhones, and what each is good for.</p>
   <style>
-.ap-get{margin:22px 0 30px;display:flex;flex-direction:column;gap:12px;max-width:560px}
-.ap-get-btn{display:block;text-align:center;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;
+.ap-get{margin:22px auto 30px;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:440px;text-align:center}
+.ap-get-btn{display:block;width:100%;text-align:center;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;
   background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
 .ap-get-btn:hover{filter:brightness(1.06)}
-.ap-get-card{display:none;align-items:center;gap:16px;padding:14px 16px;border:1px solid rgba(128,128,128,.3);border-radius:14px}
-.ap-get-card img{width:96px;height:96px;flex:none;border-radius:8px;background:#fff}
-.ap-get-card strong{display:block;margin-bottom:3px}.ap-get-card span{display:block;opacity:.75;font-size:.92em}
-.ap-sms{display:inline-block;margin-top:6px;font-size:.92em}
+.ap-get-card{display:none;width:100%;align-items:center;gap:16px;padding:14px 16px;text-align:left;border-radius:14px;
+  border:1px solid color-mix(in srgb,var(--accent,var(--green,#2563eb)) 30%,transparent);
+  background:color-mix(in srgb,var(--accent,var(--green,#2563eb)) 6%,transparent)}
+.ap-get-card img{width:104px;height:104px;flex:none;border-radius:10px;background:#fff;padding:7px;box-sizing:border-box}
+.ap-get-card .t{display:block;font-weight:700;line-height:1.25}
+.ap-get-card .s{display:block;margin-top:4px;font-size:.88em;line-height:1.4;opacity:.72}
+.ap-sms{display:inline-block;margin-top:8px;font-size:.9em;font-weight:600;color:var(--accent,var(--green,#2563eb));
+  text-decoration:underline;text-underline-offset:3px}
+.ap-end{margin:40px auto 10px;max-width:440px;text-align:center}
+.ap-end h2{margin:0 0 14px}
 .ap-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 10px;
   border-radius:14px;border:1px solid rgba(128,128,128,.3);background:var(--bg,var(--surface,#fff));color:inherit;
   box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:13px;line-height:1.25;transform:translateY(140%);transition:transform .25s ease}
@@ -142,9 +148,9 @@
 <div class="ap-get" id="ap-get">
   <a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_GuideTop&amp;mt=8" data-ph="appstore_click">Get Choru on the App Store</a>
   <div class="ap-get-card">
-    <img src="/assets/qr-appstore.svg" alt="QR code that opens Choru on the App Store" width="96" height="96">
-    <div><strong>Choru is an iPhone app</strong><span>Point your iPhone camera at the code to open the App Store.</span>
-      <a class="ap-sms" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click">or text me the link</a></div>
+    <img src="/assets/qr-appstore.svg" alt="QR code that opens Choru on the App Store" width="104" height="104">
+    <span><span class="t">Choru is an iPhone app</span><span class="s">Point your iPhone camera at the code to install it.</span>
+      <a class="ap-sms" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click">or text me the link</a></span>
   </div>
 </div>
 <aside class="ap-float" id="ap-float" aria-label="Choru on the App Store">
@@ -187,16 +193,7 @@ new IntersectionObserver(function(es){var e=es[0];f.classList.toggle('on',!e.isI
   <li><strong>Kids can join too.</strong> A kid's phone locks itself to their own list. More in the <a href="/guides/chore-chart-for-kids-with-rewards/">kids' chore chart guide</a>.</li>
 </ul>
 
-<a class="article-cta" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Guide&amp;mt=8" data-ph="appstore_click" aria-label="Download Choru on the App Store">
-    <h2>One chore list for the whole family</h2>
-    <p>Start a family, show the code, and everyone sees the shared chores.</p>
-    <div class="cta-row">
-      <span class="badge-link">
-        <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="180" height="60">
-      </span>
-      <span class="cta-qr" aria-hidden="true"><img src="/assets/qr-appstore.svg" alt="" width="84" height="84"><span>On a computer? Scan with your iPhone camera to open the App Store.</span></span>
-    </div>
-  </a>
+<div class="ap-end"><h2>One chore list for the whole family</h2><a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_GuideEnd&amp;mt=8" data-ph="appstore_click">Get Choru on the App Store</a></div>
 <div class="related">
     <h2>Related guides</h2>
     <ul>
