@@ -150,16 +150,23 @@
   <div class="ap-get-card">
     <img src="/assets/qr-appstore.svg" alt="QR code that opens Choru on the App Store" width="104" height="104">
     <span><span class="t">Choru is an iPhone app</span><span class="s">Point your iPhone camera at the code to install it.</span>
-      <a class="ap-sms" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click">or text me the link</a></span>
+      <a class="ap-sms" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Copy&amp;mt=8">or text me the link</a></span>
   </div>
 </div>
 <aside class="ap-float" id="ap-float" aria-label="Choru on the App Store">
   <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
   <span><b>Choru</b><small>Family chore chart</small></span>
-  <a class="go computer" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click">Text me the link</a>
+  <a class="go computer" href="sms:?&amp;body=Get%20Choru%3A%20https%3A//apps.apple.com/app/apple-store/id6812494775%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_Copy&amp;mt=8">Text me the link</a>
   <a class="go phone" href="https://apps.apple.com/app/apple-store/id6812494775?pt=2187944&amp;ct=Website_GuideTop&amp;mt=8" data-ph="appstore_click">Get</a>
   <button type="button" aria-label="Hide" onclick="this.parentNode.remove();try{sessionStorage.setItem('apFloat','0')}catch(e){}">&times;</button>
 </aside>
+<script>(function(){  // sms: opens Messages on a Mac; elsewhere nothing reliably handles it, so offer Copy link (Emil, 2026-11-02)
+var mac=/Mac/i.test(navigator.platform||'')||/Macintosh/.test(navigator.userAgent);if(mac)return;
+document.querySelectorAll('[data-sms]').forEach(function(a){var u=a.getAttribute('data-copy'),big=a.classList.contains('go');
+a.textContent=big?'Copy link':'or copy the link';a.href=u;a.setAttribute('data-ph','copy_link_click');
+a.addEventListener('click',function(e){if(!navigator.clipboard)return;e.preventDefault();
+navigator.clipboard.writeText(u).then(function(){var t=a.textContent;a.textContent=big?'Copied':'Link copied';
+setTimeout(function(){a.textContent=t},1800)},function(){location.href=u})})})})();</script>
 <script>(function(){var f=document.getElementById('ap-float'),g=document.getElementById('ap-get');if(!f||!g)return;
 try{if(sessionStorage.getItem('apFloat')==='0'){f.remove();return}}catch(e){}
 if(!('IntersectionObserver' in window)){f.classList.add('on');return}
